@@ -1,0 +1,129 @@
+@font-face {
+    font-family: "Paranoid";
+    src: url(../fonts/Paranoid\ Starting\ Demo.ttf) format("truetype");
+}
+@font-face{
+    font-family: "Kanit Bold";
+    src: url(../fonts/Kanit-Bold.ttf) format("truetype");
+
+}
+@font-face{
+    font-family: "Kanit Regular";
+    src: url(../fonts/Kanit-Regular.ttf) format("truetype");
+}
+
+/*Variables*/
+
+:root {
+    --bg-primary: #fbfbf6;
+    --bg-secondary: linear-gradient(48deg, rgba(201,137,198,1) 0%, rgba(136,168,188,1) 50%, rgba(0,109,83,1) 100%);
+
+    --color-1-talleres: #5b93bc ;
+    --color-2-coworking: #006d53 ;
+    --color-3-monthly: #f0ff53 ;
+    --color-4-la-plaza: #874aaf ;
+
+    --txt-primary: #211f1f;
+    --txt-secondary: #3a2539;
+
+    --box-shadow: 1px 1px 10px #e1e1e1;
+
+}
+
+
+/* estilos comunes*/
+
+.Body{
+    font-family: "Kanit Regular";
+    color: var(--txt-primary);
+    background-color: var(--bg-primary);
+}
+
+
+/* estilos del Header */
+
+.Header{
+    flex-direction: row;
+    padding: 20px;
+
+}
+
+.Header-nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Header-logo{
+    width: 9rem;
+}
+
+.Menu{
+    list-style: none;
+    display: flex;
+}
+
+.Menu-item{
+    text-decoration: none;
+    padding: .2em;
+}
+.Menu-link{
+    margin-inline: .1em;
+    text-decoration: none;
+    padding: .6rem;
+    width: max-content;
+    border-radius: 20px;
+    background-color: var(--bg-primary);
+    border: solid .05em var(--txt-primary);
+    color: var(--txt-primary);
+}
+.Menu-link--Talleres:hover{
+   
+    background-color: var(--color-1-talleres);
+    color: white;
+}
+.Menu-link--espacio:hover{
+    background-color: var(--color-2-coworking);
+    color: white;
+  
+}
+.Menu-link--monthly:hover{
+    background-color: var(--color-3-monthly);
+   
+}
+.Menu-link--contacto:hover{
+    background-color: var(--color-4-la-plaza);
+    color: white;
+   
+}
+
+
+
+
+.Menu-item:hover{
+    transform: scale(1.1);
+}
+
+
+/* estilos del inicio*/
+
+.Principal{
+    padding: 60px;
+
+}
+
+.Principal-h1{
+    font-size: 10vw;
+    line-height: 90%;
+    margin-bottom: .2em;
+   
+}
+
+
+
+
+.u-logoFamily{
+    color: var(--color-4-la-plaza);
+    font-family: "Paranoid";
+    font-size: 7vw;
+}
