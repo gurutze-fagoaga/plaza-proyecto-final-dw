@@ -30,6 +30,19 @@
 
 }
 
+/* utilities */
+
+.u-textoSubrayado{
+    text-decoration: var(--txt-primary) underline;
+    text-decoration-thickness: from-font;
+}
+
+.u-logoFamily{
+    color: var(--color-4-la-plaza);
+    font-family: "Paranoid";
+    font-size: 7vw;
+}
+
 
 /* estilos comunes*/
 
@@ -38,6 +51,7 @@
     color: var(--txt-primary);
     background-color: var(--bg-primary);
 }
+
 
 
 /* estilos del Header */
@@ -97,9 +111,6 @@
    
 }
 
-
-
-
 .Menu-item:hover{
     transform: scale(1.1);
 }
@@ -108,22 +119,74 @@
 /* estilos del inicio*/
 
 .Principal{
-    padding: 60px;
+    background-image: url(../img/background-img.jpg);
+    background-size: cover;
 
 }
 
 .Principal-h1{
+    padding: 80px;
     font-size: 10vw;
     line-height: 90%;
     margin-bottom: .2em;
    
 }
 
+.Principal-img{
+    position: sticky;
+    top: 0;
+    bottom: 0;
+    width: 100vw;
+}
 
 
 
-.u-logoFamily{
-    color: var(--color-4-la-plaza);
-    font-family: "Paranoid";
-    font-size: 7vw;
+.Novedades{
+    padding: 5em;
+}
+
+
+/*About*/
+.About{
+    padding: 80px;
+
+}
+
+.About-question{
+    padding: .4em;
+    border-radius: 20px;
+    background-color: var(--bg-primary);
+    border: solid .05em var(--txt-primary);
+    width: fit-content;
+}
+.About-question:hover{
+    text-decoration: underline;
+    background-color: var(--color-4-la-plaza);
+    color: var(--bg-primary);
+}
+
+
+
+/* Galería */
+
+.Galeria{
+    padding: 80px;
+
+}
+.Galeria-title{
+
+}
+.Galeria-content{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-flow: row;
+    gap: 1em;
+    justify-content: center;
+    object-fit: cover;
+    overflow-x: scroll;
+    
+}
+
+.Galeria-img{
 }
