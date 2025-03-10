@@ -97,6 +97,18 @@
         <form action="get" class="Footer-formulario"></form>
 
     </footer>
+
+
+    <script>
+       
+       const listaPreguntas = document.querySelectorAll('.About-item');
+       listaPreguntas.forEach(pregunta => {
+        pregunta.addEventListener("click", () => {
+            pregunta.classList.toggle("open");
+        });
+
+       });
+    </script>
 </body>
 
 </html>
