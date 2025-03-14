@@ -164,7 +164,6 @@
     background-color: var(--color-3-monthly);
 }
 .About-question:hover{
-    text-decoration: underline;
     background-color: var(--color-4-la-plaza);
     color: var(--bg-primary);
 }
@@ -173,7 +172,7 @@
     margin-left: .5em;
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.5s ease;
+    transition: max-height 0.2s ease;
 }
 
 .About-item.open .About-content {
