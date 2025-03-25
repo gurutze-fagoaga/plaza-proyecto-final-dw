@@ -10,13 +10,16 @@
 </head>
 
 <body class="Body">
+
+    <!-- HEADER -->
+
     <header class="Header">
         <nav class="Header-nav">
             <a href="./index.html"><img class="Header-logo" src="./img/logo-plaza.svg" alt="Logo La Plaza"></a>
             <ul class="Menu">
-                <li class="Menu-item"><a class="Menu-link Menu-link--Talleres" href="#">Talleres</a></l>
-                <li class="Menu-item"><a class="Menu-link Menu-link--espacio" href="#">Espacio creativo</a></li>
-                <li class="Menu-item"><a class="Menu-link Menu-link--monthly" href="#">Monthly</a></li>
+                <li class="Menu-item"><a class="Menu-link Menu-link--Talleres" href="./talleres.html">Talleres</a></l>
+                <li class="Menu-item"><a class="Menu-link Menu-link--espacio" href="./espacio.html">Espacio creativo</a></li>
+                <li class="Menu-item"><a class="Menu-link Menu-link--monthly" href="./monthly.html">Monthly</a></li>
                 <li class="Menu-item"><a class="Menu-link Menu-link--contacto" href="#">Contacto</a></li>
             </ul>
         </nav>
@@ -24,18 +27,39 @@
 
     </header>
 
-    <main class="Main">
-        <div class="Carrousel">
 
-            <section class="Principal">
+
+    <!-- CONTENIDO DE MI HOME -->
+
+    <main class="Main">
+
+        <!-- PIZARRA -->
+
+        <div id="Board" class="Board">
+
+            <section class="u-displayNone">
                 <h1 class="Principal-h1">
                     <a href="#" class="u-textoSubrayado">La Plaza</a> donde la creatividad se encuentra y crece.
                 </h1>
                 <button>-></button>
             </section>
+
+            <div class="Controllers">
+
+                <button id="BtnCuadricula" class="Controllers-btn"><img src="./img/icono-cuadricula.svg" alt="Icono cuadrícula"></button>
+                <button id="BtnPurple" class="Controllers-btn Controllers-btn--purple"></button>
+                <button id="BtnYellow" class="Controllers-btn Controllers-btn--yellow"></button>
+                <button id="BtnBlue" class="Controllers-btn Controllers-btn--blue"></button>
+                <button id="BtnGreen" class="Controllers-btn Controllers-btn--green"></button>
+                <button id="BtnBorrar" class="Controllers-btn"> <img src="./img/icono-borrar.svg" alt="Icono borrar"></button>
+                <button id="BtnDescargar" class="Controllers-btn"><img src="./img/icono-descargar.svg" alt="Icono descargar"></button>
+
+            </div>
+
         </div>
 
-        <!--EL PROYECTO-->
+        <!--SOBRE EL PROYECTO-->
+
         <section class="About">
             <div class="About-item">
                 <h3 class="About-question">+ ¿Qué es "La Plaza"? </h3>
@@ -79,7 +103,7 @@
             </div>
         </section>
 
-        <!--Galería-->
+        <!--GALERIA-->
         <section class="Galeria">
             <h2 class="Galeria-title"> This is La Plaza</h2>
             <div class="Galeria-content">
@@ -92,6 +116,8 @@
         </section>
     </main>
 
+    <!-- FOOTER -->
+
     <footer class="Footer">
 
         <form action="get" class="Footer-formulario"></form>
@@ -100,6 +126,9 @@
 
 
     <script>
+
+        // ACORDEON en ABOUT
+
        const listaItems = document.querySelectorAll('.About-item');
        listaItems.forEach(item => {
         item.addEventListener("click", () => {
@@ -108,6 +137,49 @@
         });
 
        });
+
+
+       // PIZARRA
+       const board = document.querySelector("#Board");
+
+       const listaDeBotones = board.querySelectorAll(".Controllers-btn");
+
+       const btnCuadricula = board.querySelector("#BtnCuadricula");
+       const btnPurple = board.querySelector("#BtnPurple");
+       const btnYellow = board.querySelector("#BtnYellow");
+       const btnBlue = board.querySelector("#BtnBlue");
+       const btnGreen = board.querySelector("#BtnGreen");
+       const btnBorrar = board.querySelector("#BtnBorrar");
+       const btnDescargar = board.querySelector("#BtnDescargar");
+
+
+       // función para activar los botones
+
+       btnPurple.classList.add("BtnActive");
+       listaDeBotones.forEach(boton => {
+        boton.addEventListener("click", () => {
+            listaDeBotones.forEach(boton => {
+                boton.classList.remove("BtnActive");
+            })
+            boton.classList.toggle("BtnActive");
+        })
+       });
+
+       board.addEventListener("click", dibujar);
+
+        function dibujar(e) {
+            const trazo = document.createElement("div");
+            trazo.classList.add("Trazo")
+            trazo.style.left=e.clientX +"px";
+            trazo.style.top=e.clientY + "px";
+            document.body.appendChild(trazo);
+
+            btnBlue.addEventListener("click", () => {
+            trazo.classList.add("Trazo--blue");
+        })
+        }
+
+     
     </script>
 </body>
 

@@ -16,15 +16,15 @@
 
 :root {
     --bg-primary: #fbfbf6;
-    --bg-secondary: linear-gradient(48deg, rgba(201,137,198,1) 0%, rgba(136,168,188,1) 50%, rgba(0,109,83,1) 100%);
 
     --color-1-talleres: #5b93bc ;
     --color-2-coworking: #006d53 ;
     --color-3-monthly: #f0ff53 ;
     --color-4-la-plaza: #874aaf ;
 
+    --color-5-destacado: #db6561;
+
     --txt-primary: #211f1f;
-    --txt-secondary: #3a2539;
 
     --box-shadow: 1px 1px 10px #e1e1e1;
 
@@ -43,6 +43,10 @@
     font-size: 7vw;
 }
 
+.u-displayNone{
+    display: none;
+}
+
 
 /* estilos comunes*/
 
@@ -50,6 +54,7 @@
     font-family: "Kanit Regular";
     color: var(--txt-primary);
     background-color: var(--bg-primary);
+    width: 100vw;
 }
 
 
@@ -116,34 +121,78 @@
 }
 
 
-/* estilos del inicio*/
+/* estilos del Board*/
 
-.Principal{
-   background-image: url(../img/background-img.jpg);
-    background-size: cover;
-
+.Main{
+    width: 100%;
 }
 
-.Principal-h1{
-    padding: 80px;
-    font-size: 10vw;
-    line-height: 90%;
-    margin-bottom: .2em;
-   
+.Board{
+    height: 80vh;
+    margin: 40px;
+    background-color: antiquewhite;
 }
 
-.Principal-img{
-    position: sticky;
-    top: 0;
+.Controllers{
+    position: relative;
+    right: 0;
     bottom: 0;
-    width: 100vw;
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    padding: 1em;
+}
+
+.Controllers-btn{
+    z-index: 1;
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+    background-color: var(--bg-primary);
+    border: solid var(--txt-primary) 1px;
+    border-radius: 50%;
+}
+
+.Controllers-btn:hover{
+    border: solid 2px var(--txt-primary);
+}
+
+.Controllers-btn--purple{
+    background-color: var(--color-4-la-plaza);
+}
+.Controllers-btn--yellow{
+    background-color: var(--color-3-monthly);
+}
+.Controllers-btn--blue{
+    background-color: var(--color-1-talleres);
+}
+.Controllers-btn--green{
+    background-color: var(--color-2-coworking);
+}
+
+.BtnActive{
+    border: solid 2px var(--txt-primary);
+}
+
+/*Trazo para la pizarra*/
+
+.Trazo{
+    position: absolute;
+    width: 10px;
+    height: 20px;
+    background-color: var(--color-4-la-plaza); /*cambia segun el botón*/
+    border-radius: 50%;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+ 
+}
+
+.Trazo.Trazo--blue{
+    background-color: var(--color-1-talleres); /*cambia segun el botón*/
 }
 
 
 
-.Novedades{
-    padding: 5em;
-}
 
 
 /*About*/
