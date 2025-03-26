@@ -18,7 +18,8 @@
             <a href="./index.html"><img class="Header-logo" src="./img/logo-plaza.svg" alt="Logo La Plaza"></a>
             <ul class="Menu">
                 <li class="Menu-item"><a class="Menu-link Menu-link--Talleres" href="./talleres.html">Talleres</a></l>
-                <li class="Menu-item"><a class="Menu-link Menu-link--espacio" href="./espacio.html">Espacio creativo</a></li>
+                <li class="Menu-item"><a class="Menu-link Menu-link--espacio" href="./espacio.html">Espacio creativo</a>
+                </li>
                 <li class="Menu-item"><a class="Menu-link Menu-link--monthly" href="./monthly.html">Monthly</a></li>
                 <li class="Menu-item"><a class="Menu-link Menu-link--contacto" href="#">Contacto</a></li>
             </ul>
@@ -35,32 +36,44 @@
 
         <!-- PIZARRA -->
 
-        
+
         <section id="Principal" class="Principal">
             <h1 class="Principal-h1">
-                 La Plaza donde la creatividad se encuentra y crece.
-                 <button id="Principal-btn" class="Principal-btn">Crear</button>
+                La Plaza donde la creatividad se encuentra y crece.
             </h1>
+
+            <p class="Principal-txt">Para empezar te proponemos crear tu nuevo fondo de
+                pantalla.
+                <button id="Principal-btn" class="Principal-btn">Crear</button>
+            </p>
+            
+
         </section>
 
         <div id="Board" class="Board u-displayNone">
 
             <div class="Controllers">
 
+
                 <button id="BtnCuadricula" class="Controllers-btn">
-                    <img id="IconoCuadricula" class="u-displayNone" src="./img/icono-cuadricula.svg" alt="Icono cuadrícula">
+                    <img id="IconoCuadricula" class="u-displayNone" src="./img/icono-cuadricula.svg"
+                        alt="Icono cuadrícula">
                     <img id="IconoCuadricula" src="./img/icono-liso.svg" alt="Icono sin cuadrícula">
 
-                
+
                 </button>
                 <button id="BtnPurple" class="Controllers-btn Controllers-btnColor Controllers-btn--purple"></button>
                 <button id="BtnYellow" class="Controllers-btn Controllers-btnColor Controllers-btn--yellow"></button>
                 <button id="BtnBlue" class="Controllers-btn Controllers-btnColor Controllers-btn--blue"></button>
                 <button id="BtnGreen" class="Controllers-btn Controllers-btnColor Controllers-btn--green"></button>
-                <button id="BtnBorrar" class="Controllers-btn "> <img src="./img/icono-borrar.svg" alt="Icono borrar"></button>
-                <button id="BtnDescargar" class="Controllers-btn"><img src="./img/icono-descargar.svg" alt="Icono descargar"></button>
+                <button id="BtnBorrar" class="Controllers-btn "> <img src="./img/icono-borrar.svg"
+                        alt="Icono borrar"></button>
+                <button id="BtnDescargar" class="Controllers-btn"><img src="./img/icono-descargar.svg"
+                        alt="Icono descargar"></button>
 
             </div>
+
+            <button>Cerrar</button>
 
         </div>
 
@@ -71,7 +84,8 @@
                 <h3 class="About-question">+ ¿Qué es "La Plaza"? </h3>
                 <div class="About-content">
                     <p>
-                        La Plaza es un espacio creativo situado en Pamplona, diseñado para inspirar y conectar a personas apasionadas por diversas formas de arte y expresión.
+                        La Plaza es un espacio creativo situado en Pamplona, diseñado para inspirar y conectar a
+                        personas apasionadas por diversas formas de arte y expresión.
                     </p>
                 </div>
             </div>
@@ -80,7 +94,9 @@
                 <h3 class="About-question">+ ¿Qué hacemos?</h3>
                 <div class="About-content">
                     <p>
-                        En este lugar, la creatividad fluye libremente a través de talleres semanales, nuestros eventos mensuales (Monthly) y el área de coworking, diseñado para que los creativos de la zona tengan un espacio para desarrollar sus proyectos.
+                        En este lugar, la creatividad fluye libremente a través de talleres semanales, nuestros eventos
+                        mensuales (Monthly) y el área de coworking, diseñado para que los creativos de la zona tengan un
+                        espacio para desarrollar sus proyectos.
                     </p>
                 </div>
             </div>
@@ -89,7 +105,9 @@
                 <h3 class="About-question">+ ¿Quiénes somos?</h3>
                 <div class="About-content">
                     <p>
-                        Somos un grupo de jóvenes con inquietudes artísticas, que se han visto con dificultades para encontrar entornos creativos en su día a día. Con el proyecto pretendemos que otras personas tengan facilidades para llevar a cabo sus proyectos creativos. 
+                        Somos un grupo de jóvenes con inquietudes artísticas, que se han visto con dificultades para
+                        encontrar entornos creativos en su día a día. Con el proyecto pretendemos que otras personas
+                        tengan facilidades para llevar a cabo sus proyectos creativos.
                     </p>
                 </div>
             </div>
@@ -99,10 +117,11 @@
                 <div class="About-content">
                     <p>
                         Hay muchas formas de apoyar "La Plaza":
-                        <ul>
-                            <li>Participar en los talleres y eventos que organizamos.</li>
-                            <li>¿Tienes un conociemiento que quieras compartir? Estaremos encantadas en atender tu sugerencia.</li>
-                        </ul>
+                    <ul>
+                        <li>Participar en los talleres y eventos que organizamos.</li>
+                        <li>¿Tienes un conociemiento que quieras compartir? Estaremos encantadas en atender tu
+                            sugerencia.</li>
+                    </ul>
                     </p>
                 </div>
 
@@ -135,63 +154,62 @@
 
         // ACORDEON en ABOUT
 
-       const listaItems = document.querySelectorAll('.About-item');
-       listaItems.forEach(item => {
-        item.addEventListener("click", () => {
-            listaItems.forEach(item => item.classList.remove("open"));
-            item.classList.toggle("open");
+        const listaItems = document.querySelectorAll('.About-item');
+        listaItems.forEach(item => {
+            item.addEventListener("click", () => {
+                listaItems.forEach(item => item.classList.remove("open"));
+                item.classList.toggle("open");
+            });
+
         });
 
-       });
+
+        // PIZARRA
+        const inicio = document.querySelector("#Principal");
+        const btnCrear = document.querySelector("#Principal-btn");
+
+        const board = document.querySelector("#Board");
+        const listaBotonesDibujo = board.querySelectorAll(".Controllers-btnColor");
+
+        const btnCuadricula = board.querySelector("#BtnCuadricula");
+        const listaIconosCuadricula = board.querySelectorAll("#IconoCuadricula");
+        const btnPurple = board.querySelector("#BtnPurple");
+        const btnYellow = board.querySelector("#BtnYellow");
+        const btnBlue = board.querySelector("#BtnBlue");
+        const btnGreen = board.querySelector("#BtnGreen");
+        const btnBorrar = board.querySelector("#BtnBorrar");
+        const btnDescargar = board.querySelector("#BtnDescargar");
 
 
-       // PIZARRA
-       const inicio = document.querySelector("#Principal");
-       const btnCrear = document.querySelector("#Principal-btn");
-       
-       const board = document.querySelector("#Board");
-       const listaBotonesDibujo = board.querySelectorAll(".Controllers-btnColor");
+        btnCrear.addEventListener("click", () => {
+            inicio.style.display = "none";
+            board.classList.toggle("u-displayNone");
 
-       const btnCuadricula = board.querySelector("#BtnCuadricula");
-       const listaIconosCuadricula = board.querySelectorAll("#IconoCuadricula");
-       const btnPurple = board.querySelector("#BtnPurple");
-       const btnYellow = board.querySelector("#BtnYellow");
-       const btnBlue = board.querySelector("#BtnBlue");
-       const btnGreen = board.querySelector("#BtnGreen");
-       const btnBorrar = board.querySelector("#BtnBorrar");
-       const btnDescargar = board.querySelector("#BtnDescargar");
+        })
+        // función para activar los botones de colores
 
-
-       btnCrear.addEventListener("click", () => {
-        inicio.style.display="none";
-        board.classList.toggle("u-displayNone");
-
-       })
-       // función para activar los botones de colores
-
-       btnPurple.classList.add("BtnActive");
-       listaBotonesDibujo.forEach(boton => {
-        boton.addEventListener("click", () => {
-            listaBotonesDibujo.forEach(boton => {
-                boton.classList.remove("BtnActive");
+        btnPurple.classList.add("BtnActive");
+        listaBotonesDibujo.forEach(boton => {
+            boton.addEventListener("click", () => {
+                listaBotonesDibujo.forEach(boton => {
+                    boton.classList.remove("BtnActive");
+                })
+                boton.classList.toggle("BtnActive");
             })
-            boton.classList.toggle("BtnActive");
+        });
+
+
+        // añadir o quitar la cuadrícula y cambiar el icono del botón
+
+        btnCuadricula.addEventListener("click", () => {
+            listaIconosCuadricula.forEach(icono => {
+                icono.classList.toggle("u-displayNone");
+
+            })
+            board.classList.toggle("CuadriculaActiva");
         })
-       });
 
 
-       // añadir o quitar la cuadrícula y cambiar el icono del botón
-
-       btnCuadricula.addEventListener("click", () => {
-        listaIconosCuadricula.forEach(icono => {
-            icono.classList.toggle("u-displayNone");
-           
-        })
-        board.classList.toggle("CuadriculaActiva");
-       })
-
-
-     
     </script>
 </body>
 

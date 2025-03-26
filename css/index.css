@@ -111,13 +111,20 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: start;
+    padding: 80px;
+
  }
  
  .Principal-h1{
-     padding: 80px;
      font-size: 8vw;
      line-height: 90%; 
+ }
+
+ .Principal-txt{
+    font-size: larger;
+    margin-top: 1em;
+    word-break: keep-all;
  }
  
  .Principal-img{
@@ -134,11 +141,12 @@
     background-color: var(--color-4-la-plaza);
     color: var(--bg-primary);
     padding: 10px 20px ;
-    margin-bottom: 1em;
-    font-size: 2rem;
+    margin-left: .5rem;
+    font-size: 1rem;
     border: var(--txt-primary) 1px solid;
-    border-radius: 30px;
+    border-radius: 20px;
     cursor: pointer;
+
  }
  
 
@@ -148,12 +156,15 @@
     width: 100%;
 }
 
+
 .Board{
     height: 80vh;
     margin: 40px;
     background-color: var(--bg-primary);
     border: solid 1px var(--txt-primary);
-  
+    position: block;
+
+    
 }
 
 .CuadriculaActiva{
@@ -163,9 +174,6 @@
 
 
 .Controllers{
-    position: relative;
-    right: 0;
-    bottom: 0;
     width: 100%;
     display: flex;
     gap: 10px;
@@ -177,7 +185,7 @@
     width: 50px;
     height: 50px;
     padding: 10px;
-    background-color: var(--bg-primary);
+    background-color: unset;
     border: solid var(--txt-primary) 1px;
     border-radius: 50%;
 }
