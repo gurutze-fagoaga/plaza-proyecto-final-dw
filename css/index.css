@@ -30,22 +30,6 @@
 
 }
 
-/* utilities */
-
-.u-textoSubrayado{
-    text-decoration: var(--txt-primary) underline;
-    text-decoration-thickness: from-font;
-}
-
-.u-logoFamily{
-    color: var(--color-4-la-plaza);
-    font-family: "Paranoid";
-    font-size: 7vw;
-}
-
-.u-displayNone{
-    display: none;
-}
 
 
 /* estilos comunes*/
@@ -121,6 +105,43 @@
 }
 
 
+/* Titulo */
+
+.Principal{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+ }
+ 
+ .Principal-h1{
+     padding: 80px;
+     font-size: 8vw;
+     line-height: 90%; 
+ }
+ 
+ .Principal-img{
+     position: sticky;
+     top: 0;
+     bottom: 0;
+     width: 100vw;
+ }
+
+ .Principal-btn{
+    position: relative;
+    bottom: 0;
+    width: fit-content;
+    background-color: var(--color-4-la-plaza);
+    color: var(--bg-primary);
+    padding: 10px 20px ;
+    margin-bottom: 1em;
+    font-size: 2rem;
+    border: var(--txt-primary) 1px solid;
+    border-radius: 30px;
+    cursor: pointer;
+ }
+ 
+
 /* estilos del Board*/
 
 .Main{
@@ -130,8 +151,16 @@
 .Board{
     height: 80vh;
     margin: 40px;
-    background-color: antiquewhite;
+    background-color: var(--bg-primary);
+    border: solid 1px var(--txt-primary);
+  
 }
+
+.CuadriculaActiva{
+    background-color: #006d53;
+}
+
+
 
 .Controllers{
     position: relative;
@@ -174,22 +203,6 @@
     border: solid 2px var(--txt-primary);
 }
 
-/*Trazo para la pizarra*/
-
-.Trazo{
-    position: absolute;
-    width: 10px;
-    height: 20px;
-    background-color: var(--color-4-la-plaza); /*cambia segun el botón*/
-    border-radius: 50%;
-    pointer-events: none;
-    transform: translate(-50%, -50%);
- 
-}
-
-.Trazo.Trazo--blue{
-    background-color: var(--color-1-talleres); /*cambia segun el botón*/
-}
 
 
 
@@ -255,4 +268,22 @@ color: var(--bg-primary);
 }
 
 .Galeria-img{
+}
+
+
+/* utilities */
+
+.u-textoSubrayado{
+    text-decoration: var(--txt-primary) underline;
+    text-decoration-thickness: from-font;
+}
+
+.u-logoFamily{
+    color: var(--color-4-la-plaza);
+    font-family: "Paranoid";
+    font-size: 7vw;
+}
+
+.u-displayNone{
+    display: none;
 }

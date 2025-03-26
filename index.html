@@ -35,23 +35,29 @@
 
         <!-- PIZARRA -->
 
-        <div id="Board" class="Board">
+        
+        <section id="Principal" class="Principal">
+            <h1 class="Principal-h1">
+                 La Plaza donde la creatividad se encuentra y crece.
+                 <button id="Principal-btn" class="Principal-btn">Crear</button>
+            </h1>
+        </section>
 
-            <section class="u-displayNone">
-                <h1 class="Principal-h1">
-                    <a href="#" class="u-textoSubrayado">La Plaza</a> donde la creatividad se encuentra y crece.
-                </h1>
-                <button>-></button>
-            </section>
+        <div id="Board" class="Board u-displayNone">
 
             <div class="Controllers">
 
-                <button id="BtnCuadricula" class="Controllers-btn"><img src="./img/icono-cuadricula.svg" alt="Icono cuadrícula"></button>
-                <button id="BtnPurple" class="Controllers-btn Controllers-btn--purple"></button>
-                <button id="BtnYellow" class="Controllers-btn Controllers-btn--yellow"></button>
-                <button id="BtnBlue" class="Controllers-btn Controllers-btn--blue"></button>
-                <button id="BtnGreen" class="Controllers-btn Controllers-btn--green"></button>
-                <button id="BtnBorrar" class="Controllers-btn"> <img src="./img/icono-borrar.svg" alt="Icono borrar"></button>
+                <button id="BtnCuadricula" class="Controllers-btn">
+                    <img id="IconoCuadricula" class="u-displayNone" src="./img/icono-cuadricula.svg" alt="Icono cuadrícula">
+                    <img id="IconoCuadricula" src="./img/icono-liso.svg" alt="Icono sin cuadrícula">
+
+                
+                </button>
+                <button id="BtnPurple" class="Controllers-btn Controllers-btnColor Controllers-btn--purple"></button>
+                <button id="BtnYellow" class="Controllers-btn Controllers-btnColor Controllers-btn--yellow"></button>
+                <button id="BtnBlue" class="Controllers-btn Controllers-btnColor Controllers-btn--blue"></button>
+                <button id="BtnGreen" class="Controllers-btn Controllers-btnColor Controllers-btn--green"></button>
+                <button id="BtnBorrar" class="Controllers-btn "> <img src="./img/icono-borrar.svg" alt="Icono borrar"></button>
                 <button id="BtnDescargar" class="Controllers-btn"><img src="./img/icono-descargar.svg" alt="Icono descargar"></button>
 
             </div>
@@ -140,11 +146,14 @@
 
 
        // PIZARRA
+       const inicio = document.querySelector("#Principal");
+       const btnCrear = document.querySelector("#Principal-btn");
+       
        const board = document.querySelector("#Board");
-
-       const listaDeBotones = board.querySelectorAll(".Controllers-btn");
+       const listaBotonesDibujo = board.querySelectorAll(".Controllers-btnColor");
 
        const btnCuadricula = board.querySelector("#BtnCuadricula");
+       const listaIconosCuadricula = board.querySelectorAll("#IconoCuadricula");
        const btnPurple = board.querySelector("#BtnPurple");
        const btnYellow = board.querySelector("#BtnYellow");
        const btnBlue = board.querySelector("#BtnBlue");
@@ -153,31 +162,34 @@
        const btnDescargar = board.querySelector("#BtnDescargar");
 
 
-       // función para activar los botones
+       btnCrear.addEventListener("click", () => {
+        inicio.style.display="none";
+        board.classList.toggle("u-displayNone");
+
+       })
+       // función para activar los botones de colores
 
        btnPurple.classList.add("BtnActive");
-       listaDeBotones.forEach(boton => {
+       listaBotonesDibujo.forEach(boton => {
         boton.addEventListener("click", () => {
-            listaDeBotones.forEach(boton => {
+            listaBotonesDibujo.forEach(boton => {
                 boton.classList.remove("BtnActive");
             })
             boton.classList.toggle("BtnActive");
         })
        });
 
-       board.addEventListener("click", dibujar);
 
-        function dibujar(e) {
-            const trazo = document.createElement("div");
-            trazo.classList.add("Trazo")
-            trazo.style.left=e.clientX +"px";
-            trazo.style.top=e.clientY + "px";
-            document.body.appendChild(trazo);
+       // añadir o quitar la cuadrícula y cambiar el icono del botón
 
-            btnBlue.addEventListener("click", () => {
-            trazo.classList.add("Trazo--blue");
+       btnCuadricula.addEventListener("click", () => {
+        listaIconosCuadricula.forEach(icono => {
+            icono.classList.toggle("u-displayNone");
+           
         })
-        }
+        board.classList.toggle("CuadriculaActiva");
+       })
+
 
      
     </script>
