@@ -156,13 +156,33 @@
     width: 100%;
 }
 
+.CanvasContainer {
+    width: 90vw;  
+    height: 80vh;  
+    position: absolute; /* Para que el canvas se posicione correctamente dentro del contenedor */
+    top: 0;
+    left: 0;
+    background-color: none;
+}
+
+.Canvas {
+    width: 100%;  /* El canvas ocupa el 100% del ancho del contenedor */
+    height: 100%; /* El canvas ocupa el 100% de la altura del contenedor */
+    border: 1px solid black; /* Para visualizar el canvas */
+    z-index: -1;
+}
 
 .Board{
+    position: relative;
+    width: 90vw;
     height: 80vh;
     margin: 40px;
-    background-color: var(--bg-primary);
+    background:var(--bg-primary);
     border: solid 1px var(--txt-primary);
-    position: block;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    z-index: 1;
 
     
 }
@@ -174,7 +194,6 @@
 
 
 .Controllers{
-    width: 100%;
     display: flex;
     gap: 10px;
     padding: 1em;
@@ -185,9 +204,10 @@
     width: 50px;
     height: 50px;
     padding: 10px;
-    background-color: unset;
+    background-color: var(--bg-primary);
     border: solid var(--txt-primary) 1px;
     border-radius: 50%;
+    cursor: pointer;
 }
 
 .Controllers-btn:hover{
@@ -210,8 +230,6 @@
 .BtnActive{
     border: solid 2px var(--txt-primary);
 }
-
-
 
 
 

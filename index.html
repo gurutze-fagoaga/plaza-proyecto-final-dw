@@ -5,8 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/index.css">
+
 </head>
 
 <body class="Body">
@@ -46,9 +49,10 @@
                 pantalla.
                 <button id="Principal-btn" class="Principal-btn">Crear</button>
             </p>
-            
+
 
         </section>
+
 
         <div id="Board" class="Board u-displayNone">
 
@@ -71,9 +75,21 @@
                 <button id="BtnDescargar" class="Controllers-btn"><img src="./img/icono-descargar.svg"
                         alt="Icono descargar"></button>
 
-            </div>
 
-            <button>Cerrar</button>
+            </div>
+            <div class="Controllers">
+                <button id="BtnCerrar" class="Controllers-btn"><span class="material-symbols-outlined">
+                        close
+                    </span>
+                </button>
+            </div>
+            <div class="CanvasContainer">
+
+                <canvas id="Canvas" class="Canvas">
+
+                </canvas>
+
+            </div>
 
         </div>
 
@@ -164,7 +180,10 @@
         });
 
 
-        // PIZARRA
+        // JS para PIZARRA
+
+        // Variables y constantes
+
         const inicio = document.querySelector("#Principal");
         const btnCrear = document.querySelector("#Principal-btn");
 
@@ -179,13 +198,23 @@
         const btnGreen = board.querySelector("#BtnGreen");
         const btnBorrar = board.querySelector("#BtnBorrar");
         const btnDescargar = board.querySelector("#BtnDescargar");
+        const btnCerrar = board.querySelector("#BtnCerrar");
 
+
+        // abrir y cerrar la pizarra
 
         btnCrear.addEventListener("click", () => {
             inicio.style.display = "none";
             board.classList.toggle("u-displayNone");
 
         })
+
+        btnCerrar.addEventListener("click", () => {
+            inicio.style.display = "block";
+            board.classList.toggle("u-displayNone");
+
+        })
+
         // función para activar los botones de colores
 
         btnPurple.classList.add("BtnActive");
@@ -199,7 +228,7 @@
         });
 
 
-        // añadir o quitar la cuadrícula y cambiar el icono del botón
+        // funciones de los botones
 
         btnCuadricula.addEventListener("click", () => {
             listaIconosCuadricula.forEach(icono => {
@@ -208,6 +237,108 @@
             })
             board.classList.toggle("CuadriculaActiva");
         })
+
+
+
+
+
+
+
+        // CANVAS:
+
+        //Guardar el elemento y el contexto
+        const canvas = document.querySelector("#Canvas");
+        const context = canvas.getContext("2d");
+
+     
+
+        let color = "#874aaf";
+
+        let initialX;
+        let initialY;
+        let correccionX = 0;
+        let correccionY = 0;
+
+        let posicion = canvas.getBoundingClientRect();
+        correccionX = posicion.x;
+        correccionY = posicion.y;
+
+        function resizeCanvas() {
+            canvas.width = canvas.clientWidth;  // Establece el ancho real
+            canvas.height = canvas.clientHeight; // Establece la altura real
+        }
+
+        window.addEventListener('resize', resizeCanvas);
+        resizeCanvas(); // Llama a esta función para ajustar al cargar
+
+        // cambio la variable color:
+
+        
+        btnPurple.addEventListener("click", () => {
+            color = "#874aaf";
+        })
+        btnYellow.addEventListener("click", () => {
+            color = "#f0ff53";
+        })
+        btnBlue.addEventListener("click", () => {
+            color = "#5b93bc";
+        })
+        btnGreen.addEventListener("click", () => {
+            color = "#006d53";
+        })
+
+        // funcion de dibujar
+
+        const dibujar = (cursorX, cursorY) => {
+            context.beginPath();
+            context.moveTo(initialX, initialY);
+            context.lineWidth = 10;
+            context.strokeStyle = color;
+            context.lineCap = "round";
+            context.lineJoin = "round";
+            context.lineTo(cursorX, cursorY);
+            context.stroke();
+
+            initialX = cursorX;
+            initialY = cursorY;
+
+        };
+
+        const mouseDown = (evt) => {
+            evt.preventDefault();
+            if (evt.changedTouches === undefined) {
+                initialX = evt.offsetX;
+                initialY = evt.offsetY;
+            } else {
+                //evita desfase al dibujar
+                initialX = evt.changedTouches[0].pageX - correccionX;
+                initialY = evt.changedTouches[0].pageY - correccionY;
+            }
+            dibujar(initialX, initialY);
+            canvas.addEventListener("mousemove", mouseMoving);
+            canvas.addEventListener('touchmove', mouseMoving);
+        };
+
+        const mouseMoving = (evt) => {
+            evt.preventDefault();
+            if (evt.changedTouches === undefined) {
+                dibujar(evt.offsetX, evt.offsetY);
+            } else {
+                dibujar(evt.changedTouches[0].pageX - correccionX, evt.changedTouches[0].pageY - correccionY);
+            }
+        };
+
+        const mouseUp = () => {
+            canvas.removeEventListener("mousemove", mouseMoving);
+            canvas.removeEventListener("touchmove", mouseMoving);
+        };
+
+        canvas.addEventListener("mousedown", mouseDown);
+        canvas.addEventListener("mouseup", mouseUp);
+
+        //pantallas tactiles
+        canvas.addEventListener('touchstart', mouseDown);
+        canvas.addEventListener('touchend', mouseUp);
 
 
     </script>
