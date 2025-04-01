@@ -1,241 +1,148 @@
-@font-face {
-    font-family: "Paranoid";
-    src: url(../fonts/Paranoid\ Starting\ Demo.ttf) format("truetype");
-}
-@font-face{
-    font-family: "Kanit Bold";
-    src: url(../fonts/Kanit-Bold.ttf) format("truetype");
-
-}
-@font-face{
-    font-family: "Kanit Regular";
-    src: url(../fonts/Kanit-Regular.ttf) format("truetype");
-}
-
-/*Variables*/
-
-:root {
-    --bg-primary: #fbfbf6;
-
-    --color-1-talleres: #5b93bc ;
-    --color-2-coworking: #006d53 ;
-    --color-3-monthly: #f0ff53 ;
-    --color-4-la-plaza: #874aaf ;
-
-    --color-5-destacado: #db6561;
-
-    --txt-primary: #211f1f;
-
-    --box-shadow: 1px 1px 10px #e1e1e1;
-
-}
-
-
-
-/* estilos comunes*/
-
-.Body{
-    font-family: "Kanit Regular";
-    color: var(--txt-primary);
-    background-color: var(--bg-primary);
-    width: 100vw;
-}
-
-
-
-/* estilos del Header */
-
-.Header{
-    flex-direction: row;
-    padding: 2rem;
-
-}
-
-.Header-nav{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.Header-logo{
-    width: 9rem;
-}
-
-.Menu{
-    list-style: none;
-    display: flex;
-}
-
-.Menu-item{
-    text-decoration: none;
-    padding: .2em;
-}
-.Menu-link{
-    margin-inline: .1em;
-    text-decoration: none;
-    padding: .6rem;
-    width: max-content;
-    border-radius: 20px;
-    background-color: var(--bg-primary);
-    border: solid .05em var(--txt-primary);
-    color: var(--txt-primary);
-}
-.Menu-link--Talleres:hover{
-   
-    background-color: var(--color-1-talleres);
-    color: white;
-}
-.Menu-link--espacio:hover{
-    background-color: var(--color-2-coworking);
-    color: white;
-  
-}
-.Menu-link--monthly:hover{
-    background-color: var(--color-3-monthly);
-   
-}
-.Menu-link--contacto:hover{
-    background-color: var(--color-4-la-plaza);
-    color: white;
-   
-}
-
-.Menu-item:hover{
-    transform: scale(1.1);
-}
-
-
 /* Titulo */
 
-.Principal{
+.Principal {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: start;
-    padding: 80px;
+    padding: 3em;
 
- }
- 
- .Principal-h1{
-     font-size: 8vw;
-     line-height: 90%; 
- }
+}
 
- .Principal-txt{
+.Principal-h1 {
+    font-size: 8em;
+    line-height: 90%;
+}
+
+.Principal-txt {
     font-size: larger;
     margin-top: 1em;
     word-break: keep-all;
- }
- 
- .Principal-img{
-     position: sticky;
-     top: 0;
-     bottom: 0;
-     width: 100vw;
- }
+}
 
- .Principal-btn{
+.Principal-img {
+    position: sticky;
+    top: 0;
+    bottom: 0;
+    width: 100vw;
+}
+
+.Principal-btn {
     position: relative;
     bottom: 0;
     width: fit-content;
     background-color: var(--color-4-la-plaza);
     color: var(--bg-primary);
-    padding: 10px 20px ;
+    padding: 10px 20px;
     margin-left: .5rem;
     font-size: 1rem;
     border: var(--txt-primary) 1px solid;
     border-radius: 20px;
     cursor: pointer;
 
- }
- 
+}
+
+.Principal-btn:hover {
+    transform: scale(1.1);
+
+}
+
 
 /* estilos del Board*/
 
-.Main{
+.Main {
     width: 100%;
 }
 
 .CanvasContainer {
-    width: 90vw;  
-    height: 80vh;  
-    position: absolute; /* Para que el canvas se posicione correctamente dentro del contenedor */
+    width: 90vw;
+    height: 80vh;
+    position: absolute;
+    /* Para que el canvas se posicione correctamente dentro del contenedor */
     top: 0;
     left: 0;
     background-color: none;
 }
 
 .Canvas {
-    width: 100%;  /* El canvas ocupa el 100% del ancho del contenedor */
-    height: 100%; /* El canvas ocupa el 100% de la altura del contenedor */
-    border: 1px solid black; /* Para visualizar el canvas */
-    z-index: -1;
+    width: 100%;
+    /* El canvas ocupa el 100% del ancho del contenedor */
+    height: 100%;
+    /* El canvas ocupa el 100% de la altura del contenedor */
+    border: 1px solid black;
+    /* Para visualizar el canvas */
+    z-index: 1;
 }
 
-.Board{
+.Board {
     position: relative;
     width: 90vw;
     height: 80vh;
     margin: 40px;
-    background:var(--bg-primary);
+    background: var(--bg-primary);
     border: solid 1px var(--txt-primary);
     display: flex;
     justify-content: space-between;
     align-items: start;
     z-index: 1;
 
-    
+
 }
 
-.CuadriculaActiva{
+.CuadriculaActiva {
     background-color: #006d53;
 }
 
 
 
-.Controllers{
+.Controllers {
     display: flex;
     gap: 10px;
     padding: 1em;
 }
 
-.Controllers-btn{
+.Controllers-btn {
     z-index: 1;
     width: 50px;
     height: 50px;
     padding: 10px;
     background-color: var(--bg-primary);
-    border: solid var(--txt-primary) 1px;
+    border: 1px solid var(--txt-primary);
     border-radius: 50%;
     cursor: pointer;
 }
 
-.Controllers-btn:hover{
-    border: solid 2px var(--txt-primary);
+.Controllers-btn:hover {
+    border: 3px solid var(--txt-primary);
+    transform: scale(1.1);
 }
 
-.Controllers-btn--purple{
+.Controllers-btn--purple {
     background-color: var(--color-4-la-plaza);
 }
-.Controllers-btn--yellow{
+
+.Controllers-btn--yellow {
     background-color: var(--color-3-monthly);
 }
-.Controllers-btn--blue{
+
+.Controllers-btn--blue {
     background-color: var(--color-1-talleres);
 }
-.Controllers-btn--green{
+
+.Controllers-btn--green {
     background-color: var(--color-2-coworking);
 }
 
-.BtnActive{
-    border: solid 2px var(--txt-primary);
+.BtnActive {
+    border: 3px solid var(--txt-primary);
+    transform: scale(1.1);
 }
 
 
 
 
 /*About*/
-.About{
+.About {
     background-color: var(--color-3-monthly);
     padding: 80px;
     display: flex;
@@ -243,20 +150,25 @@
     flex-direction: column;
 }
 
-.About-question{
+.About-question {
     padding: .4em;
     border-radius: 20px;
     background-color: var(--bg-primary);
     border: solid .05em var(--txt-primary);
     width: fit-content;
     background-color: var(--color-3-monthly);
-}
-.About-question:hover{
-    background-color: var(--color-4-la-plaza);
-    color: var(--bg-primary);
+    cursor: pointer;
 }
 
-.About-content{
+.About-question:hover {
+    background-color: var(--color-4-la-plaza);
+    color: var(--bg-primary);
+    transform: scale(1.1);
+
+
+}
+
+.About-content {
     margin-left: .5em;
     max-height: 0;
     overflow: hidden;
@@ -267,21 +179,22 @@
     max-height: 300px;
 
 }
-.About-item.open .About-question{
+
+.About-item.open .About-question {
     background-color: var(--color-4-la-plaza);
-color: var(--bg-primary);
-}   
+    color: var(--bg-primary);
+}
 
 /* Galería */
 
-.Galeria{
+.Galeria {
     padding: 80px;
 
 }
-.Galeria-title{
 
-}
-.Galeria-content{
+.Galeria-title {}
+
+.Galeria-content {
     width: 100%;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -289,27 +202,25 @@ color: var(--bg-primary);
     gap: 1em;
     justify-content: center;
     object-fit: cover;
-    overflow-x: scroll;
-    
+    overflow-x: hidden;
+
 }
 
-.Galeria-img{
-}
-
+.Galeria-img {}
 
 /* utilities */
 
-.u-textoSubrayado{
+.u-textoSubrayado {
     text-decoration: var(--txt-primary) underline;
     text-decoration-thickness: from-font;
 }
 
-.u-logoFamily{
+.u-logoFamily {
     color: var(--color-4-la-plaza);
     font-family: "Paranoid";
     font-size: 7vw;
 }
 
-.u-displayNone{
+.u-displayNone {
     display: none;
 }

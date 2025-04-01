@@ -1,0 +1,124 @@
+/* Hoja de estilos comunes */
+
+/* Tipografías */
+
+@font-face {
+    font-family: "Paranoid";
+    src: url(../fonts/Paranoid\ Starting\ Demo.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "Kanit Bold";
+    src: url(../fonts/Kanit-Bold.ttf) format("truetype");
+
+}
+
+@font-face {
+    font-family: "Kanit Regular";
+    src: url(../fonts/Kanit-Regular.ttf) format("truetype");
+}
+
+
+/*Variables*/
+
+:root {
+    --bg-primary: #fbfbf6;
+
+    --color-1-talleres: #5b93bc;
+    --color-2-coworking: #006d53;
+    --color-3-monthly: #f0ff53;
+    --color-4-la-plaza: #874aaf;
+
+    --color-5-destacado: #db6561;
+
+    --txt-primary: #211f1f;
+
+    --box-shadow: 1px 1px 10px #e1e1e1;
+}
+
+
+/* body */
+
+.Body {
+    font-family: "Kanit Regular";
+    color: var(--txt-primary);
+    background-color: var(--bg-primary);
+    width: 100vw;
+}
+
+
+
+/* estilos del Header */
+
+.Header {
+    flex-direction: row;
+    padding: 3em;
+
+}
+
+.Header-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Header-logo {
+    width: 9em;
+}
+
+.Menu {
+    list-style: none;
+    display: flex;
+}
+
+.Menu-item {
+    text-decoration: none;
+    padding: .2em;
+}
+
+.Menu-link {
+    margin-inline: .1em;
+    text-decoration: none;
+    padding: .6em;
+    width: max-content;
+    border-radius: 20px;
+    background-color: var(--bg-primary);
+    border: solid .05em var(--txt-primary);
+    color: var(--txt-primary);
+}
+
+.Menu-link--Talleres:hover {
+
+    background-color: var(--color-1-talleres);
+    color: white;
+}
+
+.Menu-link--espacio:hover {
+    background-color: var(--color-2-coworking);
+    color: white;
+
+}
+
+.Menu-link--monthly:hover {
+    background-color: var(--color-3-monthly);
+
+}
+
+.Menu-link--contacto:hover {
+    background-color: var(--color-4-la-plaza);
+    color: white;
+
+}
+
+.Menu-item:hover {
+    transform: scale(1.1);
+}
+
+
+.MenuActivo {
+    transform: scale(1.1);
+}
+
+
+
+
