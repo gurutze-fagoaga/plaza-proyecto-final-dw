@@ -52,7 +52,7 @@
 
 .Header {
     flex-direction: row;
-    padding: 3em;
+    padding: 2em;
 
 }
 
@@ -122,3 +122,20 @@
 
 
 
+/* Tablet */
+
+@media only screen and (min-width: 768px){
+    .Header {
+        padding: 3em;
+    
+    }
+
+}
+
+/*  Desktop  */
+@media only screen and (min-width: 1024px){
+    .Header {
+        padding: 3em;
+    
+    }
+}

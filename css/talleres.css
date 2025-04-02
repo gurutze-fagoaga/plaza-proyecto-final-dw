@@ -1,0 +1,74 @@
+.Contenido{
+    /* background-color: var(--color-1-talleres); */
+    padding: 4em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+}
+
+.Calendario{
+    gap: 2em;
+    width: 100%;
+    text-align: left;
+    /* background-color: var(--color-4-la-plaza); */
+    font-size: medium;
+    line-break: strict;
+    text-align: center;
+    color: var(--color-1-talleres);
+    border-spacing: 1em;
+ 
+    
+
+}
+
+.Calendario-fila{
+ 
+    height: 10em;
+    background-color: var(--bg-primary);
+    border-radius: 20px;
+    padding: 2em;
+   
+    
+
+}
+
+
+
+.Calendario-columna{
+    width: 10em;
+    border-radius: 20px;
+    border: .05em solid var(--color-1-talleres);
+
+ 
+
+}
+
+.Calendario-actividad{
+    display: block;
+    width: max-content;
+    justify-self: center;
+    background-color: var(--color-1-talleres);
+    border-radius: 20px;
+    padding: .8em;
+    color: var(--bg-primary);
+}
+
+.Calendario-actividad--no{
+    background-color: var(--color-5-destacado);
+    transform: rotate(-7deg);
+    border-radius: 40px;
+    padding: 1em;
+}
+
+.Calendario-titulo{
+    height: 3em;
+    font-size: x-large;
+    background-color: var(--bg-primary);
+    border-radius: 20px;
+    
+             border: .05em solid var(--color-1-talleres);
+
+}

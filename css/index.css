@@ -5,12 +5,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: start;
-    padding: 3em;
+    padding: 2em;
 
 }
 
 .Principal-h1 {
-    font-size: 8em;
+    font-size: 3em;
     line-height: 90%;
 }
 
@@ -20,12 +20,6 @@
     word-break: keep-all;
 }
 
-.Principal-img {
-    position: sticky;
-    top: 0;
-    bottom: 0;
-    width: 100vw;
-}
 
 .Principal-btn {
     position: relative;
@@ -51,6 +45,7 @@
 /* estilos del Board*/
 
 .Main {
+    margin-top: 6em;
     width: 100%;
 }
 
@@ -189,7 +184,6 @@
 
 .Galeria {
     padding: 80px;
-
 }
 
 .Galeria-title {}
@@ -224,3 +218,35 @@
 .u-displayNone {
     display: none;
 }
+
+
+/* Media Queries */
+
+@media only screen and (min-width: 768px){
+    .Principal {
+        padding: 3em;
+    
+    }
+
+    .Principal-h1 {
+        font-size: 6em;
+        line-height: 90%;
+    }
+
+}
+
+/*  Desktop  */
+@media only screen and (min-width: 1024px){
+
+    .Principal {
+
+        padding: 3em;
+    
+    }
+
+    .Principal-h1 {
+        font-size: 8em;
+        line-height: 90%;
+    }
+}
+
