@@ -167,7 +167,6 @@ canvas.addEventListener('touchend', mouseUp);
 
 
 // ACORDEON en ABOUT
-
 const listaItems = document.querySelectorAll('.About-item');
 listaItems.forEach(item => {
     item.addEventListener("click", () => {
