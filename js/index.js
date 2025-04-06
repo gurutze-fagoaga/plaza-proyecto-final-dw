@@ -9,7 +9,7 @@ const board = document.querySelector("#Board");
 const listaBotonesDibujo = board.querySelectorAll(".Controllers-btnColor");
 
 const btnCuadricula = board.querySelector("#BtnCuadricula");
-const listaIconosCuadricula = board.querySelectorAll("#IconoCuadricula");
+const listaIconosCuadricula = board.querySelectorAll(".IconoCuadricula");
 const btnPurple = board.querySelector("#BtnPurple");
 const btnYellow = board.querySelector("#BtnYellow");
 const btnBlue = board.querySelector("#BtnBlue");

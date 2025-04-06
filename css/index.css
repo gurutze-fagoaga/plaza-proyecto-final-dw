@@ -1,5 +1,3 @@
-
-
 /* Titulo */
 
 .Principal {
@@ -24,7 +22,6 @@
 
 
 .Principal-btn {
-    z-index: -1;
     position: relative;
     bottom: 0;
     width: fit-content;
@@ -169,7 +166,7 @@
 
 }
 
-.About-icon{
+.About-icon {
     padding: .5em;
     font-size: large;
 }
@@ -197,23 +194,27 @@
 
 .Galeria {
     padding: 80px;
+    width: 100%;
 }
 
 .Galeria-title {}
 
 .Galeria-content {
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-auto-flow: row;
-    gap: 1em;
-    justify-content: center;
-    object-fit: cover;
+    height: 25em;
+    display: flex;
+    gap: 2em;
+    justify-content: start;
     overflow-x: hidden;
 
 }
 
-.Galeria-img {}
+.Galeria-img {
+    object-fit: cover;
+
+
+}
+
+
 
 /* utilities */
 
@@ -224,26 +225,28 @@
 
 /* Media Queries */
 
-@media only screen and (min-width: 768px){
-    .Main{
+@media only screen and (min-width: 768px) {
+    .Main {
         margin-top: 8em;
     }
 
     .Principal {
         padding: 3em;
-    
+
     }
 
     .Principal-h1 {
         font-size: 6em;
         line-height: 90%;
     }
+
     .About-question {
         padding: .8em;
         border-radius: 40px;
         font-size: x-large;
         width: fit-content;
     }
+
     .About {
         padding: 3em;
         gap: 1.5em;
@@ -251,22 +254,22 @@
 
     .Controllers {
         flex-direction: row;
-     
+
     }
 
     .Controllers-btn {
- 
+
         width: 50px;
         height: 50px;
         padding: 10px;
-     
+
     }
 
 }
 
 /*  Desktop  */
-@media only screen and (min-width: 1024px){
-    .Main{
+@media only screen and (min-width: 1024px) {
+    .Main {
         margin-top: 10em;
     }
 
@@ -278,29 +281,39 @@
         font-size: 8em;
         line-height: 90%;
     }
+
     .About-question {
         padding: .8em;
         border-radius: 40px;
         font-size: x-large;
         width: fit-content;
     }
+
     .About {
         padding: 4em;
         gap: 1.5em;
     }
+
     .Controllers {
-flex-direction: row;     
+        flex-direction: row;
     }
 
-    
+
     .Controllers-btn {
- 
+
         width: 50px;
         height: 50px;
         padding: 10px;
-     
+
     }
 
-   
+
+    .Galeria-img:hover {
+        grid-column: span 2;
+        grid-row: span 2;
+    
+    }
+
+
 
 }

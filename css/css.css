@@ -44,6 +44,8 @@
     color: var(--txt-primary);
     background-color: var(--bg-primary);
     width: 100vw;
+
+    overflow-x: hidden;
 }
 
 
@@ -51,6 +53,7 @@
 /* estilos del Header */
 
 .Header {
+    z-index: 2;
     padding: 1em 2em 1em 2em;
     position: fixed;
     top: 0;

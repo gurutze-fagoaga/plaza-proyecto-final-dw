@@ -17,6 +17,8 @@ listaIconosMenu.forEach(icono => {
 
         // ERROR A CORREGIR
         icono.classList.toggle("u-displayNone");  
+
+     
     })
 });
 
@@ -27,3 +29,5 @@ listaBotonesMenu.forEach(boton => {
         boton.classList.add(MenuActivo);
     })
 });
+
+
