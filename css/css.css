@@ -40,7 +40,6 @@
 /* body */
 
 .Body {
-
     font-family: "Kanit Regular";
     color: var(--txt-primary);
     background-color: var(--bg-primary);
@@ -52,12 +51,12 @@
 /* estilos del Header */
 
 .Header {
-    padding: 2em;
+    padding: 1em 2em 1em 2em;
     position: fixed;
     top: 0;
     background-color: var(--bg-primary);
     width: 100%;
-    height: 5em;
+
 }
 
 .Header-nav {
@@ -164,8 +163,8 @@
 
 @media only screen and (min-width: 768px){
     .Header {
-        padding: 3em;
-        height: 8em;
+        padding: 1em 2em 1em 2em;
+        
     
     }
 
@@ -183,8 +182,8 @@
 /*  Desktop  */
 @media only screen and (min-width: 1024px){
     .Header {
-        padding: 5em;
-        height: 10em;
+        padding: 2em 5em 2em 5em;
+        
     
     }
 
