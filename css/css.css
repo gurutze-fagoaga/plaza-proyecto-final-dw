@@ -44,8 +44,6 @@
     color: var(--txt-primary);
     background-color: var(--bg-primary);
     width: 100vw;
-
-    overflow-x: hidden;
 }
 
 
@@ -154,6 +152,85 @@
 .MenuActivo {
     transform: scale(1.1);
 }
+
+/* Footer */
+.Footer{
+    background-color: var(--txt-primary);
+    color: var(--bg-primary);
+    padding: 80px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: space-between;
+    
+}
+
+.Footer-contenido{
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    gap: 8em;
+}
+
+.Footer-form{
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    gap: 1em;
+    flex-wrap: wrap;
+}
+
+.Footer-formInput{
+    padding: 1em;
+    color: var(--bg-primary);
+    background-color: var(--txt-primary);
+    border: 1px solid var(--bg-primary);
+    border-radius: 2em;
+
+
+}
+
+.Footer-formInput--txt{
+    resize: none;
+    width: 20em;
+    height: 10em;
+    overflow: hidden;
+}
+
+.Footer-formInput--btn:hover{
+    background-color: var(--color-4-la-plaza);
+    border: none;
+ 
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.Footer-formInput::placeholder{
+    font-family: "Kanit regular";
+
+
+}
+
+.Footer-direction{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.Footer-rrss{
+    display: flex;
+    gap: 2em;
+    padding: 1em;
+}
+
+.Footer-link{
+
+    text-decoration: none;
+    color: var(--bg-primary);
+}
+
 
 /* utilities */
 

@@ -7,11 +7,12 @@
     <title>Home</title>
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/css.css">
     <link rel="stylesheet" href="./css/index.css">
 
-    
+    <script src="https://kit.fontawesome.com/92ec900005.js" crossorigin="anonymous"></script>
     <script src="./js/js.js" defer></script>
     <script src="./js/index.js" defer></script>
 
@@ -76,8 +77,7 @@
 
 
                 <button id="BtnCuadricula" class="Controllers-btn">
-                    <img class="u-displayNone IconoCuadricula" src="./img/icono-cuadricula.svg"
-                        alt="Icono cuadrícula">
+                    <img class="u-displayNone IconoCuadricula" src="./img/icono-cuadricula.svg" alt="Icono cuadrícula">
                     <img class="IconoCuadricula" src="./img/icono-liso.svg" alt="Icono sin cuadrícula">
 
 
@@ -148,13 +148,13 @@
                 <h3 class="About-question">Me interesa el proyecto. ¿Cómo puedo apoyarlo?</h3>
                 <div class="About-content">
                     <p>
-                        Hay muchas formas de apoyar "La Plaza":  </p>
+                        Hay muchas formas de apoyar "La Plaza": </p>
                     <ul>
                         <li>Participar en los talleres y eventos que organizamos.</li>
                         <li>¿Tienes un conociemiento que quieras compartir? Estaremos encantadas en atender tu
                             sugerencia.</li>
                     </ul>
-                   
+
                 </div>
 
             </div>
@@ -163,9 +163,12 @@
         <!--GALERIA-->
         <section class="Galeria">
             <h2 class="Galeria-title"> This is La Plaza</h2>
-            <div class="Galeria-content">
+            <div id="Galeria-content" class="Galeria-content">
                 <img class="Galeria-img" src="./img/galeria-1.jpg" alt="">
                 <img class="Galeria-img" src="./img/galeria-2.jpg" alt="">
+                <img class="Galeria-img" src="./img/galeria-3.jpeg" alt="">
+                <img class="Galeria-img" src="./img/galeria-4.jpg" alt="">
+                <img class="Galeria-img" src="./img/galeria-5.jpg" alt="">
                 <img class="Galeria-img" src="./img/galeria-3.jpeg" alt="">
                 <img class="Galeria-img" src="./img/galeria-4.jpg" alt="">
                 <img class="Galeria-img" src="./img/galeria-5.jpg" alt="">
@@ -178,7 +181,50 @@
 
     <footer class="Footer">
 
-        <form action="get" class="Footer-formulario"></form>
+
+        <div class="Footer-contenido">
+            <p class="Footer-txt">Para más información acerca de talleres y el espacio creativo o cualquier otra consulta, rellena nuestro formulario de contacto y nos pondremos en contacto contigo.</p>
+
+            <form action="#" class="Footer-form" method="GET">
+
+                <label>
+                    <input class="Footer-formInput" required type="text" name="nombre" placeholder="nombre">
+                </label>
+
+                <label>
+                    <input class="Footer-formInput" required type="Email" name="mail" placeholder="mail">
+                </label>
+
+                <label>
+                    <input class="Footer-formInput" required type="tel" name="tel" placeholder="teléfono">
+                </label>
+                <label>
+                    <select class="Footer-formInput" name="motivo">
+                        <option value="talleres">Talleres</option>
+                        <option selected value="general">Consulta general</option>
+                        <option value="espacio">Espacio creativo</option>
+                    </select>
+                </label>
+
+                <label>
+                    <textarea class="Footer-formInput Footer-formInput--txt" name="consulta" maxlength="200"></textarea>
+                </label>
+
+                <input class="Footer-formInput Footer-formInput--btn" type="submit" value="Enviar">
+            </form>
+        </div>
+
+        
+        <div class="Footer-direction">
+            <span>c/ de San Fermin 61</span>
+                <span>31003 Pamplona</span>
+                <nav class="Footer-rrss">
+                    <a class="Footer-link" href="#" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                    <a class="Footer-link" href="#" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                    <a class="Footer-link" href="#" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
+                </nav>
+
+        </div>
 
     </footer>
 

@@ -175,3 +175,31 @@ listaItems.forEach(item => {
     });
 
 });
+
+
+// GALERÍA
+
+
+const scrollGaleria = document.querySelector("#Galeria-content");
+
+scrollGaleria.addEventListener('wheel', (e) => {
+
+    const posicionFinal = scrollGaleria.scrollLeft + scrollGaleria.clientWidth >= scrollGaleria.scrollWidth;
+    const posicionInicio = scrollGaleria.scrollLeft === 0;
+
+
+    // Si estamos en la posición final o de inicio del scroll de la galería, permitimos el scroll vertical,
+    // y además estamos haciendo scroll arriba o abajo con el mouse cambiando el "e.deltaY" a mayor o menor de su valor inicial 0:
+    if (posicionFinal && e.deltaY > 0 || posicionInicio && e.deltaY < 0) {
+        // no afecta en nada
+        return;
+
+    } else {
+        // Si no estamos al final ni al principio, seguimos con el scroll horizontal
+        e.preventDefault();
+        scrollGaleria.scrollLeft += e.deltaY;
+    }
+
+});
+
+
