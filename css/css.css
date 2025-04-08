@@ -2,14 +2,11 @@
 
 /* Tipografías */
 
-@font-face {
-    font-family: "Paranoid";
-    src: url(../fonts/Paranoid\ Starting\ Demo.ttf) format("truetype");
-}
+
 
 @font-face {
-    font-family: "Kanit Bold";
-    src: url(../fonts/Kanit-Bold.ttf) format("truetype");
+    font-family: "Lato Regular";
+    src: url(../fonts/Lato-Regular.ttf) format("truetype");
 
 }
 
@@ -40,10 +37,14 @@
 /* body */
 
 .Body {
-    font-family: "Kanit Regular";
+    font-family: "Lato Regular";
     color: var(--txt-primary);
     background-color: var(--bg-primary);
     width: 100vw;
+}
+
+.Body h2, .Body h3{
+    font-family: "Kanit Regular";
 }
 
 
@@ -57,6 +58,7 @@
     top: 0;
     background-color: var(--bg-primary);
     width: 100%;
+    font-family: "Kanit Regular";
 
 }
 
@@ -121,7 +123,7 @@
     color: var(--txt-primary);
 }
 
-.Menu-link--Talleres:hover {
+.Menu-link--talleres:hover {
 
     background-color: var(--color-1-talleres);
     color: white;
@@ -149,9 +151,6 @@
 }
 
 
-.MenuActivo {
-    transform: scale(1.1);
-}
 
 /* Footer */
 .Footer{

@@ -15,19 +15,16 @@ listaIconosMenu.forEach(icono => {
     icono.addEventListener("click", () => {
         menu.classList.toggle("desplegado");
 
-        // ERROR A CORREGIR
+        // ERROR A CORREGIR PARA QUE LO CIERRE
         icono.classList.toggle("u-displayNone");  
-
      
+
+    
+
+
     })
 });
 
 
-
-listaBotonesMenu.forEach(boton => {
-    boton.addEventListener("click", () => {
-        boton.classList.add(MenuActivo);
-    })
-});
 
 

@@ -6,19 +6,30 @@
     <title>Document</title>
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/css.css">
+    <link rel="stylesheet" href="./css/monthly.css">
 </head>
 <body class="Body">
-       <!-- HEADER -->
+     <!-- HEADER -->
 
-       <header class="Header">
+     <header class="Header">
         <nav class="Header-nav">
             <a href="./index.html"><img class="Header-logo" src="./img/logo-plaza.svg" alt="Logo La Plaza"></a>
+            <span class="Header-icon material-symbols-outlined">
+                menu
+            </span>
+            <span class="Header-icon u-displayNone material-symbols-outlined">
+                close
+            </span>
             <ul class="Menu">
-                <li class="Menu-item"><a class="Menu-link Menu-link--Talleres" href="./talleres.html">Talleres</a></l>
-                <li class="Menu-item"><a class="Menu-link Menu-link--espacio" href="./espacio.html">Espacio creativo</a>
+                <li id="BtnTalleres" class="Menu-item"><a class="Menu-link Menu-link--talleres"
+                        href="./talleres.html">Talleres</a></li>
+                <li id="BtnEspacio" class="Menu-item"><a class="Menu-link Menu-link--espacio"
+                        href="./espacio.html">Espacio creativo</a>
                 </li>
-                <li class="Menu-item"><a class="Menu-link Menu-link--monthly" href="./monthly.html">Monthly</a></li>
-                <li class="Menu-item"><a class="Menu-link Menu-link--contacto" href="#">Contacto</a></li>
+                <li id="BtnMonthly" class="Menu-item"><a class="Menu-link Menu-link--monthly"
+                        href="./monthly.html">Monthly</a></li>
+                <li id="BtnContacto" class="Menu-item"><a class="Menu-link Menu-link--contacto" href="#">Contacto</a>
+                </li>
             </ul>
         </nav>
 

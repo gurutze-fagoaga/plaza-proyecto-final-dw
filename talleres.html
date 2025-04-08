@@ -3,12 +3,13 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="widspan=device-widspan, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/css.css">
     <link rel="stylesheet" href="./css/talleres.css">
     <script src="./js/js.js" defer></script>
+    <script src="./js/talleres.js" defer></script>
 </head>
 
 <body class="Body">
@@ -18,14 +19,20 @@
     <header class="Header">
         <nav class="Header-nav">
             <a href="./index.html"><img class="Header-logo" src="./img/logo-plaza.svg" alt="Logo La Plaza"></a>
+            <span class="Header-icon material-symbols-outlined">
+                menu
+            </span>
+            <span class="Header-icon u-displayNone material-symbols-outlined">
+                close
+            </span>
             <ul class="Menu">
-                <li id="BtnTalleres" class="Menu-item"><a class="Menu-link Menu-link--Talleres"
-                        href="./talleres.html">Talleres</a></l>
+                <li id="BtnTalleres" class="Menu-item"><a class="Menu-link Menu-link--talleres"
+                        href="./talleres.html">Talleres</a></li>
                 <li id="BtnEspacio" class="Menu-item"><a class="Menu-link Menu-link--espacio"
                         href="./espacio.html">Espacio creativo</a>
                 </li>
-                <li id="BtnMonspanly" class="Menu-item"><a class="Menu-link Menu-link--monspanly"
-                        href="./monspanly.html">Monspanly</a></li>
+                <li id="BtnMonthly" class="Menu-item"><a class="Menu-link Menu-link--monthly"
+                        href="./monthly.html">Monthly</a></li>
                 <li id="BtnContacto" class="Menu-item"><a class="Menu-link Menu-link--contacto" href="#">Contacto</a>
                 </li>
             </ul>
@@ -34,106 +41,137 @@
 
     </header>
 
-    <main class="Contenido">
 
 
-        <nav>
+    <main id="Main" class="Main">
+
+        <nav class="Nav">
+
+            <h2 id="Nav-item" class="Nav-item u-activo">Talleres</h2>
+            <h2 id="Nav-item" class="Nav-item">Calendario</h2>
 
         </nav>
 
-        <section class="Talleres">
-
-        </section>
+        <div class="Contenido">
 
 
-        <div class="Calendario">
+            <section id="Contenido-bloque" class="Talleres Contenido-bloque u-activo">
+
+                <div class="Talleres-grid">
+
+                    <div class="Talleres-card">
+                        <img class="Talleres-cardImg" src="./img/galeria-2.jpg" alt="">
+                        <h3 class="Talleres-cardTitle">Titulo</h3>
+                        <h4 class="Talleres-cardTag">Duracion</h4>
+                        <p class="Talleres-cardDescription">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam rem eaque, sit quo eius voluptatem excepturi, amet culpa quas dolor sunt laborum libero quidem ea, accusantium animi quisquam reiciendis dolorem!</p>
+                    </div>
+                    <div class="Talleres-card">
+                        <img class="Talleres-cardImg" src="./img/galeria-2.jpg" alt="">
+                        <h3 class="Talleres-cardTitle">Titulo</h3>
+                        <h4 class="Talleres-cardTag">Duracion</h4>
+                        <p class="Talleres-cardDescription">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam rem eaque, sit quo eius voluptatem excepturi, amet culpa quas dolor sunt laborum libero quidem ea, accusantium animi quisquam reiciendis dolorem!</p>
+                    </div>
+                    <div class="Talleres-card">
+                        <img class="Talleres-cardImg" src="./img/galeria-2.jpg" alt="">
+                        <h3 class="Talleres-cardTitle">Titulo</h3>
+                        <h4 class="Talleres-cardTag">Duracion</h4>
+                        <p class="Talleres-cardDescription">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam rem eaque, sit quo eius voluptatem excepturi, amet culpa quas dolor sunt laborum libero quidem ea, accusantium animi quisquam reiciendis dolorem!</p>
+                    </div>
+                    <div class="Talleres-card">
+                        <img class="Talleres-cardImg" src="./img/galeria-2.jpg" alt="">
+                        <h3 class="Talleres-cardTitle">Titulo</h3>
+                        <h4 class="Talleres-cardTag">Duracion</h4>
+                        <p class="Talleres-cardDescription">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam rem eaque, sit quo eius voluptatem excepturi, amet culpa quas dolor sunt laborum libero quidem ea, accusantium animi quisquam reiciendis dolorem!</p>
+                    </div>
+                </div>
 
 
-            
-            <div class="Calendario-dia">
-                <span class="Calendario-nombreDia">Lunes</span>
-                <div class="Calendario-section">
-                    <span class="Calendario-hora">10:00-14:00</span>
-                    <span class="Calendario-actividad">Cerámica</span>
-                </div>
-                <div class="Calendario-section">
-                    <span class="Calendario-hora">16:00-20:00</span>
-                    <span class="Calendario-actividad">Cerámica</span>
-                </div>
-            </div>
+            </section>
 
-            
-            <div class="Calendario-dia">
-                <span class="Calendario-nombreDia">Martes</span>
-                <div class="Calendario-section">
-                    <span class="Calendario-hora">10:00-14:00</span>
-                    <span class="Calendario-actividad">Cerámica</span>
-                </div>
-                <div class="Calendario-section">
-                    <span class="Calendario-hora">16:00-20:00</span>
-                    <span class="Calendario-actividad">Cerámica</span>
-                </div>
-            </div>
 
-            
-            <div class="Calendario-dia">
-                <span class="Calendario-nombreDia">Miércoles</span>
-                <div class="Calendario-section">
-                    <span class="Calendario-hora">10:00-14:00</span>
-                    <span class="Calendario-actividad">Cerámica</span>
-                </div>
-                <div class="Calendario-section">
-                    <span class="Calendario-hora">16:00-20:00</span>
-                    <span class="Calendario-actividad">Cerámica</span>
-                </div>
-            </div>
 
-            
-            <div class="Calendario-dia">
-                <span class="Calendario-nombreDia">Jueves</span>
-                <div class="Calendario-section">
-                    <span class="Calendario-hora">10:00-14:00</span>
-                    <span class="Calendario-actividad">Cerámica</span>
-                </div>
-                <div class="Calendario-section">
-                    <span class="Calendario-hora">16:00-20:00</span>
-                    <span class="Calendario-actividad">Cerámica</span>
-                </div>
-            </div>
+            <section id="Contenido-bloque" class="Calendario Contenido-bloque">
 
-            
-            <div class="Calendario-dia">
-                <span class="Calendario-nombreDia">Viernes</span>
-                <div class="Calendario-section">
-                    <span class="Calendario-hora">10:00-14:00</span>
-                    <span class="Calendario-actividad">Cerámica</span>
+                <div class="Calendario-dia">
+                    <span class="Calendario-nombreDia">Lunes</span>
+                    <div class="Calendario-section">
+                        <span class="Calendario-hora">10:00-14:00</span>
+                        <span class="Calendario-actividad">Cerámica</span>
+                    </div>
+                    <div class="Calendario-section">
+                        <span class="Calendario-hora">16:00-20:00</span>
+                        <span class="Calendario-actividad">Cerámica</span>
+                    </div>
                 </div>
-                <div class="Calendario-section">
-                    <span class="Calendario-hora">16:00-20:00</span>
-                    <span class="Calendario-actividad">Cerámica</span>
-                </div>
-            </div>
 
-            
-            <div class="Calendario-dia">
-                <span class="Calendario-nombreDia">Sábado</span>
-                <div class="Calendario-section">
-                    <span class="Calendario-hora">10:00-14:00</span>
-                    <span class="Calendario-actividad">Cerámica</span>
+                <div class="Calendario-dia">
+                    <span class="Calendario-nombreDia">Martes</span>
+                    <div class="Calendario-section">
+                        <span class="Calendario-hora">10:00-14:00</span>
+                        <span class="Calendario-actividad">Cerámica</span>
+                    </div>
+                    <div class="Calendario-section">
+                        <span class="Calendario-hora">16:00-20:00</span>
+                        <span class="Calendario-actividad">Cerámica</span>
+                    </div>
                 </div>
-                <div class="Calendario-section">
-                    <span class="Calendario-hora">16:00-20:00</span>
-                    <span class="Calendario-actividad">Cerámica</span>
-                </div>
-            </div>
 
-            
-            <div class="Calendario-dia">
-                <span class="Calendario-nombreDia">Domingo</span>
-                <div class="Calendario-section">
-                    <span class="Calendario-cerrado">cerrado</span>
+                <div class="Calendario-dia">
+                    <span class="Calendario-nombreDia">Miércoles</span>
+                    <div class="Calendario-section">
+                        <span class="Calendario-hora">10:00-14:00</span>
+                        <span class="Calendario-actividad">Cerámica</span>
+                    </div>
+                    <div class="Calendario-section">
+                        <span class="Calendario-hora">16:00-20:00</span>
+                        <span class="Calendario-actividad">Cerámica</span>
+                    </div>
                 </div>
-            </div>
+
+                <div class="Calendario-dia">
+                    <span class="Calendario-nombreDia">Jueves</span>
+                    <div class="Calendario-section">
+                        <span class="Calendario-hora">10:00-14:00</span>
+                        <span class="Calendario-actividad">Cerámica</span>
+                    </div>
+                    <div class="Calendario-section">
+                        <span class="Calendario-hora">16:00-20:00</span>
+                        <span class="Calendario-actividad">Cerámica</span>
+                    </div>
+                </div>
+
+                <div class="Calendario-dia">
+                    <span class="Calendario-nombreDia">Viernes</span>
+                    <div class="Calendario-section">
+                        <span class="Calendario-hora">10:00-14:00</span>
+                        <span class="Calendario-actividad">Cerámica</span>
+                    </div>
+                    <div class="Calendario-section">
+                        <span class="Calendario-hora">16:00-20:00</span>
+                        <span class="Calendario-actividad">Cerámica</span>
+                    </div>
+                </div>
+
+                <div class="Calendario-dia">
+                    <span class="Calendario-nombreDia">Sábado</span>
+                    <div class="Calendario-section">
+                        <span class="Calendario-hora">10:00-14:00</span>
+                        <span class="Calendario-actividad">Cerámica</span>
+                    </div>
+                    <div class="Calendario-section">
+                        <span class="Calendario-hora">16:00-20:00</span>
+                        <span class="Calendario-actividad">Cerámica</span>
+                    </div>
+                </div>
+
+                <div class="Calendario-dia">
+                    <span class="Calendario-nombreDia">Domingo</span>
+                    <div class="Calendario-section">
+                        <span class="Calendario-cerrado">cerrado</span>
+                    </div>
+                </div>
+
+            </section>
 
         </div>
 

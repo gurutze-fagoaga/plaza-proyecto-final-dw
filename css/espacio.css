@@ -1,0 +1,7 @@
+  /* boton del menu coloreado */ 
+
+  .Menu-link--espacio{
+
+    background-color: var(--color-2-coworking);
+    color: white;
+}
