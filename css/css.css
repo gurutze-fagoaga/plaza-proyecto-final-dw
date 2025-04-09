@@ -156,28 +156,54 @@
 .Footer{
     background-color: var(--txt-primary);
     color: var(--bg-primary);
-    padding: 80px;
+    padding: 80px 80px 10px 80px;
     width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: space-between;
+    
     
 }
 
 .Footer-contenido{
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: start;
     align-items: start;
-    gap: 8em;
+}
+.Footer-direction{
+    margin-top: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    width: 100%;
+
+}
+
+.Footer-rrss{
+    display: flex;
+    gap: 2em;
+    margin-top: 1em;
+   margin-right: 1em;
+}
+
+.Footer-link{
+
+    text-decoration: none;
+    color: var(--bg-primary);
 }
 
 .Footer-form{
     display: flex;
+    flex-direction: column;
     align-items: start;
     justify-content: start;
     gap: 1em;
     flex-wrap: wrap;
+    margin-top: 2em;
+    margin-bottom: 2em;
 }
 
 .Footer-formInput{
@@ -186,6 +212,7 @@
     background-color: var(--txt-primary);
     border: 1px solid var(--bg-primary);
     border-radius: 2em;
+    font-family: "Lato Regular";
 
 
 }
@@ -199,36 +226,27 @@
 
 .Footer-formInput--btn:hover{
     background-color: var(--color-4-la-plaza);
-    border: none;
- 
     cursor: pointer;
-    transform: scale(1.1);
+   
 }
 
-.Footer-formInput::placeholder{
-    font-family: "Kanit regular";
-
-
-}
-
-.Footer-direction{
+.Footer-legal{
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    gap: .5em;
+    margin-top: 2em;
 }
 
-.Footer-rrss{
-    display: flex;
-    gap: 2em;
-    padding: 1em;
-}
-
-.Footer-link{
-
+.Footer-terms{
     text-decoration: none;
     color: var(--bg-primary);
 }
+
+.Footer-copyright{
+    font-size: small;
+    opacity: .5;
+}
+
 
 
 /* utilities */
@@ -256,6 +274,22 @@
         flex-direction: row;
     }
 
+    .Footer-form{
+        margin-top: 4em;
+        display: flex;
+        flex-direction: row;
+        align-items: start;
+        justify-content: start;
+        
+    }
+
+    .Footer-legal{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+
 }
 
 /*  Desktop  */
@@ -265,15 +299,7 @@
         
     
     }
-
-    .Header-icon{
-        display: none;
-    }
-
-    .Menu{
-        display: flex;
-        flex-direction: row;
-    }
+ 
 }
 
    
