@@ -7,23 +7,62 @@
 }
   
   .Main {
-      margin-top: 10em;
+      margin-top: 8em;
       width: 100%;
       display: flex;
       flex-direction: column;
       align-items: center;
+      height: 150vh;
+
+  }
+
+  .Paso{
+    width: 30%;
+    text-align: center;
+    border: 1px solid var(--bg-primary);
+    border-radius: 20px;
+    padding: 3em;
+    cursor: pointer;
+    transition: transform .4s ease;
+    color: var(--bg-primary);
+    text-decoration: none;
+  }
+
+
+
+  .Paso:hover{
+    transform: scale(1.1);
+    
+  }
+
+  .Pasos{
+    background-color: var(--color-1-talleres);
+    width: 100%;
+    display: flex;
+    gap: 4em;
+    padding: 4em;
+    color: var(--bg-primary);
+  }
+
+  .fa-solid{
+    padding: 1.5em;
+    border-radius:30px;
   }
 
   .Nav {
       display: flex;
       gap: 1em;
       margin-bottom: 3em;
+      font-size: small;
+      justify-content: center;
   }
 
   .Nav-item {
       cursor: pointer;
       padding: .6em;
       width: max-content;
+      transition: color .5s ease,
+                transform .5s ease;
 
   }
 
@@ -34,9 +73,10 @@
   }
 
   .Nav-item.u-activo {
-
-      color: var(--color-1-talleres);
+    transform: scale(1.1);
       text-decoration: underline;
+      color: var(--color-1-talleres);
+
 
   }
 
@@ -57,7 +97,6 @@
       padding: 1em;
       position: absolute;
       top: 0;
-
       opacity: 0;
       transition: all .5s ease;
   }

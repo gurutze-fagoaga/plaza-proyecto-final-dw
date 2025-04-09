@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/css.css">
     <link rel="stylesheet" href="./css/talleres.css">
+    <script src="https://kit.fontawesome.com/92ec900005.js" crossorigin="anonymous"></script>
     <script src="./js/js.js" defer></script>
     <script src="./js/talleres.js" defer></script>
 </head>
@@ -45,21 +46,37 @@
 
     <main id="Main" class="Main">
 
-        <div class="InfoTalleres">
-            
-        </div>
+        <section class="Pasos">
 
-        <nav class="Nav">
+            <a href="#Nav" class="Paso">
+                <i class="fa-solid fa-palette"></i>
+                <p>Elige el taller que mejor se adapta a ti. Ofrecemos talleres nuevos cada mes.</p>
+            </a>
+
+            <a href="#Nav" class="Paso">
+                <i class="fa-solid fa-calendar-check"></i>
+                <p>Consulta los horarios de este mes.</p>
+            </a>
+
+            <a href="#Nav" class="Paso">
+                <i class="fa-solid fa-user-check"></i>
+                <p>Haz tu reserva. Se puede reservar una única clase de 4h (X€) o el bono de 4 clases (16h, X€)</p>
+            </a>
+   
+        </section>
+
+        <nav id="Nav" class="Nav">
 
             <h2 id="Nav-item" class="Nav-item u-activo">Talleres</h2>
             <h2 id="Nav-item" class="Nav-item">Calendario</h2>
+            <h2 id="Nav-item" class="Nav-item">Reserva</h2>
 
         </nav>
 
         <div class="Contenido">
 
 
-            <section id="Contenido-bloque" class="Talleres Contenido-bloque u-activo">
+            <section class="Talleres Contenido-bloque u-activo">
 
                 <div class="Talleres-grid">
 
@@ -174,6 +191,10 @@
                         <span class="Calendario-cerrado">cerrado</span>
                     </div>
                 </div>
+
+            </section>
+
+            <section id="Contenido-bloque" class="Reserva Contenido-bloque">
 
             </section>
 
