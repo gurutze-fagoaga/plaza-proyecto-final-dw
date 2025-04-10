@@ -5,3 +5,40 @@
     background-color: var(--color-2-coworking);
     color: white;
 }
+
+.Coworking{
+  padding: 4em;
+  display: grid;
+
+  grid-template-areas: 
+  "titulo . . "
+  "parrafo1 img img"
+  "parrafo2 img img"
+  "parrafo3 parrafo3 parrafo3";
+  gap: 1em;
+}
+
+.Coworking-parrafo--1{
+  grid-area: parrafo1;
+}
+.Coworking-parrafo--2{
+  grid-area: parrafo2;
+}
+.Coworking-parrafo--3{
+  grid-area: parrafo3;
+}
+.Coworking-titulo{
+  grid-area: titulo;
+}
+.Coworking-plano{
+  grid-area: img;
+  width: 50%;
+}
+
+.Coworkers-proyectos{
+  width: 100vw;
+  background-color: var(--color-2-coworking);
+  color: white;
+  padding: 80px;
+
+}
