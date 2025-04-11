@@ -1,7 +1,6 @@
   /* boton del menu coloreado */ 
 
   .Menu-link--espacio{
-
     background-color: var(--color-2-coworking);
     color: white;
 }
@@ -40,5 +39,10 @@
   background-color: var(--color-2-coworking);
   color: white;
   padding: 80px;
+}
 
+.Main-img{
+  width: 100%;
+  height: 60vh;
+  object-fit: cover;
 }

@@ -84,7 +84,8 @@
                         <img class="Talleres-cardImg" src="./img/taller-resina.jpg" alt="">
                         <div class="Talleres-cardInfo">
 
-                            <h3 class="Talleres-cardTitle">Joyería de resina (especial del mes)</h3>
+                            <h3 class="Talleres-cardTitle">Joyería de resina</h3>
+                            <h4 class="Talleres-cardSubtitle">Especial del mes</h4>
                             <h4 class="Talleres-cardTag">Duración del taller: 2h</h4>
                             <h4 class="Talleres-cardTag">Precio: 10€/clase, 35€/4 clases</h4>
                             <p class="Talleres-cardDescription">Vas a aprender a trabajar con resina epoxi: cómo mezclarla, teñirla, verterla en moldes y agregar elementos decorativos como flores, hojas, glitter, perlas…
@@ -112,8 +113,7 @@
                         <img class="Talleres-cardImg" src="./img/taller-bordado.jpg" alt="">
                         <div class="Talleres-cardInfo">
 
-                            <h3 class="Talleres-cardTitle">Bordado
-                            </h3>
+                            <h3 class="Talleres-cardTitle">Bordado</h3>
                             <h4 class="Talleres-cardTag">Duración del taller: 2h</h4>
                             <h4 class="Talleres-cardTag">Precio: 10€/clase, 35€/4 clases</h4>
                             <p class="Talleres-cardDescription">Aprenderás los puntos básicos del bordado y crearás tu propio diseño sobre tela. Podrás elegir entre ilustraciones florales, palabras inspiradoras, bordado libre, o incluso personalizar ropa o accesorios.
@@ -179,20 +179,20 @@
                         <span class="Calendario-actividad">Cerámica</span>
                     </div>
                     <div class="Calendario-section">
-                        <span class="Calendario-hora">16:00-20:00</span>
-                        <span class="Calendario-actividad">Cerámica</span>
+                        <span class="Calendario-hora">18:00-20:00</span>
+                        <span class="Calendario-actividad">Bordado</span>
                     </div>
                 </div>
 
                 <div class="Calendario-dia">
                     <span class="Calendario-nombreDia">Martes</span>
                     <div class="Calendario-section">
-                        <span class="Calendario-hora">10:00-14:00</span>
-                        <span class="Calendario-actividad">Cerámica</span>
+                        <span class="Calendario-hora">12:00-14:00</span>
+                        <span class="Calendario-actividad Calendario-actividad--especial">Joyeria con resina</span>
                     </div>
                     <div class="Calendario-section">
                         <span class="Calendario-hora">16:00-20:00</span>
-                        <span class="Calendario-actividad">Cerámica</span>
+                        <span class="Calendario-actividad">Serigrafía</span>
                     </div>
                 </div>
 
@@ -200,11 +200,11 @@
                     <span class="Calendario-nombreDia">Miércoles</span>
                     <div class="Calendario-section">
                         <span class="Calendario-hora">10:00-14:00</span>
-                        <span class="Calendario-actividad">Cerámica</span>
+                        <span class="Calendario-actividad">Serigrafía</span>
                     </div>
                     <div class="Calendario-section">
-                        <span class="Calendario-hora">16:00-20:00</span>
-                        <span class="Calendario-actividad">Cerámica</span>
+                        <span class="Calendario-hora">18:00-20:00</span>
+                        <span class="Calendario-actividad">Escritura creativa</span>
                     </div>
                 </div>
 
@@ -212,10 +212,10 @@
                     <span class="Calendario-nombreDia">Jueves</span>
                     <div class="Calendario-section">
                         <span class="Calendario-hora">10:00-14:00</span>
-                        <span class="Calendario-actividad">Cerámica</span>
+                        <span class="Calendario-actividad">Encuadernación artesanal</span>
                     </div>
                     <div class="Calendario-section">
-                        <span class="Calendario-hora">16:00-20:00</span>
+                        <span class="Calendario-hora">18:00-20:00</span>
                         <span class="Calendario-actividad">Cerámica</span>
                     </div>
                 </div>
@@ -224,7 +224,7 @@
                     <span class="Calendario-nombreDia">Viernes</span>
                     <div class="Calendario-section">
                         <span class="Calendario-hora">10:00-14:00</span>
-                        <span class="Calendario-actividad">Cerámica</span>
+                        <span class="Calendario-actividad">Serigrafía</span>
                     </div>
                     <div class="Calendario-section">
                         <span class="Calendario-hora">16:00-20:00</span>
@@ -235,12 +235,8 @@
                 <div class="Calendario-dia">
                     <span class="Calendario-nombreDia">Sábado</span>
                     <div class="Calendario-section">
-                        <span class="Calendario-hora">10:00-14:00</span>
-                        <span class="Calendario-actividad">Cerámica</span>
-                    </div>
-                    <div class="Calendario-section">
-                        <span class="Calendario-hora">16:00-20:00</span>
-                        <span class="Calendario-actividad">Cerámica</span>
+                        <span class="Calendario-hora">12:00-14:00</span>
+                        <span class="Calendario-actividad Calendario-actividad--especial">Joyeria con resina</span>
                     </div>
                 </div>
 
@@ -254,6 +250,61 @@
             </section>
 
             <section id="Contenido-bloque" class="Reserva Contenido-bloque">
+                <form action="#" class="Reserva-form" method="GET">
+                    <h3>Selecciona la clase</h3>
+
+                    <label>
+                        <select class="Reserva-formInput" name="clase">
+                            <option value="ceramica">Cerámica</option>
+                            <option value="joyeria-de-resina">Joyería de resina</option>
+                            <option value="bordado">Bordado</option>
+                            <option value="serigrafia">Serigrafía</option>
+                            <option value="escritura-creativa">Escritura creativa</option>
+                            <option value="encuadernacion-artesanal">Encuadernación artesanal</option>
+                        </select>
+                    </label>
+
+                    <!-- Horas para taller de joyería de resina-->
+                    <label>
+                        <select class="Reserva-formInput" name="hora">
+                            <option value="martes-6">Martes 6 de mayo, 12:00-14:00</option>
+                            <option value="sabado-3">Sábado 3 de mayo, 12:00-14:00</option>
+                            <option value="sabado-10">Sábado 10 de mayo, 12:00-14:00</option>
+                            <option value="martes-13">Martes 13 de mayo, 12:00-14:00</option>
+                        </select>
+                    </label>
+
+                    <h3>Tus datos</h3>
+
+                    <label>
+                        <input class="Reserva-formInput" required type="text" name="nombre" placeholder="nombre">
+                    </label>
+    
+                    <label>
+                        <input class="Reserva-formInput" required type="text" name="apellido" placeholder="apellido">
+                    </label>
+                    <label>
+                        <input class="Reserva-formInput" required type="mail" name="mail" placeholder="mail">
+                    </label>
+                    <label>
+                        <input class="Reserva-formInput" required type="tel" name="tel" placeholder="teléfono">
+                    </label>
+             
+
+                    <label>
+                        <input class="Reserva-formInput" required type="dni" name="dni" placeholder="DNI">
+                    </label>
+
+                    <label>
+                        <input class="Reserva-formInput" required type="tarjeta" name="tarjeta" placeholder="nº de tarjeta bancaria">
+                    </label>
+
+                
+
+                    <input class="Reserva-formInput Reserva-formInput--btn" type="submit" value="Reservar">
+                    
+                </form>
+                <div class="Reserva-confirmacion"></div>
 
             </section>
 
@@ -263,7 +314,7 @@
 
      <!-- FOOTER -->
 
-     <footer class="Footer">
+     <!-- <footer class="Footer">
 
         <h2 class="Footer-title"> Contacto </h2>
         <div class="Footer-direction">
@@ -319,7 +370,7 @@
 
 
 
-    </footer>
+    </footer> -->
 
 
 
