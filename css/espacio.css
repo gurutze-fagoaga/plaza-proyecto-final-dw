@@ -6,15 +6,18 @@
 }
 
 .Coworking{
-  padding: 4em;
+  padding: 5em;
+  margin-left: 1em;
+  margin-right: 2em;
   display: grid;
 
   grid-template-areas: 
-  "titulo . . "
-  "parrafo1 img img"
-  "parrafo2 img img"
-  "parrafo3 parrafo3 parrafo3";
-  gap: 1em;
+  "titulo img img "
+  "parrafo1 . ."
+  "parrafo2 . ."
+  "parrafo3 . .";
+  gap: 2em;
+  justify-content: end;
 }
 
 .Coworking-parrafo--1{
@@ -29,20 +32,13 @@
 .Coworking-titulo{
   grid-area: titulo;
 }
-.Coworking-plano{
+.Coworking-img{
   grid-area: img;
-  width: 50%;
+  grid-row: span 4;
 }
 
-.Coworkers-proyectos{
+.Espacio{
   width: 100vw;
   background-color: var(--color-2-coworking);
-  color: white;
-  padding: 80px;
 }
 
-.Main-img{
-  width: 100%;
-  height: 60vh;
-  object-fit: cover;
-}
