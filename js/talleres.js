@@ -24,7 +24,7 @@ listaTitulos.forEach((titulo, i) => {
 
 listaPasos.forEach((paso, i) => {
     paso.addEventListener("click", () => {
-   
+
         // desactivar el botón que estaba activo
         listaTitulos.forEach((titulo, i) => {
             titulo.classList.remove("u-activo");
@@ -36,6 +36,24 @@ listaPasos.forEach((paso, i) => {
 
     })
 })
+
+const selectorDeClase = document.querySelector("#SelectClase");
+const listaDeTalleres = document.querySelectorAll("#Clase");
+const listaDeFechas = document.querySelectorAll("#Fecha");
+
+
+selectorDeClase.addEventListener("click", () => {
+
+    listaDeTalleres.forEach((taller, id) => {
+        listaDeFechas.forEach((fecha, idx) => {
+            listaDeFechas[id].clsssList.remove("u-displayNone");
+        })
+    })
+
+})
+
+
+
 
 
 
