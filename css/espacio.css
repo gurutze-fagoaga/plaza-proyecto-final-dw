@@ -5,40 +5,67 @@
     color: white;
 }
 
+.Main{
+  align-items: start;
+}
+
 .Coworking{
-  padding: 5em;
+  padding: 1em 3em 5em 3em;
   margin-left: 1em;
   margin-right: 2em;
-  display: grid;
+}
 
-  grid-template-areas: 
-  "titulo img img "
-  "parrafo1 . ."
-  "parrafo2 . ."
-  "parrafo3 . .";
+.Coworking-content{
+
+  display: flex;
+  flex-direction: column;
   gap: 2em;
-  justify-content: end;
+
 }
 
-.Coworking-parrafo--1{
-  grid-area: parrafo1;
+.Coworking-parrafo{
+  margin-top: 1em;
 }
-.Coworking-parrafo--2{
-  grid-area: parrafo2;
-}
-.Coworking-parrafo--3{
-  grid-area: parrafo3;
-}
-.Coworking-titulo{
-  grid-area: titulo;
-}
+
 .Coworking-img{
-  grid-area: img;
-  grid-row: span 4;
+  width: 100%;
 }
 
+.Coworking-link{
+  text-decoration: none;
+  color: var(--color-2-coworking);
+
+}
 .Espacio{
   width: 100vw;
   background-color: var(--color-2-coworking);
 }
+
+
+
+  /* MQs */
+
+  /*Tablet y desktop */
+  @media only screen and (min-width: 768px) {
+
+    .Coworking{
+      padding: 1em 5em 5em 5em;
+    }
+
+    .Coworking-content{
+
+      flex-direction: row;
+    
+    }
+
+    .Coworking-img{
+      width: 50%;
+      object-fit: cover;
+    }
+
+
+  }
+  
+
+  
 

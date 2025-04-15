@@ -40,6 +40,7 @@
 
 html{
     scroll-behavior: smooth;
+    
 
 }
 
@@ -52,6 +53,7 @@ html{
     color: var(--txt-primary);
     background-color: var(--bg-primary);
     width: 100vw;
+    position: relative;
 
 }
 
@@ -86,6 +88,11 @@ html{
 
 .Header-icon{
     display: flex;
+    z-index: 2;
+}
+
+.Header-icon.desplegado{
+    color: var(--bg-primary);
 }
 
 .Menu {

@@ -12,11 +12,11 @@ listaTitulos.forEach((titulo, i) => {
         // desactivar el botón que estaba activo
         listaTitulos.forEach((titulo, i) => {
             titulo.classList.remove("u-activo");
-            listaBloques[i].classList.remove("u-activo");
+            listaBloques[i].classList.add("u-displayNone");
         })
         // activar el botón al que se le ha hecho click
         listaTitulos[i].classList.add("u-activo");
-        listaBloques[i].classList.add("u-activo");
+        listaBloques[i].classList.remove("u-displayNone");
 
     })
 })
@@ -28,11 +28,11 @@ listaPasos.forEach((paso, i) => {
         // desactivar el botón que estaba activo
         listaTitulos.forEach((titulo, i) => {
             titulo.classList.remove("u-activo");
-            listaBloques[i].classList.remove("u-activo");
+            listaBloques[i].classList.add("u-displayNone");
         })
         // activar el botón al que se le ha hecho click
         listaTitulos[i].classList.add("u-activo");
-        listaBloques[i].classList.add("u-activo");
+        listaBloques[i].classList.remove("u-displayNone");
 
     })
 })
