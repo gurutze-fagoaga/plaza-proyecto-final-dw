@@ -37,8 +37,23 @@
 
 }
 .Espacio{
+  color: var(--bg-primary);
+  padding: 3em;
   width: 100vw;
   background-color: var(--color-2-coworking);
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  justify-content: center;
+  align-items: start;
+}
+.Espacio-leyenda{
+  margin-left: 1em;
+}
+.Espacio-plano{
+  margin-top: 3em;
+  align-self: center;
+  width: 100%;
 }
 
 
@@ -63,7 +78,14 @@
       object-fit: cover;
     }
 
+    .Espacio{
+      padding: 5em;
+    }
 
+    .Espacio-plano{
+      width: 80%;
+
+    }
   }
   
 
