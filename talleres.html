@@ -275,88 +275,44 @@
 
             <section id="Contenido-bloque" class="Reserva Contenido-bloque u-displayNone">
                 <form action="#" class="Reserva-form" method="GET">
+
                     <h3>Selecciona la clase</h3>
-                    <!-- Seleccionar la clase -->
-                    <label>
-                        <select id="SelectClase" class="Reserva-formInput" name="clase">
-                         
-                            <option id="Clase" value="ceramica">Cerámica</option>
-                            <option id="Clase" value="joyeria-de-resina">Joyería de resina</option>
-                            <option id="Clase" value="bordado">Bordado</option>
-                            <option id="Clase" value="serigrafia">Serigrafía</option>
-                            <option id="Clase" value="escritura-creativa">Escritura creativa</option>
-                            <option id="Clase" value="encuadernacion-artesanal">Encuadernación artesanal</option>
-                        </select>
-                    </label>
 
-                    
+                    <div id="Reserva-formClase">
+                        <!-- Seleccionar la clase -->
 
-                    <!-- Horas para taller de cerámica-->
+                        <label>
+                            <select id="SelectClase" class="Reserva-formInput" name="clase">
+                                <option id="Clase" value="ceramica">Cerámica</option>
+                                <option id="Clase" value="joyeria">Joyería de resina</option>
+                                <option id="Clase" value="bordado">Bordado</option>
+                                <option id="Clase" value="serigrafia">Serigrafía</option>
+                                <option id="Clase" value="escritura">Escritura creativa</option>
+                                <option id="Clase" value="encuadernacion">Encuadernación artesanal</option>
+                            </select>
+                        </label>
 
-                    <label >
-                        <select id="Fecha" class="u-displayNone Reserva-formInput" name="hora">
-                            <option value="martes-6">Lunes 5 de mayo, 10:00-14:00</option>
-                            <option value="sabado-3">Jueves 8 de mayo, 18:00-20:00</option>
-                            <option value="sabado-10">Viernes 9 de mayo, 10:00-14:00</option>
-                            <option value="martes-13">Lunes 12 de mayo, 10:00-14:00</option>
-                        </select>
-                    </label>
 
-                    <!-- Horas para taller de joyería de resina-->
 
-                    <label >
-                        <select id="Fecha" class="u-displayNone Reserva-formInput" name="hora">
-                            <option value="martes-6">Martes 6 de mayo, 12:00-14:00</option>
-                            <option value="sabado-3">Sábado 3 de mayo, 12:00-14:00</option>
-                            <option value="sabado-10">Sábado 10 de mayo, 12:00-14:00</option>
-                            <option value="martes-13">Martes 13 de mayo, 12:00-14:00</option>
-                        </select>
-                    </label>
-                    <!-- Horas para taller de bordado-->
+                        <!-- Seleccionar hora -->
 
-                    <label >
-                        <select id="Fecha" class="u-displayNone Reserva-formInput" name="hora">
-                            <option value="martes-6">Martes 6 de mayo, 12:00-14:00</option>
-                            <option value="sabado-3">Sábado 3 de mayo, 12:00-14:00</option>
-                            <option value="sabado-10">Sábado 10 de mayo, 12:00-14:00</option>
-                            <option value="martes-13">Martes 13 de mayo, 12:00-14:00</option>
-                        </select>
-                    </label>
+                        <label>
+                            <select id="Fecha" class="u-displayNone Reserva-formInput" name="hora">
+                                <!--Aqui se crearán las opciones segun la opcion elegida en el select anterior-->
+                            </select>
+                        </label>
 
-                    <!-- Horas para taller de serigrafía-->
 
-                    <label >
-                        <select id="Fecha" class="u-displayNone Reserva-formInput" name="hora">
-                            <option value="martes-6">Martes 6 de mayo, 12:00-14:00</option>
-                            <option value="sabado-3">Sábado 3 de mayo, 12:00-14:00</option>
-                            <option value="sabado-10">Sábado 10 de mayo, 12:00-14:00</option>
-                            <option value="martes-13">Martes 13 de mayo, 12:00-14:00</option>
-                        </select>
-                    </label>
+                        <!--Aquí se añadirán más clases que se quieran reservar-->
 
-                    <!-- Horas para taller de serigrafía-->
+                    </div>
 
-                    <label >
-                        <select id="Fecha" class="u-displayNone Reserva-formInput" name="hora">
-                            <option value="martes-6">Martes 6 de mayo, 12:00-14:00</option>
-                            <option value="sabado-3">Sábado 3 de mayo, 12:00-14:00</option>
-                            <option value="sabado-10">Sábado 10 de mayo, 12:00-14:00</option>
-                            <option value="martes-13">Martes 13 de mayo, 12:00-14:00</option>
-                        </select>
-                    </label>
-
-                    <!-- Horas para taller de serigrafía-->
-
-                    <label >
-                        <select id="Fecha" class="u-displayNone Reserva-formInput" name="hora">
-                            <option value="martes-6">Martes 6 de mayo, 12:00-14:00</option>
-                            <option value="sabado-3">Sábado 3 de mayo, 12:00-14:00</option>
-                            <option value="sabado-10">Sábado 10 de mayo, 12:00-14:00</option>
-                            <option value="martes-13">Martes 13 de mayo, 12:00-14:00</option>
-                        </select>
-                    </label>
+                    <!--Botón para añadir más clases a la reserva-->
 
                     <button id="Btn-añadir">Añadir otra clase</button>
+
+
+                    
 
                     <h3>Tus datos</h3>
 
