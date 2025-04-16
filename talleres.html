@@ -276,7 +276,7 @@
             <section id="Contenido-bloque" class="Reserva Contenido-bloque u-displayNone">
                 <form action="#" class="Reserva-form" method="GET">
 
-                    <h3>Selecciona la clase</h3>
+                    <h3>1. Selecciona la clase</h3>
 
                     <div id="Reserva-formClase">
                         <!-- Seleccionar la clase -->
@@ -302,19 +302,19 @@
                             </select>
                         </label>
 
+                    </div>
 
                         <!--Aquí se añadirán más clases que se quieran reservar-->
 
-                    </div>
 
                     <!--Botón para añadir más clases a la reserva-->
 
-                    <button id="Btn-añadir">Añadir otra clase</button>
+                    <button id="Btn-añadir" class="u-displayNone Reserva-formInput Reserva-formInput--btn">Añadir otra reserva</button>
 
 
                     
 
-                    <h3>Tus datos</h3>
+                    <h3>2. Rellena tus datos</h3>
 
                     <label>
                         <input class="Reserva-formInput" required type="text" name="nombre" placeholder="nombre">
@@ -334,6 +334,10 @@
                     <label>
                         <input class="Reserva-formInput" required type="dni" name="dni" placeholder="DNI">
                     </label>
+
+
+                    <h3>3. Pago</h3>
+                    <h4><!--Aqui aparecerá el total a pagar--></h4>
 
                     <label>
                         <input class="Reserva-formInput" required type="tarjeta" name="tarjeta"

@@ -39,11 +39,11 @@ listaPasos.forEach((paso, i) => {
 
 
 const contenedorReserva = document.querySelector("#Reserva-formClase");
-const selectorFecha = document.querySelector("#Fecha");
-const selectorClase = document.querySelector("#SelectClase");
-
+const listaSelectoresFecha = document.querySelectorAll("#Fecha");
+const listaSelectoresClase = document.querySelectorAll("#SelectClase");
+const añadirBtn = document.querySelector("#Btn-añadir");
 const listaDeHoras = {
-    ceramica: ["Lunes 5 de mayo, 10:00-14:00", "Jueves 8 de mayo, 18:00-20:00"],
+    ceramica: ["Lunes 5 de mayo, 10:00-14:00", "Jueves 8 de mayo, 18:00-20:00", "3", "4"],
     joyeria: ["Lunes 5 de mayo, 10:00-14:00", "Jueves 8 de mayo, 18:00-20:00"],
     bordado: ["Lunes 5 de mayo, 10:00-14:00", "Jueves 8 de mayo, 18:00-20:00"],
     serigrafia: ["Lunes 5 de mayo, 10:00-14:00", "Jueves 8 de mayo, 18:00-20:00"],
@@ -51,35 +51,74 @@ const listaDeHoras = {
     encuadernacion: ["Lunes 5 de mayo, 10:00-14:00", "Jueves 8 de mayo, 18:00-20:00"]
 }
 
+let claseSeleccionada = "none";
 
-let claseSeleccionada = "none"
 
-// en cada click en el selector actualizará el valor de lo seleccionado:
-
-selectorClase.addEventListener("click", () => {
-
-    let claseSeleccionada = selectorClase.value
-    console.log(claseSeleccionada);
-
-    
-    selectorFecha.classList.remove("u-displayNone");
-
-})
 
 // funcion para añadir las opciones segun el valor del selector de clase
 
-console.log(selectorClase[1].value);
+function cargarHorarios(clase) {
+    listaSelectoresFecha.forEach(selectorFecha => {
+        // se muestra el input de hora
+        selectorFecha.classList.remove("u-displayNone");
+        // se muestra el botón de añadir más
+        añadirBtn.classList.remove("u-displayNone");
+        
+            // limpiar las opciones anteriores
+            selectorFecha.innerHTML = "";
 
-console.log(listaDeHoras.ceramica[1]);
+            let horario = listaDeHoras[clase];
+        
+            for (let i = 0; i < horario.length; i++) {
+                selectorFecha.innerHTML += `
+                        <option id="Hora" value="${horario[i]}">${horario[i]}</option>
+                    `;
+            }
+    })
 
-
-for(i=0 ; i< listaDeHoras.ceramica.length; i++){
-
-    selectorFecha.innerHTML+= `
-          <option id="Hora" value="${listaDeHoras.ceramica[i]}">${listaDeHoras.ceramica[i]}</option>
-    `
 }
 
+// en cada click en el selector actualizará el valor de lo seleccionado:
+listaSelectoresClase.forEach(selectorClase => {
+
+    selectorClase.addEventListener("click", () => {
+    
+        let claseSeleccionada = selectorClase.value
+        console.log("Has seleccionado la clase " + claseSeleccionada);
+        cargarHorarios(claseSeleccionada);
+    
+    })
+})
+
+
+// añadir más reservas(el codigo de arriba tiene que ir con selectorAll)
+
+añadirBtn.addEventListener("click", añadirClase);
+function añadirClase() {
+
+    contenedorReserva.innerHTML+= `
+
+    <div id="Reserva-formClase">
+   
+        <label>
+            <select id="SelectClase" class="Reserva-formInput" name="clase">
+                <option id="Clase" value="ceramica">Cerámica</option>
+                <option id="Clase" value="joyeria">Joyería de resina</option>
+                <option id="Clase" value="bordado">Bordado</option>
+                <option id="Clase" value="serigrafia">Serigrafía</option>
+                <option id="Clase" value="escritura">Escritura creativa</option>
+                <option id="Clase" value="encuadernacion">Encuadernación artesanal</option>
+            </select>
+        </label>
+
+        <label>
+            <select id="Fecha" class="u-displayNone Reserva-formInput" name="hora">
+            </select>
+    </label>
+    </div>
+    `
+
+}
 
 
 

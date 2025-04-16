@@ -226,9 +226,26 @@
   }
 
 
+/* Formulario de reserva */
 
+.Reserva-formInput{
+    border: 1px solid var(--txt-primary);
+    border-radius: 20px;
+    padding: .5em;
+    margin-top: 1em;
+    margin-right: 1em;
 
+}
 
+.Reserva-formInput--btn{
+    background-color: var(--color-1-talleres);
+    color: var(--bg-primary);
+    cursor: pointer;
+}
+
+.Reserva-formInput--btn:hover{
+    transform: scale(1.1);
+}
   /* Media Queries */
 
 
