@@ -39,8 +39,7 @@ listaPasos.forEach((paso, i) => {
 
 
 const contenedorReserva = document.querySelector("#Reserva-formClase");
-const listaSelectoresFecha = document.querySelectorAll("#Fecha");
-const listaSelectoresClase = document.querySelectorAll("#SelectClase");
+
 const añadirBtn = document.querySelector("#Btn-añadir");
 const listaDeHoras = {
     ceramica: ["Lunes 5 de mayo, 10:00-14:00", "Jueves 8 de mayo, 18:00-20:00", "3", "4"],
@@ -51,57 +50,19 @@ const listaDeHoras = {
     encuadernacion: ["Lunes 5 de mayo, 10:00-14:00", "Jueves 8 de mayo, 18:00-20:00"]
 }
 
-let claseSeleccionada = "none";
 
 
-
-// funcion para añadir las opciones segun el valor del selector de clase
-
-function cargarHorarios(clase) {
-    listaSelectoresFecha.forEach(selectorFecha => {
-        // se muestra el input de hora
-        selectorFecha.classList.remove("u-displayNone");
-        // se muestra el botón de añadir más
-        añadirBtn.classList.remove("u-displayNone");
-        
-            // limpiar las opciones anteriores
-            selectorFecha.innerHTML = "";
-
-            let horario = listaDeHoras[clase];
-        
-            for (let i = 0; i < horario.length; i++) {
-                selectorFecha.innerHTML += `
-                        <option id="Hora" value="${horario[i]}">${horario[i]}</option>
-                    `;
-            }
-    })
-
-}
-
-// en cada click en el selector actualizará el valor de lo seleccionado:
-listaSelectoresClase.forEach(selectorClase => {
-
-    selectorClase.addEventListener("click", () => {
-    
-        let claseSeleccionada = selectorClase.value
-        console.log("Has seleccionado la clase " + claseSeleccionada);
-        cargarHorarios(claseSeleccionada);
-    
-    })
-})
-
-
-// añadir más reservas(el codigo de arriba tiene que ir con selectorAll)
+// función de añadir otra clase más
 
 añadirBtn.addEventListener("click", añadirClase);
 function añadirClase() {
 
-    contenedorReserva.innerHTML+= `
+    contenedorReserva.innerHTML += `
 
     <div id="Reserva-formClase">
    
         <label>
-            <select id="SelectClase" class="Reserva-formInput" name="clase">
+            <select class="SelectClase Reserva-formInput" name="clase">
                 <option id="Clase" value="ceramica">Cerámica</option>
                 <option id="Clase" value="joyeria">Joyería de resina</option>
                 <option id="Clase" value="bordado">Bordado</option>
@@ -112,13 +73,57 @@ function añadirClase() {
         </label>
 
         <label>
-            <select id="Fecha" class="u-displayNone Reserva-formInput" name="hora">
+            <select class="Fecha u-displayNone Reserva-formInput" name="hora">
             </select>
     </label>
     </div>
     `
+    // actualizar las listas cuando añada un nuevo select
+    actualizarEventos()
 
 }
 
 
+// actualizar las listas 
+function mostrarOpciones() {
 
+    // actualiza las listas, para que cada vez que añadamos un selector lo añada a la lista
+
+    const listaSelectoresFecha = document.querySelectorAll(".Fecha");
+    const listaSelectoresClase = document.querySelectorAll(".SelectClase");
+
+    // en cada click en el selector de clase, actualizará las opciones de su selector de fecha
+
+    listaSelectoresClase.forEach((selectorClase, id) => {
+
+        // EventListener de "change"
+
+        selectorClase.addEventListener("change", () => {
+
+            let claseSeleccionada = selectorClase.value
+            console.log("Has seleccionado la clase " + claseSeleccionada);
+
+            // se muestra el input de hora
+            listaSelectoresFecha[id].classList.remove("u-displayNone");
+            // se muestra el botón de añadir más
+            añadirBtn.classList.remove("u-displayNone");
+
+            // limpiar las opciones anteriores
+            listaSelectoresFecha[id].innerHTML = "";
+
+            let horario = listaDeHoras[claseSeleccionada];
+
+            for (let i = 0; i < horario.length; i++) {
+                listaSelectoresFecha[id].innerHTML += `
+                            <option id="Hora" value="${horario[i]}">${horario[i]}</option>
+                        `;
+            }
+
+        })
+
+    })
+
+}
+
+
+actualizarEventos();
