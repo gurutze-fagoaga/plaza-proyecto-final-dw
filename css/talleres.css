@@ -227,7 +227,9 @@
 
 
 /* Formulario de reserva */
-
+.Reserva-formSubtitle{
+    margin: .3em 0 .3em 0;
+}
 .Reserva-formInput{
     border: 1px solid var(--txt-primary);
     border-radius: 20px;
@@ -236,7 +238,17 @@
     margin-right: 1em;
 
 }
+.Reserva-desglose{
+    color: var(--color-5-destacado);
+    font-size: medium;
+    margin-top: 1em;
 
+}
+.Reserva-total{
+    margin-top: .5em;
+    color: var(--color-5-destacado);
+    font-size: large;
+}
 .Reserva-formInput--btn{
     background-color: var(--color-1-talleres);
     color: var(--bg-primary);

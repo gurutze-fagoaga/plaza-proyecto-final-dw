@@ -179,7 +179,7 @@ function actualizarPrecio() {
     console.log("El precio total es: " + precioTotal);
     // los imprime en cada contenedor
     desglosePrecio.innerHTML = `${cantTalleres} x ${precioTaller},00€`
-    contenedorPrecioTotal.innerHTML = `Total: ${precioTotal},00€`
+    contenedorPrecioTotal.innerHTML = `Total a pagar: ${precioTotal},00€`
 }
 
 
