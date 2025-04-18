@@ -246,6 +246,11 @@
 .Reserva-formInput--btn:hover{
     transform: scale(1.1);
 }
+
+.Reserva-confirmacion{
+    display: flex;
+    flex-direction: column;
+}
   /* Media Queries */
 
 

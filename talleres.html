@@ -278,7 +278,7 @@
 
                     <h3>1. Selecciona la clase</h3>
 
-                    <div id="Reserva-formClase">
+                    <div id="Reserva-formClase" class="Reserva-formClase">
                         <!-- Seleccionar la clase -->
 
                         <label>
@@ -302,17 +302,26 @@
                             </select>
                         </label>
 
+                        <button id="Btn-quitar"
+                            class="u-displayNone Btn-quitar Reserva-formInput Reserva-formInput--btn">Eliminar
+                            fila</button>
+
                     </div>
 
-                        <!--Aquí se añadirán más clases que se quieran reservar-->
+                    <button id="Btn-quitar"
+                        class="u-displayNone Btn-quitar Reserva-formInput Reserva-formInput--btn">Eliminar fila</button>
+
+
+                    <!--Aquí se añadirán más clases que se quieran reservar-->
 
 
                     <!--Botón para añadir más clases a la reserva-->
 
-                    <button id="Btn-añadir" class="u-displayNone Reserva-formInput Reserva-formInput--btn">Añadir otra reserva</button>
+                    <button id="Btn-añadir" class="u-displayNone Reserva-formInput Reserva-formInput--btn">Añadir otra
+                        reserva</button>
 
 
-                    
+
 
                     <h3>2. Rellena tus datos</h3>
 
@@ -336,7 +345,21 @@
                     </label>
 
 
-                    <h3>3. Pago</h3>
+                    <div id="Reserva-confirmacion" class="Reserva-confirmacion">
+                        <h3>3. Confirmación</h3>
+                        <!--Aqui irá lo que ha reservado + Precio a pagar-->
+                        <div class="Reserva-confirmacionClase">
+                            <span>Clase de cerámica, 3 de mayo, 10:00</span>
+                            <span>Clase de cerámica, 3 de mayo, 10:00</span>
+                        </div>
+                        <span>3 x 16,00</span>
+                        <span>48€</span>
+
+
+                    </div>
+
+
+                    <h3>4. Pago</h3>
                     <h4><!--Aqui aparecerá el total a pagar--></h4>
 
                     <label>
@@ -345,11 +368,9 @@
                     </label>
 
 
-
                     <input class="Reserva-formInput Reserva-formInput--btn" type="submit" value="Reservar">
 
                 </form>
-                <div class="Reserva-confirmacion"></div>
 
             </section>
 

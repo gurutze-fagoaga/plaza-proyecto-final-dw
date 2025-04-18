@@ -51,16 +51,12 @@ const listaDeHoras = {
 }
 
 
-
 // función de añadir otra clase más
 
 añadirBtn.addEventListener("click", añadirClase);
 function añadirClase() {
-
     contenedorReserva.innerHTML += `
-
-    <div id="Reserva-formClase">
-   
+    <div id="Reserva-formClase" class="Reserva-formClase">  
         <label>
             <select class="SelectClase Reserva-formInput" name="clase">
                 <option id="Clase" value="ceramica">Cerámica</option>
@@ -75,13 +71,16 @@ function añadirClase() {
         <label>
             <select class="Fecha u-displayNone Reserva-formInput" name="hora">
             </select>
-    </label>
+            </label>
+        <button id="Btn-quitar" class="Btn-quitar Reserva-formInput Reserva-formInput--btn">Eliminar fila</button>
+
     </div>
     `
     // actualizar las listas cuando añada un nuevo select
-    actualizarEventos()
+    mostrarOpciones()
 
 }
+
 
 
 // actualizar las listas 
@@ -91,10 +90,11 @@ function mostrarOpciones() {
 
     const listaSelectoresFecha = document.querySelectorAll(".Fecha");
     const listaSelectoresClase = document.querySelectorAll(".SelectClase");
-
+    const listaBotonesEliminar = document.querySelectorAll(".Btn-quitar");
     // en cada click en el selector de clase, actualizará las opciones de su selector de fecha
 
     listaSelectoresClase.forEach((selectorClase, id) => {
+
 
         // EventListener de "change"
 
@@ -109,6 +109,7 @@ function mostrarOpciones() {
             añadirBtn.classList.remove("u-displayNone");
 
             // limpiar las opciones anteriores
+
             listaSelectoresFecha[id].innerHTML = "";
 
             let horario = listaDeHoras[claseSeleccionada];
@@ -118,12 +119,23 @@ function mostrarOpciones() {
                             <option id="Hora" value="${horario[i]}">${horario[i]}</option>
                         `;
             }
-
         })
+
 
     })
 
+    listaBotonesEliminar.forEach((btnEliminar, id) => {
+        btnEliminar.addEventListener("click", (e) => {
+
+            // al hacer click se elimina el div contenedor de clase más cercano
+            btnEliminar.closest(".Reserva-formClase").remove();
+        })
+    })
 }
 
 
-actualizarEventos();
+mostrarOpciones();
+
+
+
+
