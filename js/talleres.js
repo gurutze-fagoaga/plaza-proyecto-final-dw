@@ -1,3 +1,5 @@
+// ACTIVAR / DESACTIVAR SECCIONES AL MOVERSE POR EL NAVEGADOR
+
 const container = document.querySelector("#Main");
 const listaTitulos = container.querySelectorAll("#Nav-item");
 const listaBloques = container.querySelectorAll("#Contenido-bloque");
@@ -38,6 +40,8 @@ listaPasos.forEach((paso, i) => {
 })
 
 
+// FORMULARIO DE RESERVA DE TALLERES Y PAGO
+
 const contenedorReserva = document.querySelector("#Reserva-formClase");
 
 const añadirBtn = document.querySelector("#Btn-añadir");
@@ -53,7 +57,21 @@ const listaDeHoras = {
 
 // función de añadir otra clase más
 
-añadirBtn.addEventListener("click", añadirClase);
+añadirBtn.addEventListener("click", () => {
+    añadirClase();
+    sumarPrecio();
+} );
+
+// función para sumar el precio
+function sumarPrecio() {
+    let precioTaller = 15;
+    let sumaPrecioTotal = 0;
+    let sumaPrecioTotal = sumaPrecioTotal + precioTaller;
+    
+    console.log("El precio total es: " + sumaPrecioTotal);
+}
+
+
 function añadirClase() {
     contenedorReserva.innerHTML += `
     <div id="Reserva-formClase" class="Reserva-formClase">  
@@ -135,6 +153,9 @@ function mostrarOpciones() {
 
 
 mostrarOpciones();
+
+
+
 
 
 
