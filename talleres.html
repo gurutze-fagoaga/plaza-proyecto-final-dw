@@ -12,7 +12,8 @@
     <link rel="stylesheet" href="./css/talleres.css">
     <script src="https://kit.fontawesome.com/92ec900005.js" crossorigin="anonymous"></script>
     <script src="./js/js.js" defer></script>
-    <script src="./js/talleres.js" defer></script>
+    <script src="./js/talleres-nav.js" defer></script>
+    <script src="./js/talleres-reserva.js" defer></script>
 </head>
 
 <body class="Body">
@@ -274,7 +275,7 @@
             </section>
 
             <section id="Contenido-bloque" class="Reserva Contenido-bloque u-displayNone">
-                <form action="#" class="Reserva-form" method="GET">
+                <form id="Reserva-form" action="#" class="Reserva-form" method="GET">
 
                     <h3>1. Selecciona la clase</h3>
 
@@ -297,7 +298,7 @@
                         <!-- Seleccionar hora -->
 
                         <label>
-                            <select class="Fecha u-displayNone Reserva-formInput" name="hora">
+                            <select required class="Fecha u-displayNone Reserva-formInput" name="hora">
                                 <!--Aqui se crearán las opciones segun la opcion elegida en el select anterior-->
                             </select>
                         </label>
@@ -332,45 +333,40 @@
                     <label>
                         <input class="Reserva-formInput" required type="text" name="apellido" placeholder="apellido">
                     </label>
+
                     <label>
                         <input class="Reserva-formInput" required type="mail" name="mail" placeholder="mail">
                     </label>
+
                     <label>
                         <input class="Reserva-formInput" required type="tel" name="tel" placeholder="teléfono">
                     </label>
 
-
                     <label>
-                        <input class="Reserva-formInput" required type="dni" name="dni" placeholder="DNI">
+                        <input class="Reserva-formInput" required type="dni" name="dni" placeholder="DNI" minlength="9" maxlength="9">
                     </label>
 
 
-                    <div id="Reserva-confirmacion" class="Reserva-confirmacion">
-                        <h3>3. Confirmación</h3>
-                        <!--Aqui irá lo que ha reservado + Precio a pagar-->
-                        <div class="Reserva-confirmacionClase">
-                            <span>Clase de cerámica, 3 de mayo, 10:00</span>
-                            <span>Clase de cerámica, 3 de mayo, 10:00</span>
-                        </div>
-                        <span>3 x 16,00</span>
-                        <span>48€</span>
+                    <h3>3. Pago</h3>
+                    <h4 id="Reserva-desglose" class="Reserva-desglose"></h4>
+                    <h4 id="Reserva-total" class="Reserva-total"></h4>
 
-
-                    </div>
-
-
-                    <h3>4. Pago</h3>
-                    <h4><!--Aqui aparecerá el total a pagar--></h4>
-
-                    <label>
-                        <input class="Reserva-formInput" required type="tarjeta" name="tarjeta"
+                    <label> 
+                        <input class="Reserva-formInput" required type="tarjetaCodigo" name="tarjeta" minlength="16" maxlength="16"
                             placeholder="nº de tarjeta bancaria">
                     </label>
 
+                    <label> 
+                        <input class="Reserva-formInput" required type="tarjeta" name="tarjeta" minlength="3" maxlength="3" 
+                            placeholder="código CVC">
+                    </label>
 
-                    <input class="Reserva-formInput Reserva-formInput--btn" type="submit" value="Reservar">
 
+                    <input id="Reserva-btnReservar" class="Reserva-formInput Reserva-formInput--btn" type="submit" value="Reservar">
+
+                    
                 </form>
+                
 
             </section>
 
