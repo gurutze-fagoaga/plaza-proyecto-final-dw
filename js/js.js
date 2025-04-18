@@ -1,3 +1,14 @@
+/*--------------------------------------------------------------------------------*\
+* js.js
+*    Estructura:
+*       -Constantes
+*       -Varibles
+*       -Funciones
+*---------------------------------------------------------------------------------*/
+
+
+
+
 // ------------------------- CONSTANTES Y VARIABLES ------------------------------- //
 
 // Selección de los iconos del menu hamburguesa (boton para abrir y cerrar menu)

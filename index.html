@@ -21,7 +21,19 @@
 
 <body class="Body">
 
-    <!-- HEADER -->
+    <!-- 
+    Descripción: Este archivo HTML contiene la página principal del sitio web.
+    
+    Estructura general:
+        - Header
+        - Contenido principal
+            - Sección 1: eslogan y pizarra
+            - Sección 2: Q&A
+            - Sección 3: Galeria
+        - Footer
+    -->
+
+    <!-- Header -->
 
     <header class="Header">
         <nav class="Header-nav">
@@ -40,7 +52,8 @@
                 </li>
                 <li id="BtnMonthly" class="Menu-item"><a class="Menu-link Menu-link--monthly"
                         href="./monthly.html">Monthly</a></li>
-                <li id="BtnContacto" class="Menu-item"><a class="Menu-link Menu-link--contacto" href="#Footer">Contacto</a>
+                <li id="BtnContacto" class="Menu-item"><a class="Menu-link Menu-link--contacto"
+                        href="#Footer">Contacto</a>
                 </li>
             </ul>
         </nav>
@@ -48,13 +61,17 @@
 
     </header>
 
+    <!-- Fin del header -->
 
 
-    <!-- CONTENIDO DE MI HOME -->
+    <!-- Contenido principal -->
 
     <main class="Main">
 
-        <!-- PIZARRA -->
+        <!-- 
+            Sección Principal
+            Descripción: Presenta a la empresa con el eslogan y llama a crear con el botón
+        -->
 
 
         <section id="Principal" class="Principal">
@@ -69,6 +86,7 @@
 
         </section>
 
+        <!-- Pizarra -->
 
         <div id="Board" class="Board u-displayNone">
 
@@ -108,7 +126,11 @@
 
         </div>
 
-        <!--SOBRE EL PROYECTO-->
+
+        <!--
+            Sección About
+            Descripción: Q&A sobre el proyecto
+        -->
 
         <section class="About">
             <div class="About-item">
@@ -159,7 +181,10 @@
             </div>
         </section>
 
-        <!--GALERIA-->
+        <!--
+            Sección Galeria
+            Descripción: Fotos del proyecto Plaza
+        -->
         <section class="Galeria">
             <h2 class="Galeria-title"> This is Plaza</h2>
             <div id="Galeria-content" class="Galeria-content">
@@ -176,21 +201,24 @@
         </section>
     </main>
 
-    <!-- FOOTER -->
+    <!-- Fin del contenido principal -->
+
+    <!-- Footer -->
 
     <footer id="Footer" class="Footer">
 
         <h2 class="Footer-title"> Contacto </h2>
+
         <div class="Footer-direction">
             <span>c/ de San Fermin 61</span>
             <span>31003 Pamplona</span>
         </div>
+        
         <nav class="Footer-rrss">
             <a class="Footer-link" href="#" target="_blank"><i class="fa-brands fa-instagram fa-lg"></i></a>
             <a class="Footer-link" href="#" target="_blank"><i class="fa-brands fa-linkedin fa-lg"></i></a>
             <a class="Footer-link" href="#" target="_blank"><i class="fa-brands fa-tiktok fa-lg"></i></a>
         </nav>
-       
 
         <div class="Footer-contenido">
             <form action="#" class="Footer-form" method="GET">
@@ -210,12 +238,10 @@
                 <label>
                     <textarea class="Footer-formInput Footer-formInput--txt" name="consulta" maxlength="200"></textarea>
                 </label>
-                
-                <input class="Footer-formInput Footer-formInput--btn" type="submit" value="Enviar">
-                
-            </form>
 
-           
+                <input class="Footer-formInput Footer-formInput--btn" type="submit" value="Enviar">
+
+            </form>
 
         </div>
 
@@ -224,11 +250,9 @@
             <span class="Footer-copyright">Copyright © 2025 Plaza</span>
         </div>
 
-
-
-
     </footer>
 
+    <!-- Fin del footer -->
 
 </body>
 

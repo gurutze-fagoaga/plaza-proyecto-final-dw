@@ -1,3 +1,13 @@
+/*--------------------------------------------------------------------------------*\
+* monthly.js
+*    Estructura:
+*       -Constantes
+*       -Varibles
+*       -Funciones
+*---------------------------------------------------------------------------------*/
+
+
+
 // --------------- CONSTANTES Y VARIABLES ------------- //
 
 // selección de los botones de desplegar/plegar cartel

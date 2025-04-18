@@ -18,7 +18,21 @@
 
 <body class="Body">
 
-    <!-- HEADER -->
+    <!-- 
+    Descripción: Este archivo HTML contiene la página "Talleres" del sitio web.
+    
+    Estructura general:
+        - Header
+        - Bloque "pasos"
+        - Navegación 
+        - Contenido principal 
+            - sección 1
+            - sección 2
+            - sección 3
+        - Footer
+    -->
+
+    <!-- Header -->
 
 
     <header class="Header">
@@ -43,15 +57,20 @@
                 </li>
             </ul>
         </nav>
-
-
     </header>
 
+    <!-- Fin del header -->
 
+    <!-- Contenido de la página -->
 
     <main id="Main" class="Main">
 
-        <section class="Pasos">
+        <!-- 
+        Bloque "Pasos"
+        Descripción: Explica cómo navegar por la página de talleres
+        -->
+
+        <div class="Pasos">
 
             <a id="Paso" href="#Nav" class="Paso">
                 <i class="fa-solid fa-palette"></i>
@@ -65,10 +84,15 @@
 
             <a id="Paso" href="#Nav" class="Paso">
                 <i class="fa-solid fa-user-check"></i>
-                <p>Haz tu reserva. Se puede reservar una única clase o el bono de 4 clases.</p>
+                <p>Haz tu reserva. Se puede reservar una única clase o varias clases a la vez.</p>
             </a>
 
-        </section>
+        </div>
+
+        <!-- 
+        Navegación
+        Descripción: Menú de navegación para moverse entre secciones
+        -->
 
         <nav id="Nav" class="Nav">
 
@@ -78,8 +102,14 @@
 
         </nav>
 
+       <!-- Contenido principal -->
+
         <div class="Contenido">
 
+            <!-- 
+            Sección 1: Talleres
+            Descripciones: Tarjetas con la descripción de cada taller
+            -->
 
             <section id="Contenido-bloque" class="Talleres Contenido-bloque">
 
@@ -165,9 +195,9 @@
                             <p class="Talleres-cardDescription">Llevarás a casa un cuaderno lleno de ideas, ejercicios
                                 para seguir escribiendo y, sobre todo, una reconexión con tu voz, tu historia y tu forma
                                 de mirar el mundo.
+                            </p>
                         </div>
 
-                        </p>
                     </div>
                     <div class="Talleres-card">
                         <img class="Talleres-cardImg" src="./img/taller-encuadernacion.jpg" alt="">
@@ -193,7 +223,10 @@
 
             </section>
 
-
+            <!-- 
+            Sección 2: Calendario
+            Descripciones: Calendario semanal de los talleres
+            -->
 
             <section id="Contenido-bloque" class="Calendario Contenido-bloque u-displayNone">
 
@@ -274,6 +307,12 @@
 
             </section>
 
+
+            <!-- 
+            Sección 3: Reserva
+            Descripciones: Formulario para realizar la reserva y pago de una o varias clases
+            -->
+
             <section id="Contenido-bloque" class="Reserva Contenido-bloque u-displayNone">
                 <form id="Reserva-form" action="#" class="Reserva-form" method="GET">
 
@@ -305,12 +344,15 @@
 
                         <button id="Btn-quitar"
                             class="u-displayNone Btn-quitar Reserva-formInput Reserva-formInput--btn">Eliminar
-                            fila</button>
+                            fila
+                        </button>
 
                     </div>
 
                     <button id="Btn-quitar"
-                        class="u-displayNone Btn-quitar Reserva-formInput Reserva-formInput--btn">Eliminar fila</button>
+                        class="u-displayNone Btn-quitar Reserva-formInput Reserva-formInput--btn">Eliminar fila
+                    </button>
+
 
 
                     <!--Aquí se añadirán más clases que se quieran reservar-->
@@ -319,7 +361,8 @@
                     <!--Botón para añadir más clases a la reserva-->
 
                     <button id="Btn-añadir" class="u-displayNone Reserva-formInput Reserva-formInput--btn">Añadir otra
-                        reserva</button>
+                        reserva
+                    </button>
 
 
 
@@ -343,36 +386,39 @@
                     </label>
 
                     <label>
-                        <input class="Reserva-formInput" required type="dni" name="dni" placeholder="DNI" minlength="9" maxlength="9">
+                        <input class="Reserva-formInput" required type="dni" name="dni" placeholder="DNI" minlength="9"
+                            maxlength="9">
                     </label>
 
 
                     <h3>3. Pago</h3>
+                    <!-- Aquí se imprimira el precio a pagar: -->
                     <h4 id="Reserva-desglose" class="Reserva-desglose"></h4>
                     <h4 id="Reserva-total" class="Reserva-total"></h4>
 
-                    <label> 
-                        <input class="Reserva-formInput" required type="tarjetaCodigo" name="tarjeta" minlength="16" maxlength="16"
-                            placeholder="nº de tarjeta bancaria">
+                    <label>
+                        <input class="Reserva-formInput" required type="tarjetaCodigo" name="tarjeta" minlength="16"
+                            maxlength="16" placeholder="nº de tarjeta bancaria">
                     </label>
 
-                    <label> 
-                        <input class="Reserva-formInput" required type="tarjeta" name="tarjeta" minlength="3" maxlength="3" 
-                            placeholder="código CVC">
+                    <label>
+                        <input class="Reserva-formInput" required type="tarjeta" name="tarjeta" minlength="3"
+                            maxlength="3" placeholder="código CVC">
                     </label>
 
 
-                    <input id="Reserva-btnReservar" class="Reserva-formInput Reserva-formInput--btn" type="submit" value="Reservar">
+                    <input id="Reserva-btnReservar" class="Reserva-formInput Reserva-formInput--btn" type="submit"
+                        value="Reservar">
 
-                    
                 </form>
-                
 
             </section>
 
         </div>
 
     </main>
+
+
 
     <!-- FOOTER -->
 
