@@ -24,12 +24,12 @@
 * @property {array} encuadernacion
 */
 const agendaTalleres = {
-    ceramica: ["Lunes 5 de mayo, 10:00-14:00", "Jueves 8 de mayo, 18:00-20:00", "3", "4"],
-    joyeria: ["Lunes 5 de mayo, 10:00-14:00", "Jueves 8 de mayo, 18:00-20:00"],
-    bordado: ["Lunes 5 de mayo, 10:00-14:00", "Jueves 8 de mayo, 18:00-20:00"],
-    serigrafia: ["Lunes 5 de mayo, 10:00-14:00", "Jueves 8 de mayo, 18:00-20:00"],
-    escritura: ["Lunes 5 de mayo, 10:00-14:00", "Jueves 8 de mayo, 18:00-20:00"],
-    encuadernacion: ["Lunes 5 de mayo, 10:00-14:00", "Jueves 8 de mayo, 18:00-20:00"]
+    ceramica: ["Lunes, 5 de mayo, 10:00-14:00", "Jueves, 8 de mayo, 18:00-20:00", "Viernes, 9 de mayo, 16:00-20:00", "Lunes, 12 de mayo, 10:00-14:00", "Jueve,s 15 de mayo, 18:00-20:00"],
+    joyeria: ["Martes, 6 de mayo, 12:00-14:00", "Sábado, 10 de mayo, 12:00-14:00", "Martes, 13 de mayo, 12:00-14:00", "Sábado, 17 de mayo, 12:00-14:00"],
+    bordado: ["Lunes, 5 de mayo, 18:00-20:00", "Lunes, 12 de mayo, 18:00-20:00"],
+    serigrafia: ["Martes, 6 de mayo, 16:00-20:00", "Miércoles, 7 de mayo, 10:00-14:00", "Viernes, 9 de mayo, 10:00-14:00", "Martes, 13 de mayo, 16:00-20:00", "Miércoles, 14 de mayo, 10:00-14:00", "Viernes, 16 de mayo, 10:00-14:00"],
+    escritura: ["Miércoles, 7 de mayo, 18:00-20:00", "Miércoles, 14 de mayo, 18:00-20:00"],
+    encuadernacion: ["Jueves, 8 de mayo, 10:00-14:00", "Jueves, 15 de mayo, 10:00-14:00"]
 }
 
 // Selección del div contenedor del formulario reserva de clase 
