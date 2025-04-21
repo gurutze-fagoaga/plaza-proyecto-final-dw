@@ -38,8 +38,8 @@
 }
 .Espacio{
   color: var(--bg-primary);
-  padding: 3em;
-  width: 100vw;
+  padding: 4em;
+  width: 100%;
   background-color: var(--color-2-coworking);
   display: flex;
   flex-direction: column;
@@ -79,7 +79,7 @@
     }
 
     .Espacio{
-      padding: 5em;
+      padding: 6em;
     }
 
     .Espacio-plano{

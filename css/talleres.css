@@ -159,7 +159,7 @@
   /* Calendario */
 
   .Calendario {
-      width: 80%;
+      
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -177,41 +177,53 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
-      align-items: start;
+      align-items: center;
       box-shadow: 8px 8px 16px #dcdcdc,
           -8px -8px 16px #e4e4e4;
-
-
-
   }
 
+  
   .Calendario-nombreDia {
       text-align: center;
       font-size: large;
+      font-weight: bold;
       color: var(--color-1-talleres);
+      padding: .5em .5em .5em 0;
+      border-bottom: solid 1px var(--color-1-talleres);
       width: 100%;
-      padding: .5em;
-  }
+      margin-bottom: .5em;
+    }
 
-  .Calendario-section {
+    .Calendario-secciones{
+        width: 100%;
+        padding: .5em;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+    }
+    
+    .Calendario-section {
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1em;
+    }
 
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 1em;
+
+  .Calendario-hora{
+    white-space: nowrap;
   }
 
   .Calendario-actividad {
-      /* border: 1px solid var(--color-1-talleres); */
       padding: .5em;
       border-radius: 20px;
-      margin: .5em;
       color: var(--txt-primary);
   }
 
   .Calendario-actividad--especial {
       color: var(--bg-primary);
-
       background: linear-gradient(90deg, rgb(177, 191, 218) 0%, rgba(72, 146, 184, 1) 49%, rgba(135, 74, 175, 1) 100%);
   }
 
@@ -227,6 +239,13 @@
 
 
 /* Formulario de reserva */
+
+.Reserva{
+    display: flex;
+    flex-direction: center;
+    justify-content: center;
+    align-items: center;
+}
 .Reserva-formSubtitle{
     margin: .3em 0 .3em 0;
 }
@@ -280,57 +299,10 @@
           padding: 3em 1em 3em 1em;
       }
 
-      .Calendario {
-          height: 100%;
-          display: grid;
-          width: 100vw;
-          grid-template-columns: repeat(4, 1fr);
-          grid-template-areas:
-              "lunes martes miercoles ."
-              "jueves viernes sabado domingo"
-          ;
-          gap: 10px;
-          justify-items: center;
-          align-items: start;
-
+      .Calendario-dia{
+        width: 50%;
       }
-
-      .Calendario-dia {
-          min-width: 50%;
-          height: 100%;
-          justify-content: start;
-          font-size: smaller;
-          white-space: nowrap;
-
-      }
-
-      .Calendario:nth-child(1) {
-          grid-area: lunes;
-      }
-
-      .Calendario:nth-child(2) {
-          grid-area: martes;
-      }
-
-      .Calendario:nth-child(3) {
-          grid-area: miercoles;
-      }
-
-      .Calendario:nth-child(4) {
-          grid-area: jueves;
-      }
-
-      .Calendario:nth-child(5) {
-          grid-area: viernes;
-      }
-
-      .Calendario:nth-child(6) {
-          grid-area: sabado;
-      }
-
-      .Calendario:nth-child(7) {
-          grid-area: domingo;
-      }
+      
   }
 
   @media only screen and (min-width: 1024px) {
@@ -339,9 +311,57 @@
       }
 
 
+      .Calendario {
+        height: 100%;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-areas:
+            "lunes martes miercoles ."
+            "jueves viernes sabado domingo"
+        ;
+        gap: 10px;
+        justify-items: center;
+        align-items: center;
+    
+    }
+    
+    .Calendario-dia {
+        min-width: 40%;
+        height: 100%;
+        width: 100%;
+        justify-content: start;
+        
+    }
+    
+    .Calendario:nth-child(1) {
+        grid-area: lunes;
+    }
+    
+    .Calendario:nth-child(2) {
+        grid-area: martes;
+    }
+    
+    .Calendario:nth-child(3) {
+        grid-area: miercoles;
+    }
+    
+    .Calendario:nth-child(4) {
+        grid-area: jueves;
+    }
+    
+    .Calendario:nth-child(5) {
+        grid-area: viernes;
+    }
+    
+    .Calendario:nth-child(6) {
+        grid-area: sabado;
+    }
+    
+    .Calendario:nth-child(7) {
+        grid-area: domingo;
+    }
+    
+      .u-displayNone{
+        display: none;
+    }
   }
-
-
-  .u-displayNone{
-    display: none;
-}
