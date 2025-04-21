@@ -20,12 +20,12 @@
   .Paso {
       width: 100%;
       text-align: center;
-      border: 1px solid var(--bg-primary);
+      border: 1px solid var(--txt-light);
       border-radius: 20px;
       padding: 3em;
       cursor: pointer;
       transition: transform .4s ease;
-      color: var(--bg-primary);
+      color: var(--txt-light);
       text-decoration: none;
       box-shadow: 5px 5px 15px #00506f,
           -5px -5px 15px #007aa9;
@@ -151,7 +151,7 @@
       margin-bottom: .5em;
       width: fit-content;
       border-radius: 20px;
-      color: var(--bg-primary);
+      color: var(--txt-light);
       font-family: "Lato Regular";
   }
 
@@ -219,11 +219,11 @@
   .Calendario-actividad {
       padding: .5em;
       border-radius: 20px;
-      color: var(--txt-primary);
+      color: var(--txt-dark);
   }
 
   .Calendario-actividad--especial {
-      color: var(--bg-primary);
+      color: var(--txt-light);
       background: linear-gradient(90deg, rgb(177, 191, 218) 0%, rgba(72, 146, 184, 1) 49%, rgba(135, 74, 175, 1) 100%);
   }
 
@@ -233,7 +233,7 @@
       padding: .5em;
       border-radius: 20px;
       margin: .3em;
-      color: var(--bg-primary);
+      color: var(--txt-dark);
       transform: rotate(-5deg);
   }
 
@@ -250,7 +250,7 @@
     margin: .3em 0 .3em 0;
 }
 .Reserva-formInput{
-    border: 1px solid var(--txt-primary);
+    border: 1px solid var(--txt-dark);
     border-radius: 20px;
     padding: .5em;
     margin-top: 1em;
@@ -270,7 +270,7 @@
 }
 .Reserva-formInput--btn{
     background-color: var(--color-1-talleres);
-    color: var(--bg-primary);
+    color: var(--txt-light);
     cursor: pointer;
 }
 

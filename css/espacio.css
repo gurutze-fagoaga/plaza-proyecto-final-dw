@@ -2,7 +2,7 @@
 
   .Menu-link--espacio{
     background-color: var(--color-2-coworking);
-    color: white;
+    color: var(--txt-light);
 }
 
 .Main{
@@ -37,7 +37,7 @@
 
 }
 .Espacio{
-  color: var(--bg-primary);
+  color: var(--txt-light);
   padding: 4em;
   width: 100%;
   background-color: var(--color-2-coworking);

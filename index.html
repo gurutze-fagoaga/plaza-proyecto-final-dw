@@ -1,27 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home</title>
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
 
-    <link rel="stylesheet" href="./css/reset.css">
-    <link rel="stylesheet" href="./css/css.css">
-    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/css.css" />
+    <link rel="stylesheet" href="./css/index.css" />
 
-    <script src="https://kit.fontawesome.com/92ec900005.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/92ec900005.js"
+      crossorigin="anonymous"
+    ></script>
     <script src="./js/js.js" defer></script>
     <script src="./js/index.js" defer></script>
     <script src="./js/canvas.js" defer></script>
+  </head>
 
-
-</head>
-
-<body class="Body">
-
+  <body class="Body">
     <!-- 
     Descripción: Este archivo HTML contiene la página principal del sitio web.
     
@@ -37,169 +38,185 @@
     <!-- Header -->
 
     <header class="Header">
-        <nav class="Header-nav">
-            <a href="./index.html"><img class="Header-logo" src="./img/logo-plaza.svg" alt="Logo La Plaza"></a>
-            <span class="Header-icon material-symbols-outlined">
-                menu
-            </span>
-            <span class="Header-icon u-displayNone material-symbols-outlined">
-                close
-            </span>
-            <ul class="Menu">
-                <li id="BtnTalleres" class="Menu-item"><a class="Menu-link Menu-link--talleres"
-                        href="./talleres.html">Talleres</a></li>
-                <li id="BtnEspacio" class="Menu-item"><a class="Menu-link Menu-link--espacio"
-                        href="./espacio.html">Espacio creativo</a>
-                </li>
-                <li id="BtnMonthly" class="Menu-item"><a class="Menu-link Menu-link--monthly"
-                        href="./monthly.html">Monthly</a></li>
-                <li id="BtnContacto" class="Menu-item"><a class="Menu-link Menu-link--contacto"
-                        href="#Footer">Contacto</a>
-                </li>
-            </ul>
-        </nav>
-
-
+      <nav class="Header-nav">
+        <a href="./index.html"
+          ><img
+            class="Header-logo"
+            src="./img/logo-plaza.svg"
+            alt="Logo La Plaza"
+        /></a>
+        <span class="Header-icon material-symbols-outlined"> menu </span>
+        <span class="Header-icon u-displayNone material-symbols-outlined">
+          close
+        </span>
+        <ul class="Menu">
+          <li id="BtnTalleres" class="Menu-item">
+            <a class="Menu-link Menu-link--talleres" href="./talleres.html"
+              >Talleres</a
+            >
+          </li>
+          <li id="BtnEspacio" class="Menu-item">
+            <a class="Menu-link Menu-link--espacio" href="./espacio.html"
+              >Espacio creativo</a
+            >
+          </li>
+          <li id="BtnMonthly" class="Menu-item">
+            <a class="Menu-link Menu-link--monthly" href="./monthly.html"
+              >Monthly</a
+            >
+          </li>
+          <li id="BtnContacto" class="Menu-item">
+            <a class="Menu-link Menu-link--contacto" href="#Footer">Contacto</a>
+          </li>
+        </ul>
+      </nav>
     </header>
 
     <!-- Fin del header -->
 
-
     <!-- Contenido principal -->
 
     <main class="Main">
-
-        <!-- 
+      <!-- 
             Sección Principal
             Descripción: Presenta a la empresa con el eslogan y llama a crear con el botón
         -->
 
+      <section id="Principal" class="Principal">
+        <h1 class="Principal-h1">
+          La plaza donde la creatividad se encuentra y crece.
+        </h1>
 
-        <section id="Principal" class="Principal">
-            <h1 class="Principal-h1">
-                La plaza donde la creatividad se encuentra y crece.
-            </h1>
+        <p class="Principal-txt">
+          Tu proceso creativo puede empezar aquí.
+          <button id="Principal-btn" class="Principal-btn">Crear</button>
+        </p>
+      </section>
 
-            <p class="Principal-txt">Tu proceso creativo puede empezar aquí.
-                <button id="Principal-btn" class="Principal-btn">Crear</button>
-            </p>
+      <!-- Pizarra -->
 
-
-        </section>
-
-        <!-- Pizarra -->
-
-        <div id="Board" class="Board u-displayNone">
-
-            <div class="Controllers">
-
-
-                <button id="BtnCuadricula" class="Controllers-btn">
-                    <img class="u-displayNone IconoCuadricula" src="./img/icono-cuadricula.svg" alt="Icono cuadrícula">
-                    <img class="IconoCuadricula" src="./img/icono-liso.svg" alt="Icono sin cuadrícula">
-
-
-                </button>
-                <button id="BtnPurple" class="Controllers-btn Controllers-btnColor Controllers-btn--purple"></button>
-                <button id="BtnYellow" class="Controllers-btn Controllers-btnColor Controllers-btn--yellow"></button>
-                <button id="BtnBlue" class="Controllers-btn Controllers-btnColor Controllers-btn--blue"></button>
-                <button id="BtnGreen" class="Controllers-btn Controllers-btnColor Controllers-btn--green"></button>
-                <button id="BtnBorrar" class="Controllers-btn "> <img src="./img/icono-borrar.svg"
-                        alt="Icono borrar"></button>
-                <button id="BtnDescargar" class="Controllers-btn"><img src="./img/icono-descargar.svg"
-                        alt="Icono descargar"></button>
-
-
-            </div>
-            <div class="Controllers">
-                <button id="BtnCerrar" class="Controllers-btn"><span class="material-symbols-outlined">
-                        close
-                    </span>
-                </button>
-            </div>
-            <div class="CanvasContainer">
-
-                <canvas id="Canvas" class="Canvas">
-
-                </canvas>
-
-            </div>
-
+      <div id="Board" class="Board u-displayNone">
+        <div class="Controllers">
+          <button id="BtnCuadricula" class="Controllers-btn">
+            <img
+              class="u-displayNone IconoCuadricula"
+              src="./img/icono-cuadricula.svg"
+              alt="Icono cuadrícula"
+            />
+            <img
+              class="IconoCuadricula"
+              src="./img/icono-liso.svg"
+              alt="Icono sin cuadrícula"
+            />
+          </button>
+          <button
+            id="BtnPurple"
+            class="Controllers-btn Controllers-btnColor Controllers-btn--purple"
+          ></button>
+          <button
+            id="BtnYellow"
+            class="Controllers-btn Controllers-btnColor Controllers-btn--yellow"
+          ></button>
+          <button
+            id="BtnBlue"
+            class="Controllers-btn Controllers-btnColor Controllers-btn--blue"
+          ></button>
+          <button
+            id="BtnGreen"
+            class="Controllers-btn Controllers-btnColor Controllers-btn--green"
+          ></button>
+          <button id="BtnBorrar" class="Controllers-btn">
+            <img src="./img/icono-borrar.svg" alt="Icono borrar" />
+          </button>
+          <button id="BtnDescargar" class="Controllers-btn">
+            <img src="./img/icono-descargar.svg" alt="Icono descargar" />
+          </button>
         </div>
+        <div class="Controllers">
+          <button id="BtnCerrar" class="Controllers-btn">
+            <span class="material-symbols-outlined"> close </span>
+          </button>
+        </div>
+        <div class="CanvasContainer">
+          <canvas id="Canvas" class="Canvas"> </canvas>
+        </div>
+      </div>
 
-
-        <!--
+      <!--
             Sección About
             Descripción: Q&A sobre el proyecto
         -->
 
-        <section class="About">
-            <div class="About-item">
-                <h3 class="About-question">¿Qué es "La Plaza"? </h3>
-                <div class="About-content">
-                    <p>
-                        La Plaza es un espacio creativo situado en Pamplona, diseñado para inspirar y conectar a
-                        personas apasionadas por diversas formas de arte y expresión.
-                    </p>
-                </div>
-            </div>
+      <section class="About">
+        <div class="About-item">
+          <h3 class="About-question">¿Qué es "La Plaza"?</h3>
+          <div class="About-content">
+            <p>
+              La Plaza es un espacio creativo situado en Pamplona, diseñado para
+              inspirar y conectar a personas apasionadas por diversas formas de
+              arte y expresión.
+            </p>
+          </div>
+        </div>
 
-            <div class="About-item">
-                <h3 class="About-question">¿Qué hacemos?</h3>
-                <div class="About-content">
-                    <p>
-                        En este lugar, la creatividad fluye libremente a través de talleres semanales, nuestros eventos
-                        mensuales (Monthly) y el área de coworking, diseñado para que los creativos de la zona tengan un
-                        espacio para desarrollar sus proyectos.
-                    </p>
-                </div>
-            </div>
+        <div class="About-item">
+          <h3 class="About-question">¿Qué hacemos?</h3>
+          <div class="About-content">
+            <p>
+              En este lugar, la creatividad fluye libremente a través de
+              talleres semanales, nuestros eventos mensuales (Monthly) y el área
+              de coworking, diseñado para que los creativos de la zona tengan un
+              espacio para desarrollar sus proyectos.
+            </p>
+          </div>
+        </div>
 
-            <div class="About-item">
-                <h3 class="About-question">¿Quiénes somos?</h3>
-                <div class="About-content">
-                    <p>
-                        Somos un grupo de jóvenes con inquietudes artísticas, que se han visto con dificultades para
-                        encontrar entornos creativos en su día a día. Con el proyecto pretendemos que otras personas
-                        tengan facilidades para llevar a cabo sus proyectos creativos.
-                    </p>
-                </div>
-            </div>
+        <div class="About-item">
+          <h3 class="About-question">¿Quiénes somos?</h3>
+          <div class="About-content">
+            <p>
+              Somos un grupo de jóvenes con inquietudes artísticas, que se han
+              visto con dificultades para encontrar entornos creativos en su día
+              a día. Con el proyecto pretendemos que otras personas tengan
+              facilidades para llevar a cabo sus proyectos creativos.
+            </p>
+          </div>
+        </div>
 
-            <div class="About-item">
-                <h3 class="About-question">Me interesa el proyecto. ¿Cómo puedo apoyarlo?</h3>
-                <div class="About-content">
-                    <p>
-                        Hay muchas formas de apoyar "La Plaza": </p>
-                    <ul>
-                        <li>Participar en los talleres y eventos que organizamos.</li>
-                        <li>¿Tienes un conociemiento que quieras compartir? Estaremos encantadas en atender tu
-                            sugerencia.</li>
-                    </ul>
+        <div class="About-item">
+          <h3 class="About-question">
+            Me interesa el proyecto. ¿Cómo puedo apoyarlo?
+          </h3>
+          <div class="About-content">
+            <p>Hay muchas formas de apoyar "La Plaza":</p>
+            <ul>
+              <li>Participar en los talleres y eventos que organizamos.</li>
+              <li>
+                ¿Tienes un conociemiento que quieras compartir? Estaremos
+                encantadas en atender tu sugerencia.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
 
-                </div>
-
-            </div>
-        </section>
-
-        <!--
+      <!--
             Sección Galeria
             Descripción: Fotos del proyecto Plaza
         -->
-        <section class="Galeria">
-            <h2 class="Galeria-title"> This is Plaza</h2>
-            <div id="Galeria-content" class="Galeria-content">
-                <img class="Galeria-img" src="./img/galeria-2.jpg" alt="">
-                <img class="Galeria-img" src="./img/galeria-3.jpeg" alt="">
-                <img class="Galeria-img" src="./img/galeria-4.jpg" alt="">
-                <img class="Galeria-img" src="./img/galeria-5.jpg" alt="">
-                <img class="Galeria-img" src="./img/galeria-6.jpg" alt="">
-                <img class="Galeria-img" src="./img/galeria-7.jpg" alt="">
-                <img class="Galeria-img" src="./img/galeria-8.jpg" alt="">
-
-            </div>
-            <a href=""></a>
-        </section>
+      <section class="Galeria">
+        <h2 class="Galeria-title">This is Plaza</h2>
+        <div id="Galeria-content" class="Galeria-content">
+          <img class="Galeria-img" src="./img/galeria-2.jpg" alt="" />
+          <img class="Galeria-img" src="./img/galeria-3.jpeg" alt="" />
+          <img class="Galeria-img" src="./img/galeria-4.jpg" alt="" />
+          <img class="Galeria-img" src="./img/galeria-5.jpg" alt="" />
+          <img class="Galeria-img" src="./img/galeria-6.jpg" alt="" />
+          <img class="Galeria-img" src="./img/galeria-7.jpg" alt="" />
+          <img class="Galeria-img" src="./img/galeria-8.jpg" alt="" />
+        </div>
+        <a href=""></a>
+      </section>
     </main>
 
     <!-- Fin del contenido principal -->
@@ -207,54 +224,79 @@
     <!-- Footer -->
 
     <footer id="Footer" class="Footer">
+      <h2 class="Footer-title">Contacto</h2>
 
-        <h2 class="Footer-title"> Contacto </h2>
+      <div class="Footer-direction">
+        <span>c/ de San Fermin 61</span>
+        <span>31003 Pamplona</span>
+      </div>
 
-        <div class="Footer-direction">
-            <span>c/ de San Fermin 61</span>
-            <span>31003 Pamplona</span>
-        </div>
-        
-        <nav class="Footer-rrss">
-            <a class="Footer-link" href="#" target="_blank"><i class="fa-brands fa-instagram fa-lg"></i></a>
-            <a class="Footer-link" href="#" target="_blank"><i class="fa-brands fa-linkedin fa-lg"></i></a>
-            <a class="Footer-link" href="#" target="_blank"><i class="fa-brands fa-tiktok fa-lg"></i></a>
-        </nav>
+      <nav class="Footer-rrss">
+        <a class="Footer-link" href="#" target="_blank"
+          ><i class="fa-brands fa-instagram fa-lg"></i
+        ></a>
+        <a class="Footer-link" href="#" target="_blank"
+          ><i class="fa-brands fa-linkedin fa-lg"></i
+        ></a>
+        <a class="Footer-link" href="#" target="_blank"
+          ><i class="fa-brands fa-tiktok fa-lg"></i
+        ></a>
+      </nav>
 
-        <div class="Footer-contenido">
-            <form action="#" class="Footer-form" method="GET">
+      <div class="Footer-contenido">
+        <form action="#" class="Footer-form" method="GET">
+          <label>
+            <input
+              class="Footer-formInput"
+              required
+              type="text"
+              name="nombre"
+              placeholder="nombre"
+            />
+          </label>
 
-                <label>
-                    <input class="Footer-formInput" required type="text" name="nombre" placeholder="nombre">
-                </label>
+          <label>
+            <input
+              class="Footer-formInput"
+              required
+              type="Email"
+              name="mail"
+              placeholder="mail"
+            />
+          </label>
 
-                <label>
-                    <input class="Footer-formInput" required type="Email" name="mail" placeholder="mail">
-                </label>
+          <label>
+            <input
+              class="Footer-formInput"
+              required
+              type="tel"
+              name="tel"
+              placeholder="teléfono"
+            />
+          </label>
 
-                <label>
-                    <input class="Footer-formInput" required type="tel" name="tel" placeholder="teléfono">
-                </label>
+          <label>
+            <textarea
+              class="Footer-formInput Footer-formInput--txt"
+              name="consulta"
+              maxlength="200"
+            ></textarea>
+          </label>
 
-                <label>
-                    <textarea class="Footer-formInput Footer-formInput--txt" name="consulta" maxlength="200"></textarea>
-                </label>
+          <input
+            class="Footer-formInput Footer-formInput--btn"
+            type="submit"
+            value="Enviar"
+          />
+        </form>
+      </div>
 
-                <input class="Footer-formInput Footer-formInput--btn" type="submit" value="Enviar">
-
-            </form>
-
-        </div>
-
-        <div class="Footer-legal">
-            <a class="Footer-terms" href="./terms.html">Términos y condiciones</a>
-            <span class="Footer-copyright">Copyright © 2025 Plaza</span>
-        </div>
-
+      <div class="Footer-legal">
+        <a class="Footer-terms" href="./terms.html">Términos y condiciones</a>
+        <span class="Footer-copyright">Copyright © 2025 Plaza</span>
+      </div>
     </footer>
 
     <!-- Fin del footer -->
-
-</body>
-
+  </body>
 </html>

@@ -54,7 +54,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border: 1px solid var(--txt-primary);
+    border: 1px solid var(--txt-dark);
     border-radius: 20px;
     padding: .5em;
     background-color: var(--color-4-la-plaza);
@@ -94,7 +94,7 @@
   }
 
   .Info-link {
-    color: var(--txt-primary);
+    color: var(--txt-dark);
     cursor: pointer;
     text-decoration: none;
     font-family: "Lato Bold";

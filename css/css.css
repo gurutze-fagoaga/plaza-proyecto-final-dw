@@ -1,342 +1,332 @@
-/* Hoja de estilos comunes */
+/*-------------------------------------------------*\
+css.css
+- @font-face
+- Variables
+- Global
+- Header
+- Footer
+- Utilities
+- Media queries
+\*-------------------------------------------------*/
 
-/* Tipografías */
-
-
-
-@font-face {
-    font-family: "Lato Regular";
-    src: url(../fonts/Lato-Regular.ttf) format("truetype");
-
-}
-@font-face {
-    font-family: "Lato Bold";
-    src: url(../fonts/Lato-Bold.ttf) format("truetype");
-
-}
+/* ----------------- TIPOGRAFÍAS ----------------- */
 
 @font-face {
-    font-family: "Kanit Regular";
-    src: url(../fonts/Kanit-Regular.ttf) format("truetype");
+  font-family: "Lato Regular"; /* Tipografía para textos en regular*/
+  src: url(../fonts/Lato-Regular.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Lato Bold"; /* Tipografía para textos en bold */
+  src: url(../fonts/Lato-Bold.ttf) format("truetype");
 }
 
+@font-face {
+  font-family: "Kanit Regular"; /* Tipografía para titulos principales */
+  src: url(../fonts/Kanit-Regular.ttf) format("truetype");
+}
 
-/*Variables*/
+/* ----------------- VARIABLES ----------------- */
 
 :root {
-    --bg-primary: #fbfbf6;
+  /*------ Branding -------*/
 
-    --color-1-talleres: #00658C;
-    --color-2-coworking: #006d53;
-    --color-3-monthly: #fff82c;
-    --color-4-la-plaza: #874aaf;
+  --bg-primary: #fbfbf6; /* Color de fondo de la página */
 
-    --color-5-destacado: #db6561;
+  --color-1-talleres: #00658c; /* Color del branding para talleres */
+  --color-2-coworking: #006d53; /* Color del branding para coworking */
+  --color-3-monthly: #fff82c; /* Color del branding para monthly */
+  --color-4-la-plaza: #874aaf; /* Color principal del branding */
+  --color-5-destacado: #db6561; /* Color del branding para elementos destacados */
 
-    --txt-primary: #211f1f;
-
-    --box-shadow: 1px 1px 10px #e1e1e1;
+  --txt-dark: #211f1f; /* Color del texto oscuro */
+  --txt-light: #fbfbf6; /* COlor del texto claro */
 }
 
-html{
-    scroll-behavior: smooth;
-    
+/* --------------- ESTILOS GLOBALES --------------- */
 
+html {
+  scroll-behavior: smooth;
 }
-
-
-/* body */
 
 .Body {
-    
-    font-family: "Lato Regular";
-    color: var(--txt-primary);
-    background-color: var(--bg-primary);
-    width: 100%;
-    position: relative;
-
+  font-family: "Lato Regular";
+  color: var(--txt-dark);
+  background-color: var(--bg-primary);
+  width: 100%;
+  position: relative;
 }
 
-.Body h2, .Body h3{
-    font-family: "Kanit Regular";
+.Body h2,
+.Body h3 {
+  font-family: "Kanit Regular";
 }
 
+.Main {
+  margin-top: 8em;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
+/* ------------------ HEADER -------------------- */
 
-/* estilos del Header */
+/* ------------- Estilos del header ------------- */
+/* Descripción: Estilos para el header
+*  Estructura:
+        - Header-nav
+        - Header-logo
+        - Header-icon
+*/
 
 .Header {
-    z-index: 2;
-    padding: 1em 2em 1em 2em;
-    position: fixed;
-    top: 0;
-    background-color: var(--bg-primary);
-    width: 100%;
-    font-family: "Kanit Regular";
-
+  z-index: 2;
+  padding: 1em 2em 1em 2em;
+  position: fixed;
+  top: 0;
+  background-color: var(--bg-primary);
+  width: 100%;
+  font-family: "Kanit Regular";
 }
 
 .Header-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .Header-logo {
-    width: 9em;
+  width: 9em;
 }
 
-.Header-icon{
-    display: flex;
-    z-index: 2;
+.Header-icon {
+  display: flex;
+  z-index: 2;
 }
 
-.Header-icon.desplegado{
-    color: var(--bg-primary);
+.Header-icon.desplegado {
+  color: var(--bg-primary);
 }
+
+/* ------------- Estilos del menu ------------- */
+/* Descripción: Estilos para el menú del header
+*  Estructura:
+        - Menu
+        - Menu-item
+        - Menu-link
+*/
 
 .Menu {
-    list-style: none;
-    display: none;
+  list-style: none;
+  display: none;
 }
 
 .Menu.desplegado {
-    display: flex;
-    flex-direction: column;
-    position: fixed;
-    top: 0;
-    right: 0;
-    padding: 2em;
-    justify-content: start;
-    align-items: start;
-    gap: 1.5em;
-    background-color: var(--color-4-la-plaza);
-    width: fit-content;
-    border-bottom-left-radius: 40px;
-    z-index: 1;
-    
-    
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  right: 0;
+  padding: 2em;
+  justify-content: start;
+  align-items: start;
+  gap: 1.5em;
+  background-color: var(--color-4-la-plaza);
+  width: fit-content;
+  border-bottom-left-radius: 40px;
+  z-index: 1;
 }
-
-.Menu.desplegado .Menu-item {
-    margin-top: 1em;
-    font-size: smaller;
-    padding: .1em;
-
-}
-
 
 .Menu-item {
-    text-decoration: none;
-    padding: .2em;
-}
-
-.Menu-link {
-    margin-inline: .1em;
-    text-decoration: none;
-    padding: .6em;
-    width: max-content;
-    border-radius: 20px;
-    background-color: var(--bg-primary);
-    border: solid .05em var(--txt-primary);
-    color: var(--txt-primary);
-}
-
-.Menu-link--talleres:hover {
-
-    background-color: var(--color-1-talleres);
-    color: white;
-}
-
-.Menu-link--espacio:hover {
-    background-color: var(--color-2-coworking);
-    color: white;
-
-}
-
-.Menu-link--monthly:hover {
-    background-color: var(--color-3-monthly);
-
-}
-
-.Menu-link--contacto:hover {
-    background-color: var(--color-4-la-plaza);
-    color: white;
-
+  text-decoration: none;
+  padding: 0.2em;
 }
 
 .Menu-item:hover {
-    transform: scale(1.1);
+  transform: scale(1.1);
 }
 
-/* Main */
-
-
-.Main {
-    margin-top: 8em;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  
-
+.Menu.desplegado .Menu-item {
+  margin-top: 1em;
+  font-size: smaller;
+  padding: 0.1em;
 }
 
-/* Footer */
-.Footer{
-    background-color: var(--txt-primary);
-    color: var(--bg-primary);
-    padding: 80px 80px 10px 50px;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-   
-
-    
-    
+.Menu-link {
+  margin-inline: 0.1em;
+  text-decoration: none;
+  padding: 0.6em;
+  width: max-content;
+  border-radius: 20px;
+  background-color: var(--bg-primary);
+  border: solid 0.05em var(--txt-dark);
+  color: var(--txt-dark);
 }
 
-.Footer-contenido{
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    align-items: start;
-}
-.Footer-direction{
-    margin-top: 1em;
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    align-items: start;
-    width: 100%;
-
+.Menu-link--talleres:hover {
+  background-color: var(--color-1-talleres);
+  color: var(--txt-light);
 }
 
-.Footer-rrss{
-    display: flex;
-    gap: 2em;
-    margin-top: 1em;
-   margin-right: 1em;
+.Menu-link--espacio:hover {
+  background-color: var(--color-2-coworking);
+  color: var(--txt-light);
 }
 
-.Footer-link{
-
-    text-decoration: none;
-    color: var(--bg-primary);
+.Menu-link--monthly:hover {
+  background-color: var(--color-3-monthly);
 }
 
-.Footer-form{
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    justify-content: start;
-    gap: 1em;
-    flex-wrap: wrap;
-    margin-top: 2em;
-    margin-bottom: 2em;
+.Menu-link--contacto:hover {
+  background-color: var(--color-4-la-plaza);
+  color: var(--txt-light);
 }
 
-.Footer-formInput{
-    padding: 1em;
-    color: var(--bg-primary);
-    background-color: var(--txt-primary);
-    border: 1px solid var(--bg-primary);
-    border-radius: 2em;
-    font-family: "Lato Regular";
+/* ------------------- FOOTER ------------------- */
 
+/* ------------- Estilos del footer ------------- */
+/* Descripción: Estilos para el footer
+*  Estructura:
+        - Footer
+        - Footer-direction
+        - Footer-rrss
+        - Footer-form
+        - Footer-legal
+*/
 
+.Footer {
+  background-color: var(--txt-dark);
+  color: var(--bg-primary);
+  padding: 80px 80px 10px 50px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-.Footer-formInput--txt{
-    resize: none;
-    width: 20em;
-    height: 10em;
-    overflow: hidden;
+.Footer-contenido {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
 }
 
-.Footer-formInput--btn:hover{
-    background-color: var(--color-4-la-plaza);
-    cursor: pointer;
-   
+.Footer-direction {
+  margin-top: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  width: 100%;
 }
 
-.Footer-legal{
-    display: flex;
-    flex-direction: column;
-    gap: .5em;
-    margin-top: 2em;
+.Footer-rrss {
+  display: flex;
+  gap: 2em;
+  margin-top: 1em;
+  margin-right: 1em;
 }
 
-.Footer-terms{
-    text-decoration: none;
-    color: var(--bg-primary);
+.Footer-link {
+  text-decoration: none;
+  color: var(--bg-primary);
 }
 
-.Footer-copyright{
-    font-size: small;
-    opacity: .5;
+.Footer-form {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+  gap: 1em;
+  flex-wrap: wrap;
+  margin-top: 2em;
+  margin-bottom: 2em;
 }
 
+.Footer-formInput {
+  padding: 1em;
+  color: var(--txt-light);
+  background-color: var(--txt-dark);
+  border: 1px solid var(--bg-primary);
+  border-radius: 2em;
+  font-family: "Lato Regular";
+}
 
+.Footer-formInput--txt {
+  resize: none;
+  width: 20em;
+  height: 10em;
+  overflow: hidden;
+}
 
-/* utilities */
+.Footer-formInput--btn:hover {
+  background-color: var(--color-4-la-plaza);
+  cursor: pointer;
+}
+
+.Footer-legal {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  margin-top: 2em;
+}
+
+.Footer-terms {
+  text-decoration: none;
+  color: var(--bg-primary);
+}
+
+.Footer-copyright {
+  font-size: small;
+  opacity: 0.5;
+}
+
+/* ---------------- UTILITIES ------------------- */
 
 .u-displayNone {
+  display: none;
+}
+
+/* -------------- MEDIA QUERIES ------------------- */
+
+/* -------------- MQ para tablet ------------------- */
+
+@media only screen and (min-width: 768px) {
+  .Header {
+    padding: 1em 2em 1em 2em;
+  }
+
+  .Header-icon {
     display: none;
-}
+  }
 
-
-/* Tablet */
-
-@media only screen and (min-width: 768px){
-    .Header {
-        padding: 1em 2em 1em 2em;
-        
-    
-    }
-
-    .Header-icon{
-        display: none;
-    }
-
-    .Menu{
-        display: flex;
-        flex-direction: row;
-    }
-.Footer{
-
+  .Menu {
+    display: flex;
+    flex-direction: row;
+  }
+  .Footer {
     padding: 80px 80px 10px 80px;
+  }
+
+  .Footer-form {
+    margin-top: 4em;
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: start;
+  }
+
+  .Footer-legal {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 
-    .Footer-form{
-        margin-top: 4em;
-        display: flex;
-        flex-direction: row;
-        align-items: start;
-        justify-content: start;
-        
-    }
-
-    .Footer-legal{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-    }
-    
-
+/* -------------- MQ para desktop ------------------ */
+@media only screen and (min-width: 1024px) {
+  .Header {
+    padding: 2em 5em 2em 5em;
+  }
 }
-
-/*  Desktop  */
-@media only screen and (min-width: 1024px){
-    .Header {
-        padding: 2em 5em 2em 5em;
-        
-    
-    }
- 
-}
-
-   
-

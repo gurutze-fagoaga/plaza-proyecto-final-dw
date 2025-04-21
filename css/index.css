@@ -1,330 +1,318 @@
-/* Titulo */
+/*-------------------------------------------------*\
+index.css
+- Principal
+- Pizarra
+- About
+- Galeria
+- Utilities
+- Media Queries
+\*-------------------------------------------------*/
+
+/* ----------------- PRINCIPAL ----------------- */
+
+/* Descripción: Estilos del bloque principal
+*  Estructura:
+        - Principal
+        - Header-h1
+        - Header-txt
+        - Header-btn
+*/
 
 .Principal {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: start;
-    padding: 2em;
-
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  padding: 2em;
 }
 
 .Principal-h1 {
-    font-size: 3em;
-    line-height: 90%;
+  font-size: 3em;
+  line-height: 90%;
 }
 
 .Principal-txt {
-    font-size: larger;
-    margin-top: 1em;
-    word-break: keep-all;
+  font-size: larger;
+  margin-top: 1em;
+  word-break: keep-all;
 }
 
-
 .Principal-btn {
-    position: relative;
-    bottom: 0;
-    width: fit-content;
-    background-color: var(--color-4-la-plaza);
-    color: var(--bg-primary);
-    padding: 10px 20px;
-    margin-left: .5rem;
-    font-size: 1rem;
-    border: var(--txt-primary) 1px solid;
-    border-radius: 20px;
-    cursor: pointer;
-
+  position: relative;
+  bottom: 0;
+  width: fit-content;
+  background-color: var(--color-4-la-plaza);
+  color: var(--txt-dark);
+  padding: 10px 20px;
+  margin-left: 0.5rem;
+  font-size: 1rem;
+  border: var(--txt-dark) 1px solid;
+  border-radius: 20px;
+  cursor: pointer;
 }
 
 .Principal-btn:hover {
-    transform: scale(1.1);
-
+  transform: scale(1.1);
 }
 
-
-/* estilos del Board*/
-
+/* ----------------- PIZARRA ----------------- */
+/* Descripción: Estilos de la pizarra
+*  Estructura:
+        - Canvas
+        - Board
+        - Controllers
+*/
 
 .CanvasContainer {
-    width: 100%;
-    height: 80vh;
-    position: absolute;
-    /* Para que el canvas se posicione correctamente dentro del contenedor */
-    top: 0;
-    left: 0;
-    background-color: none;
+  width: 100%;
+  height: 80vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: none;
 }
 
 .Canvas {
-    width: 100%;
-    /* El canvas ocupa el 100% del ancho del contenedor */
-    height: 100%;
-    /* El canvas ocupa el 100% de la altura del contenedor */
-    z-index: 1;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
 }
 
 .Board {
-    position: relative;
-    width: 90%;
-    height: 80vh;
-    margin: 40px;
-    background: var(--bg-primary);
-    border: solid 1px var(--txt-primary);
-    display: flex;
-    justify-content: space-between;
-    align-items: start;
-    z-index: 1;
-
-
+  position: relative;
+  width: 90%;
+  height: 80vh;
+  margin: 40px;
+  background: var(--bg-primary);
+  border: solid 1px var(--txt-dark);
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  z-index: 1;
 }
 
 .CuadriculaActiva {
-    background-image: url(../img/board-bg.png);
+  background-image: url(../img/board-bg.png);
 }
 
-
-
 .Controllers {
-    display: flex;
-    gap: 10px;
-    padding: 1em;
-    flex-direction: column;
+  display: flex;
+  gap: 10px;
+  padding: 1em;
+  flex-direction: column;
 }
 
 .Controllers-btn {
-    z-index: 1;
-    width: 30px;
-    height: 30px;
-    padding: 6px;
-    background-color: var(--bg-primary);
-    border: 1px solid var(--txt-primary);
-    border-radius: 50%;
-    cursor: pointer;
+  z-index: 1;
+  width: 30px;
+  height: 30px;
+  padding: 6px;
+  background-color: var(--bg-primary);
+  border: 1px solid var(--txt-dark);
+  border-radius: 50%;
+  cursor: pointer;
 }
 
 .Controllers-btn:hover {
-    border: 3px solid var(--txt-primary);
-    transform: scale(1.1);
+  border: 3px solid var(--txt-dark);
+  transform: scale(1.1);
 }
 
 .Controllers-btn--purple {
-    background-color: var(--color-4-la-plaza);
+  background-color: var(--color-4-la-plaza);
 }
 
 .Controllers-btn--yellow {
-    background-color: var(--color-3-monthly);
+  background-color: var(--color-3-monthly);
 }
 
 .Controllers-btn--blue {
-    background-color: var(--color-1-talleres);
+  background-color: var(--color-1-talleres);
 }
 
 .Controllers-btn--green {
-    background-color: var(--color-2-coworking);
+  background-color: var(--color-2-coworking);
 }
 
 .BtnActive {
-    border: 3px solid var(--txt-primary);
-    transform: scale(1.1);
+  border: 3px solid var(--txt-dark);
+  transform: scale(1.1);
 }
 
+/* ----------------- ABOUT ----------------- */
+/* Descripción: Estilos del bloque about
+*  Estructura:
+        - About
+        - About-question
+        - About-icon
+        - About-content
+*/
 
-
-
-/*About*/
 .About {
-    background-color: var(--color-3-monthly);
-    padding: 2em;
-    display: flex;
-    gap: 1em;
-    flex-direction: column;
+  background-color: var(--color-3-monthly);
+  padding: 2em;
+  display: flex;
+  gap: 1em;
+  flex-direction: column;
 }
 
 .About-question {
-    padding: .5em;
-    border-radius: 40px;
-    background-color: var(--bg-primary);
-    border: solid .05em var(--txt-primary);
-    width: 100%;
-    font-size: small;
-    background-color: var(--color-3-monthly);
-    cursor: pointer;
+  padding: 0.5em;
+  border-radius: 40px;
+  background-color: var(--bg-primary);
+  border: solid 0.05em var(--txt-dark);
+  width: 100%;
+  font-size: small;
+  background-color: var(--color-3-monthly);
+  cursor: pointer;
 }
 
 .About-question:hover {
-    background-color: var(--color-4-la-plaza);
-    color: var(--bg-primary);
-    transform: scale(1.1);
-
-
+  background-color: var(--color-4-la-plaza);
+  color: var(--txt-light);
+  transform: scale(1.1);
 }
 
 .About-icon {
-    padding: .5em;
-    font-size: large;
+  padding: 0.5em;
+  font-size: large;
 }
 
 .About-content {
-    margin-left: .5em;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height .5s ease-out;
-    max-width: 70%;
+  margin-left: 0.5em;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-out;
+  max-width: 70%;
 }
 
 .About-item.open .About-content {
-    max-height: 300px;
-    margin-top: 1em;
-
+  max-height: 300px;
+  margin-top: 1em;
 }
 
 .About-item.open .About-question {
-    background-color: var(--color-4-la-plaza);
-    color: var(--bg-primary);
+  background-color: var(--color-4-la-plaza);
+  color: var(--txt-light);
 }
 
-/* Galería */
+/* ----------------- GALERIA ----------------- */
+/* Descripción: Estilos de la galería
+*  Estructura:
+        - Galeria
+        - Galeria-title
+        - Galeria-content
+        - Galeria-img
+*/
 
 .Galeria {
-    padding: 80px;
-    width: 100%;
+  padding: 80px;
+  width: 100%;
 }
 
 .Galeria-title {
-    margin-bottom: 2em;
+  margin-bottom: 2em;
 }
 
 .Galeria-content {
-    
-    display: flex;
-    flex-direction: column;
-    gap: 2em;
-   
-    justify-content: center;
-    align-items: center;
-}
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
 
+  justify-content: center;
+  align-items: center;
+}
 
 .Galeria-img {
-    object-fit: cover;
-    width: 100%;
+  object-fit: cover;
+  width: 100%;
 }
 
-
-
-/* utilities */
+/* ----------------- UTILITIES ----------------- */
 
 .u-displayNone {
-    display: none;
+  display: none;
 }
 
+/* ----------------- MEDIA QUERIES ----------------- */
 
-/* Media Queries */
-
+/* MQ para tablet */
 @media only screen and (min-width: 768px) {
-    .Main {
-        margin-top: 8em;
-    }
+  .Main {
+    margin-top: 8em;
+  }
 
-    .Principal {
-        padding: 3em;
+  .Principal {
+    padding: 3em;
+  }
 
-    }
+  .Principal-h1 {
+    font-size: 6em;
+    line-height: 90%;
+  }
 
-    .Principal-h1 {
-        font-size: 6em;
-        line-height: 90%;
-    }
+  .About-question {
+    padding: 0.6em;
+    border-radius: 40px;
+    font-size: large;
+    width: fit-content;
+  }
 
-    .About-question {
-        padding: .6em;
-        border-radius: 40px;
-        font-size: large;
-        width: fit-content;
-    }
+  .About {
+    padding: 3em;
+    gap: 1.5em;
+  }
 
-    .About {
-        padding: 3em;
-        gap: 1.5em;
-    }
+  .Controllers {
+    flex-direction: row;
+  }
 
-    .Controllers {
-        flex-direction: row;
-
-    }
-
-    .Controllers-btn {
-
-        width: 50px;
-        height: 50px;
-        padding: 10px;
-
-    }
-
+  .Controllers-btn {
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+  }
 }
 
 /*  Desktop  */
 @media only screen and (min-width: 1024px) {
-    .Main {
-        margin-top: 10em;
-    }
+  .Main {
+    margin-top: 10em;
+  }
 
-    .Principal {
-        padding: 5em;
-    }
+  .Principal {
+    padding: 5em;
+  }
 
-    .Principal-h1 {
-        font-size: 8em;
-        line-height: 90%;
-    }
+  .Principal-h1 {
+    font-size: 8em;
+  }
 
-    .About-question {
-        padding: .6em;
-        border-radius: 40px;
-        font-size: large;
-        width: fit-content;
-    }
+  .About {
+    padding: 4em;
+  }
 
-    .About {
-        padding: 4em;
-        gap: 1.5em;
-    }
+  /* Galeria con sccroll horizontal para desktop */
 
-    .Controllers {
-        flex-direction: row;
-    }
+  .Galeria-content {
+    height: 25em;
+    flex-direction: row;
+    overflow-x: auto;
+    scroll-snap-type: inline mandatory;
+    overscroll-behavior-x: contain;
+  }
 
+  .Galeria-content::-webkit-scrollbar {
+    display: none;
+  }
 
-    .Controllers-btn {
-
-        width: 50px;
-        height: 50px;
-        padding: 10px;
-
-    }
-    .Galeria-content {
-        height: 25em;
-        flex-direction: row;
-        overflow-x: auto;
-        scroll-snap-type: inline mandatory;
-        overscroll-behavior-x: contain;
-    }
-    
-    .Galeria-content::-webkit-scrollbar {
-        display: none;
-    }
-    
-    .Galeria-img {
-        scroll-snap-align: none;
-        width: 60%;
+  .Galeria-img {
+    scroll-snap-align: none;
+    width: 60%;
     height: 90%;
-    
-    }
+  }
 
-    .Galeria-img:hover {
-        transform: scale(1.1);
-    
-    }
+  .Galeria-img:hover {
+    transform: scale(1.1);
+  }
 }
-
-   
