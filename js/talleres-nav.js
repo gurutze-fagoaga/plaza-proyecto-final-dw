@@ -13,13 +13,13 @@
 const container = document.querySelector("#Main");
 
 // Selección de todos los titulos del menú de navegación dentro de "Talleres"
-const listaTitulos = container.querySelectorAll("#Nav-item");
+const listaTitulos = container.querySelectorAll(".Nav-item");
 
 // Selección de todos los bloques o secciones de la página de "Talleres"
-const listaBloques = container.querySelectorAll("#Contenido-bloque");
+const listaBloques = container.querySelectorAll(".Contenido-bloque");
 
 // Selección de los pasos a seguir para reservar un taller
-const listaPasos = container.querySelectorAll("#Paso");
+const listaPasos = container.querySelectorAll(".Paso");
 
 
 

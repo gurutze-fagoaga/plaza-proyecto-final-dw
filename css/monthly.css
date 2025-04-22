@@ -1,125 +1,153 @@
-  /* boton del menu coloreado */
+/*-------------------------------------------------*\
+monthly.css
+- Menu (header)
+- Main
+- Actividades
+- Programa
+- Info
+- Utilities
+- Media Queries
+\*-------------------------------------------------*/
 
-  .Menu-link--monthly {
+/* ----------------- MENU (Header) ----------------- */
 
-    background-color: var(--color-3-monthly);
+/* Descripción: Botón de "monthly" activo */
 
-  }
+.Menu-link--monthly {
+  background-color: var(--color-3-monthly);
+}
+/* ----------------- MAIN ----------------- */
+.Main {
+  background-color: var(--color-3-monthly);
+  display: flex;
+  flex-direction: column;
+  padding: 4em;
+  justify-content: start;
+  align-items: center;
+}
 
-  .Main {
-    background-color: var(--color-3-monthly);
-    display: flex;
-    flex-direction: column;
-    padding: 4em;
-    justify-content: start;
-    align-items: center;
-  }
+.Main-titulo {
+  margin-bottom: 1em;
+  font-size: xx-large;
+}
 
-  .Titulo {
-    margin-bottom: 1em;
-    font-size: xx-large;
-  }
+/* ----------------- ACTIVIDADES ----------------- */
 
+/* Descripción: Estilos de la sección actividades
+*  Estructura:
+        - Actividades
+        - Actividades-titulo
+        - Actividades-emoji
+*/
+
+.Actividades {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2em;
+  align-items: center;
+  justify-content: center;
+}
+
+.Actividades-titulo {
+  text-align: center;
+  font-family: "Kanit Regular";
+  font-size: xxx-large;
+}
+
+.Actividades-emoji {
+  text-align: center;
+  font-family: "Kanit Regular";
+  font-size: xxx-large;
+}
+
+/* ----------------- PROGRAMA ----------------- */
+
+/* Descripción: Estilos de la sección programa
+*  Estructura:
+        - Programa
+        - Programa-btn
+        - Programa-parrafo
+        - Programa-hora  
+        - Programa-lista  
+        - Programa-listItem
+*/
+
+.Programa {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.Programa-btn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--txt-dark);
+  border-radius: 20px;
+  padding: 0.5em;
+  background-color: var(--color-4-la-plaza);
+  color: var(--bg-primary);
+  width: 8em;
+  margin-top: 2em;
+  margin-bottom: 1em;
+}
+
+.Programa-btn:hover {
+  transform: scale(1.1);
+}
+
+.Programa-parrafo {
+  margin-top: 1em;
+}
+
+.Programa-hora {
+  font-family: "Lato Bold";
+  margin-right: 1em;
+}
+
+.Programa-lista {
+  margin-top: 1em;
+}
+
+.Programa-listItem {
+  margin-left: 2em;
+  list-style-type: square;
+}
+
+/* ----------------- PROGRAMA ----------------- */
+
+/* Descripción: Estilos de la sección info
+*  Estructura:
+        - Info
+        - Info-link
+*/
+
+.Info {
+  margin-top: 5em;
+  text-align: center;
+}
+
+.Info-link {
+  color: var(--txt-dark);
+  cursor: pointer;
+  text-decoration: none;
+  font-family: "Lato Bold";
+}
+
+/* ----------------- UTILITIES ----------------- */
+.u-displayNone {
+  display: none;
+}
+
+/* ----------------- MEDIA QUERIES ----------------- */
+
+/*Tablet y desktop */
+@media only screen and (min-width: 768px) {
   .Actividades {
-    display: flex;
-    flex-direction: column;
-    gap: .2em;
-    align-items: center;
-    justify-content: center;
+    flex-direction: row;
+    gap: 1em;
+    flex-wrap: wrap;
   }
-
-  .Actividades-titulo {
-    text-align: center;
-    font-family: "Kanit Regular";
-    font-size: xxx-large;
-
-
-  }
-
-  .Actividades-emoji {
-    text-align: center;
-    font-family: "Kanit Regular";
-    font-size: xxx-large;
-  }
-
-  .Programa {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .Programa-btn {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid var(--txt-dark);
-    border-radius: 20px;
-    padding: .5em;
-    background-color: var(--color-4-la-plaza);
-    color: var(--bg-primary);
-    width: 8em;
-    margin-top: 2em;
-    margin-bottom: 1em;
-  }
-
-  .Programa-btn:hover {
-    transform: scale(1.1);
-  }
-
-  .Programa-parrafo {
-    margin-top: 1em;
-  }
-
-  .Programa-lista {
-    margin-top: 1em;
-  }
-
-  .Programa-hora {
-
-    font-family: "Lato Bold";
-    margin-right: 1em;
-  }
-
-  .Programa-listItem {
-    margin-left: 2em;
-    list-style-type: square;
-
-  }
-
-  .Info {
-    margin-top: 5em;
-    text-align: center;
-  }
-
-  .Info-link {
-    color: var(--txt-dark);
-    cursor: pointer;
-    text-decoration: none;
-    font-family: "Lato Bold";
-
-
-  }
-
-  /* utilities */
-
-  .u-displayNone {
-    display: none;
-  }
-
-  /* MQs */
-
-  /*Tablet y desktop */
-  @media only screen and (min-width: 768px) {
-
-    
-    .Actividades {
-      flex-direction: row;
-      gap: 1em;
-      flex-wrap: wrap;
-    }
-  
-
-  }
-
+}

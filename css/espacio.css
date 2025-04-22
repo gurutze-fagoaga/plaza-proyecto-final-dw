@@ -1,42 +1,74 @@
-  /* boton del menu coloreado */ 
+/*-------------------------------------------------*\
+espacio.css
+- Menu (header)
+- Main
+- Coworking
+- Espacio
+- Media Queries
+\*-------------------------------------------------*/
 
-  .Menu-link--espacio{
-    background-color: var(--color-2-coworking);
-    color: var(--txt-light);
+/* ----------------- MENU (Header) ----------------- */
+
+/* Descripción: Botón de "espacio" activo */
+
+.Menu-link--espacio {
+  background-color: var(--color-2-coworking);
+  color: var(--txt-light);
 }
 
-.Main{
+/* ----------------- MAIN ----------------- */
+
+.Main {
   align-items: start;
 }
 
-.Coworking{
+/* ----------------- COWORKING ----------------- */
+
+/* Descripción: Estilos de la sección coworking
+*  Estructura:
+        - Coworking
+        - Coworking-content
+        - Coworking-parrafo
+        - Coworking-img
+        - Coworking-link
+
+*/
+
+.Coworking {
   padding: 1em 3em 5em 3em;
   margin-left: 1em;
   margin-right: 2em;
 }
 
-.Coworking-content{
-
+.Coworking-content {
   display: flex;
   flex-direction: column;
   gap: 2em;
-
 }
 
-.Coworking-parrafo{
+.Coworking-parrafo {
   margin-top: 1em;
 }
 
-.Coworking-img{
+.Coworking-img {
   width: 100%;
 }
 
-.Coworking-link{
+.Coworking-link {
   text-decoration: none;
   color: var(--color-2-coworking);
-
 }
-.Espacio{
+
+/* ----------------- ESPACIO ----------------- */
+
+/* Descripción: Estilos de la sección espacio
+*  Estructura:
+        - Espacio
+        - Espacio-leyenda
+        - Espacio-plano
+*/
+
+.Espacio {
   color: var(--txt-light);
   padding: 4em;
   width: 100%;
@@ -47,47 +79,38 @@
   justify-content: center;
   align-items: start;
 }
-.Espacio-leyenda{
+.Espacio-leyenda {
   margin-left: 1em;
 }
-.Espacio-plano{
+.Espacio-plano {
   margin-top: 3em;
   align-self: center;
   width: 100%;
 }
 
+/* ----------------- MEDIA QUERIES ----------------- */
 
+/*Tablet y desktop */
 
-  /* MQs */
-
-  /*Tablet y desktop */
-  @media only screen and (min-width: 768px) {
-
-    .Coworking{
-      padding: 1em 5em 5em 5em;
-    }
-
-    .Coworking-content{
-
-      flex-direction: row;
-    
-    }
-
-    .Coworking-img{
-      width: 50%;
-      object-fit: cover;
-    }
-
-    .Espacio{
-      padding: 6em;
-    }
-
-    .Espacio-plano{
-      width: 80%;
-
-    }
+@media only screen and (min-width: 768px) {
+  .Coworking {
+    padding: 1em 5em 5em 5em;
   }
-  
 
-  
+  .Coworking-content {
+    flex-direction: row;
+  }
 
+  .Coworking-img {
+    width: 50%;
+    object-fit: cover;
+  }
+
+  .Espacio {
+    padding: 6em;
+  }
+
+  .Espacio-plano {
+    width: 80%;
+  }
+}

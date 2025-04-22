@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="es">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
     <title>Document</title>
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
-    />
-    <link rel="stylesheet" href="./css/reset.css" />
-    <link rel="stylesheet" href="./css/css.css" />
-    <link rel="stylesheet" href="./css/talleres.css" />
+    >
+    <link rel="stylesheet" href="./css/reset.css" >
+    <link rel="stylesheet" href="./css/css.css" >
+    <link rel="stylesheet" href="./css/talleres.css" >
     <script
       src="https://kit.fontawesome.com/92ec900005.js"
       crossorigin="anonymous"
@@ -44,7 +44,7 @@
             class="Header-logo"
             src="./img/logo-plaza.svg"
             alt="Logo La Plaza"
-        /></a>
+        ></a>
         <span class="Header-icon material-symbols-outlined"> menu </span>
         <span class="Header-icon u-displayNone material-symbols-outlined">
           close
@@ -83,7 +83,7 @@
         -->
 
       <div class="Pasos">
-        <a id="Paso" href="#Nav" class="Paso">
+        <a href="#Nav" class="Paso">
           <i class="fa-solid fa-palette fa-2xl"></i>
           <p>
             Elige el taller que mejor se adapta a ti. Cada mes hay un taller
@@ -91,12 +91,12 @@
           </p>
         </a>
 
-        <a id="Paso" href="#Nav" class="Paso">
+        <a href="#Nav" class="Paso">
           <i class="fa-solid fa-calendar-check fa-2xl"></i>
           <p>Consulta los horarios de este mes.</p>
         </a>
 
-        <a id="Paso" href="#Nav" class="Paso">
+        <a href="#Nav" class="Paso">
           <i class="fa-solid fa-user-check fa-2xl"></i>
           <p>
             Haz tu reserva. Se puede reservar una única clase o varias clases a
@@ -111,9 +111,9 @@
         -->
 
       <nav id="Nav" class="Nav">
-        <h2 id="Nav-item" class="Nav-item u-activo">Talleres</h2>
-        <h2 id="Nav-item" class="Nav-item">Calendario</h2>
-        <h2 id="Nav-item" class="Nav-item">Reserva</h2>
+        <h2 class="Nav-item u-activo">Talleres</h2>
+        <h2 class="Nav-item">Calendario</h2>
+        <h2 class="Nav-item">Reserva</h2>
       </nav>
 
       <!-- Contenido principal -->
@@ -124,14 +124,14 @@
             Descripciones: Tarjetas con la descripción de cada taller
             -->
 
-        <section id="Contenido-bloque" class="Talleres Contenido-bloque">
+        <section class="Talleres Contenido-bloque">
           <div class="Talleres-grid">
             <div class="Talleres-card">
               <img
                 class="Talleres-cardImg"
                 src="./img/taller-resina.jpg"
                 alt=""
-              />
+              >
               <div class="Talleres-cardInfo">
                 <h3 class="Talleres-cardTitle">Joyería de resina</h3>
                 <h4 class="Talleres-cardSubtitle">Especial del mes</h4>
@@ -154,7 +154,7 @@
                 class="Talleres-cardImg"
                 src="./img/taller-ceramica.jpg"
                 alt=""
-              />
+              >
               <div class="Talleres-cardInfo">
                 <h3 class="Talleres-cardTitle">Cerámica</h3>
                 <h4 class="Talleres-cardTag">Duración del taller: 4h</h4>
@@ -177,7 +177,7 @@
                 class="Talleres-cardImg"
                 src="./img/taller-bordado.jpg"
                 alt=""
-              />
+              >
               <div class="Talleres-cardInfo">
                 <h3 class="Talleres-cardTitle">Bordado</h3>
                 <h4 class="Talleres-cardTag">Duración del taller: 2h</h4>
@@ -195,7 +195,7 @@
                 class="Talleres-cardImg"
                 src="./img/taller-serigrafia.jpg"
                 alt=""
-              />
+              >
               <div class="Talleres-cardInfo">
                 <h3 class="Talleres-cardTitle">Serigrafía</h3>
                 <h4 class="Talleres-cardTag">Duración del taller: 4h</h4>
@@ -217,7 +217,7 @@
                 class="Talleres-cardImg"
                 src="./img/taller-escritura.jpg"
                 alt=""
-              />
+              >
               <div class="Talleres-cardInfo">
                 <h3 class="Talleres-cardTitle">Escritura creativa</h3>
                 <h4 class="Talleres-cardTag">Duración del taller: 2h</h4>
@@ -238,7 +238,7 @@
                 class="Talleres-cardImg"
                 src="./img/taller-encuadernacion.jpg"
                 alt=""
-              />
+              >
               <div class="Talleres-cardInfo">
                 <h3 class="Talleres-cardTitle">Encuadernación artesanal</h3>
                 <h4 class="Talleres-cardTag">Duración del taller: 4h</h4>
@@ -264,10 +264,7 @@
             Descripciones: Calendario semanal de los talleres
             -->
 
-        <section
-          id="Contenido-bloque"
-          class="Calendario Contenido-bloque u-displayNone"
-        >
+        <section class="Calendario Contenido-bloque u-displayNone">
           <div class="Calendario-dia">
             <span class="Calendario-nombreDia">Lunes</span>
             <div class="Calendario-secciones">
@@ -366,9 +363,7 @@
             Descripciones: Formulario para realizar la reserva y pago de una o varias clases
             -->
 
-        <section
-          id="Contenido-bloque"
-          class="Reserva Contenido-bloque u-displayNone"
+        <section class="Reserva Contenido-bloque u-displayNone"
         >
           <form id="Reserva-form" action="#" class="Reserva-form" method="GET">
             <h3 class="Reserva-formSubtitle">1. Selecciona la clase</h3>
@@ -378,14 +373,14 @@
 
               <label>
                 <select class="SelectClase Reserva-formInput" name="clase">
-                  <option id="Clase" value="ceramica">Cerámica</option>
-                  <option id="Clase" value="joyeria">Joyería de resina</option>
-                  <option id="Clase" value="bordado">Bordado</option>
-                  <option id="Clase" value="serigrafia">Serigrafía</option>
-                  <option id="Clase" value="escritura">
+                  <option id="ceramica" value="ceramica">Cerámica</option>
+                  <option id="joyeria" value="joyeria">Joyería de resina</option>
+                  <option id="bordado" value="bordado">Bordado</option>
+                  <option id="serigrafia" value="serigrafia">Serigrafía</option>
+                  <option id="escritura" value="escritura">
                     Escritura creativa
                   </option>
-                  <option id="Clase" value="encuadernacion">
+                  <option id="encuadernacion" value="encuadernacion">
                     Encuadernación artesanal
                   </option>
                 </select>
@@ -395,7 +390,6 @@
 
               <label>
                 <select
-                  required
                   class="Fecha u-displayNone Reserva-formInput"
                   name="hora"
                 >
@@ -410,13 +404,6 @@
                 Eliminar fila
               </button>
             </div>
-
-            <button
-              id="Btn-quitar"
-              class="u-displayNone Btn-quitar Reserva-formInput Reserva-formInput--btn"
-            >
-              Eliminar fila
-            </button>
 
             <!--Aquí se añadirán más clases que se quieran reservar-->
 
@@ -438,7 +425,7 @@
                 type="text"
                 name="nombre"
                 placeholder="nombre"
-              />
+              >
             </label>
 
             <label>
@@ -448,7 +435,7 @@
                 type="text"
                 name="apellido"
                 placeholder="apellido"
-              />
+              >
             </label>
 
             <label>
@@ -458,7 +445,7 @@
                 type="email"
                 name="mail"
                 placeholder="mail"
-              />
+              >
             </label>
 
             <label>
@@ -468,7 +455,7 @@
                 type="tel"
                 name="tel"
                 placeholder="teléfono"
-              />
+              >
             </label>
 
             <label>
@@ -480,7 +467,7 @@
                 placeholder="DNI"
                 minlength="9"
                 maxlength="9"
-              />
+              >
             </label>
 
             <h3 class="Reserva-formSubtitle">3. Pago</h3>
@@ -493,24 +480,20 @@
               <input
                 class="Reserva-formInput"
                 required
-                type="tarjetaCodigo"
+                type="number"
                 name="tarjeta"
-                minlength="16"
-                maxlength="16"
                 placeholder="nº de tarjeta bancaria"
-              />
+              >
             </label>
 
             <label>
               <input
                 class="Reserva-formInput"
                 required
-                type="tarjeta"
-                name="tarjeta"
-                minlength="3"
-                maxlength="3"
+                type="number"
+                name="tarjeta-cvc"
                 placeholder="código CVC"
-              />
+              >
             </label>
 
             <input
@@ -518,7 +501,7 @@
               class="Reserva-formInput Reserva-formInput--btn"
               type="submit"
               value="Reservar"
-            />
+            >
           </form>
         </section>
       </div>
@@ -555,7 +538,7 @@
               type="text"
               name="nombre"
               placeholder="nombre"
-            />
+            >
           </label>
 
           <label>
@@ -565,7 +548,7 @@
               type="Email"
               name="mail"
               placeholder="mail"
-            />
+            >
           </label>
 
           <label>
@@ -575,7 +558,7 @@
               type="tel"
               name="tel"
               placeholder="teléfono"
-            />
+            >
           </label>
 
           <label>
@@ -590,7 +573,7 @@
             class="Footer-formInput Footer-formInput--btn"
             type="submit"
             value="Enviar"
-          />
+          >
         </form>
       </div>
 

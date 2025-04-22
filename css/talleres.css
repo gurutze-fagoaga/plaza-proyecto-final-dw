@@ -1,367 +1,363 @@
-  /* boton del menu coloreado */
+/*-------------------------------------------------*\
+talleres.css
+- Menu
+- Pasos
+- Nav
+- Contenido:
+    - Talleres
+    - Calendario
+    - Reserva
+- Utilities
+- Media queries
+\*-------------------------------------------------*/
 
-  .Menu-link--talleres {
+/* ----------------- MENU (Header) ----------------- */
 
-      background-color: var(--color-1-talleres);
-      color: white;
-  }
+/* Descripción: Botón de "talleres" activo */
 
-
-  .Pasos {
-    background-color: var(--color-1-talleres);
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 4em;
-    padding: 4em;
-    color: var(--bg-primary);
+.Menu-link--talleres {
+  background-color: var(--color-1-talleres);
+  color: white;
 }
+
+/* ----------------- COWORKING ----------------- */
+
+/* Descripción: Estilos del bloque Pasos */
+
+.Pasos {
+  background-color: var(--color-1-talleres);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 4em;
+  padding: 4em;
+  color: var(--bg-primary);
+}
+
+.Paso {
+  width: 100%;
+  text-align: center;
+  border: 1px solid var(--txt-light);
+  border-radius: 20px;
+  padding: 3em;
+  cursor: pointer;
+  transition: transform 0.4s ease;
+  color: var(--txt-light);
+  text-decoration: none;
+  box-shadow: 5px 5px 15px #00506f, -5px -5px 15px #007aa9;
+}
+
+.Paso:hover {
+  transform: scale(1.1);
+}
+
+.fa-solid {
+  padding: 1.5em;
+  border-radius: 30px;
+}
+
+/* ----------------- NAV ----------------- */
+
+/* Descripción: Estilos del menu de navegación de talleres */
+.Nav {
+  display: flex;
+  gap: 1em;
+  margin-bottom: 3em;
+  font-size: small;
+  justify-content: center;
+}
+
+.Nav-item {
+  cursor: pointer;
+  padding: 0.6em;
+  width: max-content;
+  transition: color 0.5s ease, transform 0.5s ease;
+}
+
+.Nav-item:hover {
+  transform: scale(1.1);
+}
+
+.Nav-item.u-activo {
+  transform: scale(1.1);
+  text-decoration: underline;
+  color: var(--color-1-talleres);
+}
+
+/* ----------------- CONTENIDO ----------------- */
+
+/* Descripción: Estilos del contenido
+*  Estructura:
+        - Talleres
+        - Calendario
+        - Reserva
+
+*/
+.Contenido {
+  width: 100%;
+  padding: 2em;
+}
+
+.Contenido-bloque {
+  padding: 1em;
+}
+
+.Contenido-bloque.u-displayNone {
+  display: none;
+}
+
+/* ----------------- Talleres ----------------- */
+
+.Talleres {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.Talleres-grid {
+  width: 80%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-rows: auto;
+  gap: 2em;
+  grid-auto-flow: row;
+}
+
+.Talleres-card {
+  object-fit: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  border-radius: 20px;
+  font-size: small;
+  box-shadow: 8px 8px 16px #dcdcdc, -8px -8px 16px #e4e4e4;
+}
+
+.Talleres-cardImg {
+  width: 100%;
+  height: 20em;
+  object-fit: cover;
+  border-radius: 20px 20px 0 0;
+}
+
+.Talleres-cardInfo {
+  padding: 1em;
+}
+
+.Talleres-cardSubtitle {
+  background: linear-gradient(
+    90deg,
+    rgb(177, 191, 218) 0%,
+    rgba(72, 146, 184, 1) 49%,
+    rgba(135, 74, 175, 1) 100%
+  );
+  padding: 0.5em;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  width: fit-content;
+  border-radius: 20px;
+  color: var(--txt-light);
+  font-family: "Lato Regular";
+}
+
+/* ----------------- Calendario ----------------- */
+
+.Calendario {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8em;
+  padding: 0.5em;
+  border-radius: 20px;
+}
+
+.Calendario-dia {
+  width: 100%;
+  background-color: var(--bg-primary);
+  border-radius: 20px;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 8px 8px 16px #dcdcdc, -8px -8px 16px #e4e4e4;
+}
+
+.Calendario-nombreDia {
+  text-align: center;
+  font-size: large;
+  font-weight: bold;
+  color: var(--color-1-talleres);
+  padding: 0.5em 0.5em 0.5em 0;
+  border-bottom: solid 1px var(--color-1-talleres);
+  width: 100%;
+  margin-bottom: 0.5em;
+}
+
+.Calendario-secciones {
+  width: 100%;
+  padding: 0.5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+}
+
+.Calendario-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+}
+
+.Calendario-hora {
+  white-space: nowrap;
+}
+
+.Calendario-actividad {
+  padding: 0.5em;
+  border-radius: 20px;
+  color: var(--txt-dark);
+}
+
+.Calendario-actividad--especial {
+  color: var(--txt-light);
+  background: linear-gradient(
+    90deg,
+    rgb(177, 191, 218) 0%,
+    rgba(72, 146, 184, 1) 49%,
+    rgba(135, 74, 175, 1) 100%
+  );
+}
+
+.Calendario-cerrado {
+  font-size: large;
+  background-color: var(--color-5-destacado);
+  padding: 0.5em;
+  border-radius: 20px;
+  margin: 0.3em;
+  color: var(--txt-dark);
+  transform: rotate(-5deg);
+}
+
+/* ----------------- Reserva ----------------- */
+
+.Reserva {
+  display: flex;
+  flex-direction: center;
+  justify-content: center;
+  align-items: center;
+}
+.Reserva-formSubtitle {
+  margin: 0.3em 0 0.3em 0;
+}
+.Reserva-formInput {
+  border: 1px solid var(--txt-dark);
+  border-radius: 20px;
+  padding: 0.5em;
+  margin-top: 1em;
+  margin-right: 1em;
+}
+.Reserva-desglose {
+  color: var(--color-5-destacado);
+  font-size: medium;
+  margin-top: 1em;
+}
+.Reserva-total {
+  margin-top: 0.5em;
+  color: var(--color-5-destacado);
+  font-size: large;
+}
+.Reserva-formInput--btn {
+  background-color: var(--color-1-talleres);
+  color: var(--txt-light);
+  cursor: pointer;
+}
+
+.Reserva-formInput--btn:hover {
+  transform: scale(1.1);
+}
+
+.Reserva-confirmacion {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ----------------- MEDIA QUERIES ----------------- */
+
+/* Tablet*/
+@media only screen and (min-width: 768px) {
+  .Pasos {
+    flex-direction: row;
+  }
 
   .Paso {
-      width: 100%;
-      text-align: center;
-      border: 1px solid var(--txt-light);
-      border-radius: 20px;
-      padding: 3em;
-      cursor: pointer;
-      transition: transform .4s ease;
-      color: var(--txt-light);
-      text-decoration: none;
-      box-shadow: 5px 5px 15px #00506f,
-          -5px -5px 15px #007aa9;
-  }
-
-
-
-  .Paso:hover {
-      transform: scale(1.1);
-
-  }
-
-
-  .fa-solid {
-      padding: 1.5em;
-      border-radius: 30px;
-  }
-
-  .Nav {
-      display: flex;
-      gap: 1em;
-      margin-bottom: 3em;
-      font-size: small;
-      justify-content: center;
-  }
-
-  .Nav-item {
-      cursor: pointer;
-      padding: .6em;
-      width: max-content;
-      transition: color .5s ease,
-          transform .5s ease;
-
-  }
-
-  .Nav-item:hover {
-
-      transform: scale(1.1);
-
-  }
-
-  .Nav-item.u-activo {
-      transform: scale(1.1);
-      text-decoration: underline;
-      color: var(--color-1-talleres);
-
-
-  }
-
-
-
-  .Contenido {
-      width: 100%;
-      padding: 2em;
-  }
-
-  .Contenido-bloque {
-      padding: 1em;
-
-  }
-
-  .Contenido-bloque.u-displayNone {
-    display: none;
-
-
-}
-
-
-
-
-  /* Talleres */
-
-  .Talleres {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-  }
-
-  .Talleres-grid {
-      width: 80%;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      grid-template-rows: auto;
-      gap: 2em;
-      grid-auto-flow: row;
-  }
-
-  .Talleres-card {
-      object-fit: cover;
-      display: flex;
-      flex-direction: column;
-      justify-content: start;
-      align-items: start;
-      border-radius: 20px;
-      font-size: small;
-      box-shadow: 8px 8px 16px #dcdcdc,
-          -8px -8px 16px #e4e4e4;
-
-
-  }
-
-
-
-  .Talleres-cardImg {
-      width: 100%;
-      height: 20em;
-      object-fit: cover;
-      border-radius: 20px 20px 0 0;
-
-  }
-
-  .Talleres-cardInfo {
-      padding: 1em;
-
-  }
-
-
-  .Talleres-cardSubtitle {
-      background: linear-gradient(90deg, rgb(177, 191, 218) 0%, rgba(72, 146, 184, 1) 49%, rgba(135, 74, 175, 1) 100%);
-      padding: .5em;
-      margin-top: .5em;
-      margin-bottom: .5em;
-      width: fit-content;
-      border-radius: 20px;
-      color: var(--txt-light);
-      font-family: "Lato Regular";
-  }
-
-
-  /* Calendario */
-
-  .Calendario {
-      
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      gap: .8em;
-      padding: .5em;
-      border-radius: 20px;
+    width: 30%;
+    padding: 3em 1em 3em 1em;
   }
 
   .Calendario-dia {
-      width: 100%;
-      background-color: var(--bg-primary);
-      border-radius: 20px;
-      padding: 1em;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      box-shadow: 8px 8px 16px #dcdcdc,
-          -8px -8px 16px #e4e4e4;
+    width: 50%;
+  }
+}
+
+/* Desktop  */
+@media only screen and (min-width: 1024px) {
+  .Paso {
+    padding: 3em 2em 3em 2em;
   }
 
-  
-  .Calendario-nombreDia {
-      text-align: center;
-      font-size: large;
-      font-weight: bold;
-      color: var(--color-1-talleres);
-      padding: .5em .5em .5em 0;
-      border-bottom: solid 1px var(--color-1-talleres);
-      width: 100%;
-      margin-bottom: .5em;
-    }
-
-    .Calendario-secciones{
-        width: 100%;
-        padding: .5em;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: start;
-    }
-    
-    .Calendario-section {
-        
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 1em;
-    }
-
-
-  .Calendario-hora{
-    white-space: nowrap;
-  }
-
-  .Calendario-actividad {
-      padding: .5em;
-      border-radius: 20px;
-      color: var(--txt-dark);
-  }
-
-  .Calendario-actividad--especial {
-      color: var(--txt-light);
-      background: linear-gradient(90deg, rgb(177, 191, 218) 0%, rgba(72, 146, 184, 1) 49%, rgba(135, 74, 175, 1) 100%);
-  }
-
-  .Calendario-cerrado {
-      font-size: large;
-      background-color: var(--color-5-destacado);
-      padding: .5em;
-      border-radius: 20px;
-      margin: .3em;
-      color: var(--txt-dark);
-      transform: rotate(-5deg);
-  }
-
-
-/* Formulario de reserva */
-
-.Reserva{
-    display: flex;
-    flex-direction: center;
-    justify-content: center;
+  .Calendario {
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas:
+      "lunes martes miercoles ."
+      "jueves viernes sabado domingo";
+    gap: 10px;
+    justify-items: center;
     align-items: center;
-}
-.Reserva-formSubtitle{
-    margin: .3em 0 .3em 0;
-}
-.Reserva-formInput{
-    border: 1px solid var(--txt-dark);
-    border-radius: 20px;
-    padding: .5em;
-    margin-top: 1em;
-    margin-right: 1em;
-
-}
-.Reserva-desglose{
-    color: var(--color-5-destacado);
-    font-size: medium;
-    margin-top: 1em;
-
-}
-.Reserva-total{
-    margin-top: .5em;
-    color: var(--color-5-destacado);
-    font-size: large;
-}
-.Reserva-formInput--btn{
-    background-color: var(--color-1-talleres);
-    color: var(--txt-light);
-    cursor: pointer;
-}
-
-.Reserva-formInput--btn:hover{
-    transform: scale(1.1);
-}
-
-.Reserva-confirmacion{
-    display: flex;
-    flex-direction: column;
-}
-  /* Media Queries */
-
-
-
-  /* Tablet y Desktop  */
-  @media only screen and (min-width: 768px) {
-
-      .Pasos {
-          flex-direction: row;
-
-      }
-
-      .Paso {
-          width: 30%;
-          padding: 3em 1em 3em 1em;
-      }
-
-      .Calendario-dia{
-        width: 50%;
-      }
-      
   }
 
-  @media only screen and (min-width: 1024px) {
-      .Paso {
-          padding: 3em 2em 3em 2em;
-      }
-
-
-      .Calendario {
-        height: 100%;
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        grid-template-areas:
-            "lunes martes miercoles ."
-            "jueves viernes sabado domingo"
-        ;
-        gap: 10px;
-        justify-items: center;
-        align-items: center;
-    
-    }
-    
-    .Calendario-dia {
-        min-width: 40%;
-        height: 100%;
-        width: 100%;
-        justify-content: start;
-        
-    }
-    
-    .Calendario:nth-child(1) {
-        grid-area: lunes;
-    }
-    
-    .Calendario:nth-child(2) {
-        grid-area: martes;
-    }
-    
-    .Calendario:nth-child(3) {
-        grid-area: miercoles;
-    }
-    
-    .Calendario:nth-child(4) {
-        grid-area: jueves;
-    }
-    
-    .Calendario:nth-child(5) {
-        grid-area: viernes;
-    }
-    
-    .Calendario:nth-child(6) {
-        grid-area: sabado;
-    }
-    
-    .Calendario:nth-child(7) {
-        grid-area: domingo;
-    }
-    
-      .u-displayNone{
-        display: none;
-    }
+  .Calendario-dia {
+    min-width: 40%;
+    height: 100%;
+    width: 100%;
+    justify-content: start;
   }
+
+  .Calendario:nth-child(1) {
+    grid-area: lunes;
+  }
+
+  .Calendario:nth-child(2) {
+    grid-area: martes;
+  }
+
+  .Calendario:nth-child(3) {
+    grid-area: miercoles;
+  }
+
+  .Calendario:nth-child(4) {
+    grid-area: jueves;
+  }
+
+  .Calendario:nth-child(5) {
+    grid-area: viernes;
+  }
+
+  .Calendario:nth-child(6) {
+    grid-area: sabado;
+  }
+
+  .Calendario:nth-child(7) {
+    grid-area: domingo;
+  }
+
+  .u-displayNone {
+    display: none;
+  }
+}

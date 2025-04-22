@@ -11,7 +11,7 @@
 // --------------- CONSTANTES Y VARIABLES ------------- //
 
 // selección de los botones de desplegar/plegar cartel
-const listaBotones = document.querySelectorAll("#Programa-btn")
+const listaBotones = document.querySelectorAll(".Programa-btn")
 
 // Selección del contenedor del cartel
 const cartel = document.querySelector("#Programa-content");

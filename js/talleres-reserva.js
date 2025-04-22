@@ -81,7 +81,6 @@ function mostrarOpciones() {
     // Selección del botón de Elimiar Clase
     const listaBotonesEliminar = document.querySelectorAll(".Btn-quitar");
 
-
     // Recorre cada input selector de clase de la lista
     listaSelectoresClase.forEach((selectorClase, id) => {
         // Añade el EventListener de "change", para que ejecute la función al seleccionar una opción
@@ -147,7 +146,7 @@ function añadirClase() {
         </label>
 
         <label>
-            <select class="Fecha u-displayNone Reserva-formInput" name="hora">
+            <select required class="Fecha u-displayNone Reserva-formInput" name="hora">
             </select>
             </label>
         <button id="Btn-quitar" class="Btn-quitar Reserva-formInput Reserva-formInput--btn">Eliminar fila</button>
