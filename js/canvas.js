@@ -52,7 +52,7 @@ btnCrear.addEventListener("click", () => {
 // Función para cerrar la pizarra con el botón de "crear"
 
 btnCerrar.addEventListener("click", () => {
-    inicio.style.display = "block";
+    inicio.style.display = "flex";
     board.classList.toggle("u-displayNone");
 
 })

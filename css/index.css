@@ -31,24 +31,18 @@ index.css
   line-height: 90%;
 }
 
-.Principal-txt {
-  font-size: larger;
-  margin-top: 1em;
-  word-break: keep-all;
-}
-
 .Principal-btn {
-  position: relative;
-  bottom: 0;
   width: fit-content;
   background-color: var(--color-4-la-plaza);
-  color: var(--txt-dark);
-  padding: 10px 20px;
-  margin-left: 0.5rem;
+  color: var(--txt-light);
+  padding: 12px 20px;
   font-size: 1rem;
+  margin-top: .5em;
   border: var(--txt-dark) 1px solid;
   border-radius: 20px;
   cursor: pointer;
+  align-self: flex-end;
+  
 }
 
 .Principal-btn:hover {
@@ -106,11 +100,14 @@ index.css
   z-index: 1;
   width: 30px;
   height: 30px;
-  padding: 6px;
+  padding: 5px;
   background-color: var(--bg-primary);
   border: 1px solid var(--txt-dark);
   border-radius: 50%;
   cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .Controllers-btn:hover {
@@ -150,6 +147,7 @@ index.css
 
 .About {
   background-color: var(--color-3-monthly);
+  width: 100%;
   padding: 2em;
   display: flex;
   gap: 1em;
@@ -206,7 +204,7 @@ index.css
 */
 
 .Galeria {
-  padding: 80px;
+  padding: 2em;
   width: 100%;
 }
 
@@ -293,6 +291,10 @@ index.css
   }
 
   /* Galeria con sccroll horizontal para desktop */
+
+  .Galeria{
+    padding: 4em;
+  }
 
   .Galeria-content {
     height: 25em;

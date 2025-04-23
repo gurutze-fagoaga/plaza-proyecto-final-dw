@@ -54,8 +54,10 @@ html {
   background-color: var(--bg-primary);
   width: 100%;
   position: relative;
+
 }
 
+.Body h1,
 .Body h2,
 .Body h3 {
   font-family: "Kanit Regular";
@@ -199,7 +201,6 @@ html {
   color: var(--bg-primary);
   padding: 80px 80px 10px 50px;
   width: 100%;
-  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -329,4 +330,5 @@ html {
   .Header {
     padding: 2em 5em 2em 5em;
   }
+
 }
