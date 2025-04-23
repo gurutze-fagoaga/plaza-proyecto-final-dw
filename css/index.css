@@ -23,7 +23,7 @@ index.css
   flex-direction: column;
   justify-content: center;
   align-items: start;
-  padding: 2em;
+  padding: 0em 2em 2em 2em;
 }
 
 .Principal-h1 {
@@ -36,8 +36,8 @@ index.css
   background-color: var(--color-4-la-plaza);
   color: var(--txt-light);
   padding: 12px 20px;
-  font-size: 1rem;
-  margin-top: .5em;
+  font-size: 1em;
+  margin-top: 1em;
   border: var(--txt-dark) 1px solid;
   border-radius: 20px;
   cursor: pointer;
@@ -279,7 +279,7 @@ index.css
   }
 
   .Principal {
-    padding: 5em;
+    padding: 0em 5em 5em 5em;
   }
 
   .Principal-h1 {
@@ -290,7 +290,7 @@ index.css
     padding: 4em;
   }
 
-  /* Galeria con sccroll horizontal para desktop */
+  /* Galeria con scroll horizontal para desktop */
 
   .Galeria{
     padding: 4em;

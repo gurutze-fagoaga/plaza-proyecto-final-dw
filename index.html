@@ -3,18 +3,20 @@
   <head>
     <meta charset="UTF-8" >
     <meta name="viewport" content="width=device-width, initial-scale=1.0" >
-    <title>Home</title>
+    <meta name="description" content="Plaza, talleres y espacio creativo">
+    <meta name="keywords" content="plaza, coworking, talleres, creatividad">
+    <title>Plaza</title>
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
     >
-
     <link rel="stylesheet" href="./css/reset.css" >
     <link rel="stylesheet" href="./css/css.css" >
     <link rel="stylesheet" href="./css/index.css" >
 
     <script
       src="https://kit.fontawesome.com/92ec900005.js"
+      defer
       crossorigin="anonymous"
     ></script>
     <script src="./js/js.js" defer></script>
@@ -39,7 +41,7 @@
 
     <header class="Header">
       <nav class="Header-nav">
-        <a href="./index.html"
+        <a title="Plaza" href="./index.html"
           ><img
             class="Header-logo"
             src="./img/logo-plaza.svg"
@@ -51,22 +53,22 @@
         </span>
         <ul class="Menu">
           <li id="BtnTalleres" class="Menu-item">
-            <a class="Menu-link Menu-link--talleres" href="./talleres.html"
+            <a title="Talleres" class="Menu-link Menu-link--talleres" href="./talleres.html"
               >Talleres</a
             >
           </li>
           <li id="BtnEspacio" class="Menu-item">
-            <a class="Menu-link Menu-link--espacio" href="./espacio.html"
+            <a title="Espacio creativo" class="Menu-link Menu-link--espacio" href="./espacio.html"
               >Espacio creativo</a
             >
           </li>
           <li id="BtnMonthly" class="Menu-item">
-            <a class="Menu-link Menu-link--monthly" href="./monthly.html"
+            <a title="Monthly" class="Menu-link Menu-link--monthly" href="./monthly.html"
               >Monthly</a
             >
           </li>
           <li id="BtnContacto" class="Menu-item">
-            <a class="Menu-link Menu-link--contacto" href="#Footer">Contacto</a>
+            <a title="Contacto" class="Menu-link Menu-link--contacto" href="#Footer">Contacto</a>
           </li>
         </ul>
       </nav>
@@ -87,7 +89,7 @@
           La plaza donde la creatividad se encuentra y crece.
         </h1>
 
-        <button id="Principal-btn" class="Principal-btn">Empezar a crear</button>
+        <button title="Crear" id="Principal-btn" class="Principal-btn">Empezar a crear</button>
         
       </section>
 
@@ -95,43 +97,49 @@
 
       <div id="Board" class="Board u-displayNone">
         <div class="Controllers">
-          <button id="BtnCuadricula" class="Controllers-btn">
+          <button title="Cuadrícula" id="BtnCuadricula" class="Controllers-btn">
             <img
+              loading="lazy"
               class="u-displayNone IconoCuadricula"
               src="./img/icono-cuadricula.svg"
               alt="Icono cuadrícula"
             >
             <img
+              loading="lazy"
               class="IconoCuadricula"
               src="./img/icono-liso.svg"
               alt="Icono sin cuadrícula"
             >
           </button>
-          <button
+          <button 
+            title="Morado"
             id="BtnPurple"
             class="Controllers-btn Controllers-btnColor Controllers-btn--purple"
           ></button>
           <button
+            title="Amarillo"
             id="BtnYellow"
             class="Controllers-btn Controllers-btnColor Controllers-btn--yellow"
           ></button>
           <button
+            title="Azul"
             id="BtnBlue"
             class="Controllers-btn Controllers-btnColor Controllers-btn--blue"
           ></button>
           <button
+            title="Verde"
             id="BtnGreen"
             class="Controllers-btn Controllers-btnColor Controllers-btn--green"
           ></button>
-          <button id="BtnBorrar" class="Controllers-btn">
+          <button title="Borrar" id="BtnBorrar" class="Controllers-btn">
             <img src="./img/icono-borrar.svg" alt="Icono borrar">
           </button>
-          <button id="BtnDescargar" class="Controllers-btn">
+          <button title="Descargar" id="BtnDescargar" class="Controllers-btn">
             <img src="./img/icono-descargar.svg" alt="Icono descargar">
           </button>
         </div>
         <div class="Controllers">
-          <button id="BtnCerrar" class="Controllers-btn">
+          <button title="Cerrar" id="BtnCerrar" class="Controllers-btn">
             <span class="material-symbols-outlined"> close </span>
           </button>
         </div>
@@ -205,13 +213,13 @@
       <section class="Galeria">
         <h2 class="Galeria-title">This is Plaza</h2>
         <div id="Galeria-content" class="Galeria-content">
-          <img class="Galeria-img" src="./img/galeria-2.jpg" alt="">
-          <img class="Galeria-img" src="./img/galeria-3.jpeg" alt="">
-          <img class="Galeria-img" src="./img/galeria-4.jpg" alt="">
-          <img class="Galeria-img" src="./img/galeria-5.jpg" alt="">
-          <img class="Galeria-img" src="./img/galeria-6.jpg" alt="">
-          <img class="Galeria-img" src="./img/galeria-7.jpg" alt="">
-          <img class="Galeria-img" src="./img/galeria-8.jpg" alt="">
+          <img loading="lazy" class="Galeria-img" src="./img/galeria-2.jpg" alt="Galeria 1">
+          <img loading="lazy" class="Galeria-img" src="./img/galeria-3.jpeg" alt="Galeria 2">
+          <img loading="lazy" class="Galeria-img" src="./img/galeria-4.jpg" alt="Galeria 3">
+          <img loading="lazy" class="Galeria-img" src="./img/galeria-5.jpg" alt="Galeria 4">
+          <img loading="lazy" class="Galeria-img" src="./img/galeria-6.jpg" alt="Galeria 5">
+          <img loading="lazy" class="Galeria-img" src="./img/galeria-7.jpg" alt="Galeria 6">
+          <img loading="lazy" class="Galeria-img" src="./img/galeria-8.jpg" alt="Galeria 7">
         </div>
         <a href=""></a>
       </section>
@@ -230,13 +238,13 @@
       </div>
 
       <nav class="Footer-rrss">
-        <a class="Footer-link" href="#" target="_blank"
+        <a title="Instagram" class="Footer-link" href="#" target="_blank"
           ><i class="fa-brands fa-instagram fa-lg"></i
         ></a>
-        <a class="Footer-link" href="#" target="_blank"
+        <a title="Linkedin" class="Footer-link" href="#" target="_blank"
           ><i class="fa-brands fa-linkedin fa-lg"></i
         ></a>
-        <a class="Footer-link" href="#" target="_blank"
+        <a title="Tiktok" class="Footer-link" href="#" target="_blank"
           ><i class="fa-brands fa-tiktok fa-lg"></i
         ></a>
       </nav>
@@ -290,7 +298,7 @@
       </div>
 
       <div class="Footer-legal">
-        <a class="Footer-terms" href="./terms.html">Términos y condiciones</a>
+        <a title="Términos y condiciones" class="Footer-terms" href="./terms.html">Términos y condiciones</a>
         <span class="Footer-copyright">Copyright © 2025 Plaza</span>
       </div>
     </footer>

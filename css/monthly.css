@@ -92,6 +92,7 @@ monthly.css
   width: 8em;
   margin-top: 2em;
   margin-bottom: 1em;
+  cursor: pointer;
 }
 
 .Programa-btn:hover {

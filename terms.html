@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Términos y condiciones</title>
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
@@ -28,7 +28,7 @@
 
     <header class="Header">
       <nav class="Header-nav">
-        <a href="./index.html"
+        <a title="Plaza" href="./index.html"
           ><img
             class="Header-logo"
             src="./img/logo-plaza.svg"
@@ -40,22 +40,22 @@
         </span>
         <ul class="Menu">
           <li id="BtnTalleres" class="Menu-item">
-            <a class="Menu-link Menu-link--talleres" href="./talleres.html"
+            <a title="Talleres" class="Menu-link Menu-link--talleres" href="./talleres.html"
               >Talleres</a
             >
           </li>
           <li id="BtnEspacio" class="Menu-item">
-            <a class="Menu-link Menu-link--espacio" href="./espacio.html"
+            <a title="Espacio creativo" class="Menu-link Menu-link--espacio" href="./espacio.html"
               >Espacio creativo</a
             >
           </li>
           <li id="BtnMonthly" class="Menu-item">
-            <a class="Menu-link Menu-link--monthly" href="./monthly.html"
+            <a title="Monthly" class="Menu-link Menu-link--monthly" href="./monthly.html"
               >Monthly</a
             >
           </li>
           <li id="BtnContacto" class="Menu-item">
-            <a class="Menu-link Menu-link--contacto" href="#Footer">Contacto</a>
+            <a title="Contacto" class="Menu-link Menu-link--contacto" href="#Footer">Contacto</a>
           </li>
         </ul>
       </nav>
@@ -199,20 +199,22 @@
 
     <!-- Footer -->
 
-    <footer class="Footer">
+    <footer id="Footer" class="Footer">
       <h2 class="Footer-title">Contacto</h2>
+
       <div class="Footer-direction">
         <span>c/ de San Fermin 61</span>
         <span>31003 Pamplona</span>
       </div>
+
       <nav class="Footer-rrss">
-        <a class="Footer-link" href="#" target="_blank"
+        <a title="Instagram" class="Footer-link" href="#" target="_blank"
           ><i class="fa-brands fa-instagram fa-lg"></i
         ></a>
-        <a class="Footer-link" href="#" target="_blank"
+        <a title="Linkedin" class="Footer-link" href="#" target="_blank"
           ><i class="fa-brands fa-linkedin fa-lg"></i
         ></a>
-        <a class="Footer-link" href="#" target="_blank"
+        <a title="Tiktok" class="Footer-link" href="#" target="_blank"
           ><i class="fa-brands fa-tiktok fa-lg"></i
         ></a>
       </nav>
@@ -233,7 +235,7 @@
             <input
               class="Footer-formInput"
               required
-              type="email"
+              type="Email"
               name="mail"
               placeholder="mail"
             >
@@ -247,13 +249,6 @@
               name="tel"
               placeholder="teléfono"
             >
-          </label>
-          <label>
-            <select class="Footer-formInput" name="motivo">
-              <option value="talleres">Talleres</option>
-              <option selected value="general">Consulta general</option>
-              <option value="espacio">Espacio creativo</option>
-            </select>
           </label>
 
           <label>
@@ -273,7 +268,7 @@
       </div>
 
       <div class="Footer-legal">
-        <a class="Footer-terms" href="./terms.html">Términos y condiciones</a>
+        <a title="Términos y condiciones" class="Footer-terms" href="./terms.html">Términos y condiciones</a>
         <span class="Footer-copyright">Copyright © 2025 Plaza</span>
       </div>
     </footer>
