@@ -136,6 +136,7 @@ talleres.css
 }
 
 .Talleres-cardImg {
+  aspect-ratio: auto; /* para evitar problemas con Lighthouse */
   width: 100%;
   height: 20em;
   object-fit: cover;
@@ -247,7 +248,7 @@ talleres.css
 
 .Reserva {
   display: flex;
-  flex-direction: center;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }

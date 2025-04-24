@@ -51,6 +51,7 @@ espacio.css
 }
 
 .Coworking-img {
+  aspect-ratio: auto; /* para evitar problemas con Lighthouse */
   width: 100%;
 }
 

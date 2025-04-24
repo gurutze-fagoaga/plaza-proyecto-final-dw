@@ -63,7 +63,7 @@ index.css
   position: absolute;
   top: 0;
   left: 0;
-  background-color: none;
+  background-color: var(--bg-primary);
 }
 
 .Canvas {
@@ -222,6 +222,7 @@ index.css
 }
 
 .Galeria-img {
+  aspect-ratio: auto; /* para evitar problemas con Lighthouse */
   object-fit: cover;
   width: 100%;
 }
