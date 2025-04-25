@@ -56,6 +56,22 @@ html {
   position: relative;
 }
 
+
+/* Estilos del scrollbar personalizado */
+.Body::-webkit-scrollbar {
+  width: 12px;              
+}
+
+.Body::-webkit-scrollbar-track {
+  background: var(--txt-dark);       
+}
+
+.Body::-webkit-scrollbar-thumb {
+  background-color: var(--color-4-la-plaza);    
+  border-radius: 20px;       
+  border: 3px solid var(--txt-dark);  
+}
+
 .Body h1,
 .Body h2,
 .Body h3 {

@@ -1,5 +1,6 @@
 /*-------------------------------------------------*\
 monthly.css
+- Body
 - Menu (header)
 - Main
 - Actividades
@@ -8,6 +9,23 @@ monthly.css
 - Utilities
 - Media Queries
 \*-------------------------------------------------*/
+
+/* ----------------- BODY ----------------- */
+
+/* Descripción: Estilos del scrollbar personalizado */
+.Body::-webkit-scrollbar {
+  width: 12px;              
+}
+
+.Body::-webkit-scrollbar-track {
+  background: var(--txt-dark);       
+}
+
+.Body::-webkit-scrollbar-thumb {
+  background-color: var(--color-3-monthly);    
+  border-radius: 20px;       
+  border: 3px solid var(--txt-dark);  
+}
 
 /* ----------------- MENU (Header) ----------------- */
 
@@ -24,6 +42,7 @@ monthly.css
   padding: 4em;
   justify-content: start;
   align-items: center;
+ 
 }
 
 .Main-titulo {

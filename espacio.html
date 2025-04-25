@@ -100,11 +100,17 @@
               eventos mensuales, etc.
             </p>
           </div>
-          <img
-            class="Coworking-img"
-            src="./img/galeria-1.jpg"
-            alt="Foto del espacio"
-          >
+
+          <picture class="Coworking-img">
+            <source media="(min-width:1024px)"
+            srcset="./img/espacio-large.jpg">
+            <source media="(min-width:600px)"
+            srcset="./img/espacio-medium.jpg">
+            <img
+              src="./img/espacio-small.jpg"
+              alt="Foto del espacio"
+            >
+          </picture>
         </div>
       </section>
 

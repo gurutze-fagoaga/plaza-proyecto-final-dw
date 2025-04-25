@@ -1,5 +1,6 @@
 /*-------------------------------------------------*\
 talleres.css
+- Body
 - Menu
 - Pasos
 - Nav
@@ -10,6 +11,23 @@ talleres.css
 - Utilities
 - Media queries
 \*-------------------------------------------------*/
+
+/* ----------------- BODY ----------------- */
+
+/* Descripción: Estilos del scrollbar personalizado */
+.Body::-webkit-scrollbar {
+  width: 12px;              
+}
+
+.Body::-webkit-scrollbar-track {
+  background: var(--txt-dark);       
+}
+
+.Body::-webkit-scrollbar-thumb {
+  background-color: var(--color-1-talleres);    
+  border-radius: 20px;       
+  border: 3px solid var(--txt-dark);  
+}
 
 /* ----------------- MENU (Header) ----------------- */
 
