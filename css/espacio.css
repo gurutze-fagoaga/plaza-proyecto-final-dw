@@ -40,6 +40,12 @@ espacio.css
   align-items: start;
 }
 
+/* estilos del botón de subir */
+
+.Main-subir:hover{
+  background-color: var(--color-2-coworking);
+}
+
 /* ----------------- COWORKING ----------------- */
 
 /* Descripción: Estilos de la sección coworking
@@ -71,6 +77,7 @@ espacio.css
 .Coworking-img {
   aspect-ratio: auto; /* para evitar problemas con Lighthouse */
   width: 100%;
+ 
 }
 
 .Coworking-link {

@@ -29,6 +29,12 @@ talleres.css
   border: 3px solid var(--txt-dark);  
 }
 
+/* estilos del botón de subir */
+
+.Main-subir:hover{
+  background-color: var(--color-1-talleres);
+}
+
 /* ----------------- MENU (Header) ----------------- */
 
 /* Descripción: Botón de "talleres" activo */
@@ -69,7 +75,9 @@ talleres.css
   transform: scale(1.1);
 }
 
-.fa-solid {
+.fa-palette,
+.fa-calendar-check,
+.fa-user-check {
   padding: 1.5em;
   border-radius: 30px;
 }
@@ -123,6 +131,7 @@ talleres.css
 .Contenido-bloque.u-displayNone {
   display: none;
 }
+
 
 /* ----------------- Talleres ----------------- */
 

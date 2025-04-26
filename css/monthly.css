@@ -50,6 +50,11 @@ monthly.css
   font-size: xx-large;
 }
 
+.Main-subir:hover{
+  color: var(--txt-dark);
+  background-color: var(--color-3-monthly);
+}
+
 /* ----------------- ACTIVIDADES ----------------- */
 
 /* Descripción: Estilos de la sección actividades

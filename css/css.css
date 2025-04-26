@@ -86,6 +86,36 @@ html {
   align-items: center;
 }
 
+/* estilos del botón de subir */
+
+.Main-subir{
+  background: none;
+  border: none;
+  position: fixed;
+  transform: rotate(-90deg);
+  right: 0em;
+  bottom: 5em;
+  color: var(--txt-dark);
+  border: solid 1px var(--txt-dark);
+  background-color: var(--bg-primary);
+  padding: 0.2em 1em 0.2em 1em;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.fa-arrow-right{
+  padding: .5em;
+}
+
+.Main-subir:hover{
+  color: var(--bg-primary);
+  background-color: var(--color-4-la-plaza);
+
+}
+
+
+
+
 /* ------------------ HEADER -------------------- */
 
 /* ------------- Estilos del header ------------- */
