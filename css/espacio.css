@@ -62,13 +62,16 @@ espacio.css
   padding: 1em 3em 5em 3em;
   margin-left: 1em;
   margin-right: 2em;
+
 }
 
 .Coworking-content {
   display: flex;
   flex-direction: column;
-  gap: 2em;
+  gap: 3em;
 }
+
+
 
 .Coworking-parrafo {
   margin-top: 1em;
@@ -126,9 +129,9 @@ espacio.css
   .Coworking-content {
     flex-direction: row;
   }
-
-  .Coworking-img {
-    width: 50%;
+  
+  .Coworking-img{
+    height: 100%;
     object-fit: cover;
   }
 
@@ -138,5 +141,11 @@ espacio.css
 
   .Espacio-plano {
     width: 80%;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .Coworking-content {
+    gap: 6em;
   }
 }
