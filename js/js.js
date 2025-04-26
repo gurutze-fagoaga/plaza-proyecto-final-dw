@@ -23,7 +23,10 @@ const listaBotonesMenu = document.querySelectorAll(".Menu-item");
 
 // Función para mostrar el botón de subir arriba
 // añado event listener de "wheel" (rueda de scroll del ratón) al documento
-document.addEventListener('wheel', (e) => {
+function mostrarBotonSubir() {
+    
+}
+document.addEventListener('scroll', (e) => {
     // si el scroll no está al inicio (!=0) 
     if (window.scrollY != 0){
         // se muestra el botón
